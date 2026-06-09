@@ -1,0 +1,503 @@
+
+  <!-- ─── Nav ─── -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <!-- Sostituisci con il path del tuo logo -->
+          <!-- <img src="LOGO_SJM.png" alt="SJM Systems Engineering" /> -->
+          <span class="nav-logo-text">SJM Systems Engineering</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#come-funziona">Come Funziona</a></li>
+          <li><a href="#case-studies">Casi Studio</a></li>
+          <li><a href="#about">Chi Siamo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#contatti" class="nav-cta">Parliamo del tuo progetto</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#servizi" onclick="closeMobile()">Servizi</a>
+      <a href="#come-funziona" onclick="closeMobile()">Come Funziona</a>
+      <a href="#case-studies" onclick="closeMobile()">Casi Studio</a>
+      <a href="#about" onclick="closeMobile()">Chi Siamo</a>
+      <a href="#faq" onclick="closeMobile()">FAQ</a>
+      <a href="#contatti" onclick="closeMobile()">Parliamo del tuo progetto →</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">Forza lavoro digitale · PMI italiane</div>
+        <h1 class="hero-title reveal">
+          Forze lavoro digitali,<br>
+          <span class="highlight">progettate sui tuoi processi.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Agenti AI custom per le PMI italiane. Nessuna soluzione generica.
+          Solo architetture costruite attorno a come lavori tu — integrate negli strumenti che già usi.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contatti" class="btn btn-primary">Parliamo del tuo progetto →</a>
+          <a href="#come-funziona" class="btn btn-secondary">Scopri come funziona</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hero-stat">
+            <div class="hero-stat-num">30–60gg</div>
+            <div class="hero-stat-label">Primo risultato misurabile</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">0</div>
+            <div class="hero-stat-label">Soluzioni generiche vendute</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Costruiti sui tuoi flussi reali</div>
+          </div>
+        </div>
+      </div>
+      <!-- Floating agent flow (decorativo) -->
+      <div class="hero-visual">
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>richiesta_cliente.incoming</div>
+        <div class="flow-node"><span class="flow-dot dot-viola"></span>agent.qualifica → CRM</div>
+        <div class="flow-node"><span class="flow-dot dot-verdino"></span>risposta.generata ✓</div>
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>log.aggiornato → slack</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Servizi ─── -->
+  <section id="servizi">
+    <div class="container">
+      <div class="servizi-header reveal">
+        <div>
+          <div class="section-label">Cosa costruiamo</div>
+          <h2 class="section-title">Agenti operativi<br>su misura per la tua azienda</h2>
+        </div>
+        <p class="section-sub">Non vendiamo piattaforme da configurare da soli. Progettiamo, costruiamo e consegniamo sistemi che funzionano — integrati nei tuoi strumenti dal giorno uno.</p>
+      </div>
+      <div class="servizi-grid">
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-avio">🧠</div>
+          <div class="service-title">AI Knowledge Agent</div>
+          <p class="service-desc">Un cervello interno aziendale. Risponde a domande su procedure, prodotti e policy — attingendo alla tua documentazione reale. Cresce ad ogni interazione, loga le lacune e le segnala al responsabile.</p>
+          <span class="service-tag">→ Elimina domande ripetitive ai referenti</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-viola">⚙️</div>
+          <div class="service-title">Automazione Processi</div>
+          <p class="service-desc">Connetti CRM, ERP, email e strumenti interni in flussi automatici. Le attività manuali — trascrizione dati, follow-up, compilazione form — vengono gestite senza intervento umano.</p>
+          <span class="service-tag">→ Ore recuperate ogni settimana</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-verdino">📊</div>
+          <div class="service-title">CRM AI-Augmented</div>
+          <p class="service-desc">Il tuo CRM smette di essere un archivio passivo. Log automatici delle interazioni, priorità dei contatti, follow-up intelligenti e sintesi di conversazioni — senza che il commerciale tocchi una riga.</p>
+          <span class="service-tag">→ Pipeline sempre aggiornata, zero effort</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-muted">🏗️</div>
+          <div class="service-title">Architetture Multi-Agente</div>
+          <p class="service-desc">Per processi complessi che coinvolgono più reparti. Progettiamo sistemi dove più agenti lavorano in coordinazione — ognuno con un ruolo specifico, tutti integrati nel tuo workflow esistente.</p>
+          <span class="service-tag">→ Operatività end-to-end automatizzata</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Come Funziona ─── -->
+  <section id="come-funziona">
+    <div class="container">
+      <div class="steps-header reveal">
+        <div class="section-label">Il metodo SJM</div>
+        <h2 class="section-title">Dal problema al sistema che funziona</h2>
+        <p class="section-sub">Nessun discovery infinito. Nessun prototipo che non arriva mai in produzione. Lavoriamo in sprint brevi con un output concreto ad ogni fase.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item reveal">
+          <div class="step-num active">01</div>
+          <div class="step-title">Diagnosi operativa</div>
+          <p class="step-desc">Analizziamo dove l'azienda perde tempo, continuità e risorse. Identifichiamo il collo di bottiglia con il ROI più alto da automatizzare per primo.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">02</div>
+          <div class="step-title">Progettazione dell'architettura</div>
+          <p class="step-desc">Definiamo quali agenti costruire, come si collegano ai tuoi sistemi esistenti e quali metriche userai per misurare i risultati.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">03</div>
+          <div class="step-title">Build e integrazione</div>
+          <p class="step-desc">Costruiamo il sistema sui tuoi processi reali. Lo integriamo negli strumenti che già usi: CRM, email, gestionale, Slack — senza sostituire niente.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num">04</div>
+          <div class="step-title">Risultato misurabile</div>
+          <p class="step-desc">In 30–60 giorni hai un sistema in produzione con risultati verificabili. Non un proof-of-concept — un agente operativo che sta già facendo il suo lavoro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Case Studies ─── -->
+  <section id="case-studies">
+    <div class="container">
+      <div class="cs-header reveal">
+        <div class="section-label">Casi studio</div>
+        <h2 class="section-title">Progetti consegnati, risultati reali</h2>
+        <p class="section-sub">Esempi di sistemi costruiti e operativi. I nomi sono resi anonimi, i risultati no.</p>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card reveal">
+          <div class="cs-sector">Settore Assicurativo / Previdenziale</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> I referenti operativi erano saturi di richieste ripetitive su prodotti e procedure — dalle stesse domande, da clienti e agenti interni, ogni giorno.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di knowledge interna con base documentale strutturata. Risponde autonomamente al 70% delle richieste, loga le lacune e allerta il responsabile competente. La knowledge cresce ad ogni interazione.</span>
+          </div>
+          <blockquote class="cs-quote">"Il cervello interno dell'azienda." — CEO, dopo il secondo incontro. Il progetto è stato esteso alla sede estera con contratto di consulenza continuativa.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Fitness / Centri Sportivi Strutturati</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> Consulenti interni impiegavano ore a rispondere a domande fiscali ricorrenti, spesso le stesse — con risposte disperse tra documenti, email e colleghi.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di consulenza fiscale interna testato in ambiente operativo reale. Struttura risposte normative accurate in secondi, riducendo il carico sui referenti qualificati.</span>
+          </div>
+          <blockquote class="cs-quote">Il sistema è stato presentato al Responsabile Nazionale e proposto formalmente ai vertici aziendali per un rollout su scala.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Studi Professionali / Consulenza</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> L'onboarding di nuovi clienti richiedeva settimane — raccolta documenti manuale, comunicazioni frammentate, procedure non standardizzate tra i referenti.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Sistema agente per onboarding strutturato: raccoglie informazioni, compila documenti, aggiorna il CRM e invia comunicazioni — senza intervento manuale del team.</span>
+          </div>
+          <blockquote class="cs-quote">Tempo di onboarding ridotto da 3 settimane a 4 giorni. Il team ha recuperato circa 6 ore a cliente.</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <div class="section-label">Chi siamo</div>
+          <h2 class="section-title">Non vendiamo tecnologia.<br>Vendiamo tempo recuperato.</h2>
+          <p class="about-text">SJM Systems Engineering nasce da una premessa semplice: la maggior parte delle PMI italiane strutturate ha già processi che funzionano. Il problema non è la tecnologia — è che quei processi assorbono troppo tempo, troppi referenti e troppa energia manuale.</p>
+          <p class="about-text">Il nostro lavoro è diagnosticare dove l'azienda perde continuità e costruire agenti operativi che tappano quei buchi — integrandosi con gli strumenti che già usi, senza stravolgere niente.</p>
+          <ul class="about-list">
+            <li>Lavoriamo solo su colli di bottiglia reali, non su proof of concept dimostrativi</li>
+            <li>Ogni progetto ha una metrica di risultato definita prima di iniziare</li>
+            <li>Consegniamo sistemi operativi, non presentazioni da rivedere tra sei mesi</li>
+            <li>Siamo il tuo interlocutore tecnico e commerciale, senza middleman</li>
+          </ul>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-card">
+            <div class="about-card-header">SJM · Dashboard operativa</div>
+            <div class="about-metric">
+              <span class="about-metric-label">Progetti consegnati</span>
+              <span class="about-metric-value">2 attivi</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Settori coperti</span>
+              <span class="about-metric-value">Assicurativo · HR · Fitness · Professionale</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tempo medio al primo risultato</span>
+              <span class="about-metric-value positive">30–60 giorni</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Dipendenza da piattaforme terze</span>
+              <span class="about-metric-value positive">Zero lock-in</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tipo di contratto</span>
+              <span class="about-metric-value">Progetto fisso o consulenza continuativa</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Integrazione sistemi esistenti</span>
+              <span class="about-metric-value positive">Sempre inclusa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">Domande frequenti</div>
+        <h2 class="section-title">Quello che ci chiedono i CEO prima di partire</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto tempo ci vuole per vedere i primi risultati?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Lavoriamo per avere un sistema operativo e misurabile in 30–60 giorni. Non un prototipo — un agente che sta già facendo il suo lavoro in produzione. La prima settimana è dedicata alla diagnosi e alla progettazione; dal giorno 8 iniziamo a costruire.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Devo cambiare i miei strumenti o processi attuali?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Costruiamo attorno a quello che già usi. Se hai un CRM, un ERP, o lavori su email e Slack — gli agenti si integrano lì. Non chiediamo mai di sostituire strumenti esistenti: aggiungiamo operatività a quello che funziona già.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Serve un team tecnico interno per gestire il sistema?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Il sistema viene consegnato già configurato e operativo. Formiamo il referente che lo userà quotidianamente — di solito bastano 2-3 ore. Per le aziende che preferiscono non gestire niente internamente, offriamo contratti di consulenza continuativa.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come si misura il ritorno dell'investimento?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Prima di iniziare, definiamo insieme la metrica di risultato: ore di lavoro manuale eliminate, tempo di risposta ridotto, pipeline aggiornata senza intervento manuale, ecc. Il ROI si misura su quelle metriche — non su numeri teorici.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Lavorate solo con certi settori?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I verticali in cui lavoriamo con priorità oggi: broker assicurativi e consulenti previdenziali, società di servizi con alto volume di supporto clienti, cliniche private e poliambulatori, studi professionali strutturati, agenzie immobiliari, palestre e centri fitness con più sedi. Se la tua azienda ha processi ripetitivi e referenti saturi, la conversazione vale.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come inizia il processo? C'è un impegno minimo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Si inizia con una chiamata gratuita di 30 minuti in cui analizziamo i tuoi processi e capiamo insieme se c'è un progetto sensato da costruire. Se non vediamo un valore concreto per la tua azienda, lo diciamo chiaramente — senza spingere verso un impegno che non ha senso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contatti ─── -->
+  <section id="contatti">
+    <div class="container">
+      <div class="contatti-grid">
+        <div class="contatti-content reveal">
+          <div class="section-label">Parliamo</div>
+          <h2 class="section-title">Hai un processo che assorbe troppo tempo?</h2>
+          <p class="section-sub">Raccontaci il problema. In 30 minuti capiamo insieme se c'è un sistema da costruire — e qual è il punto di partenza con il ritorno più alto.</p>
+          <div class="contatti-points">
+            <div class="contatti-point">
+              <div class="contatti-point-icon">⚡</div>
+              <div class="contatti-point-text">
+                <strong>Risposta entro 24 ore</strong>
+                <span>Nessun form che finisce nel vuoto. Ti rispondo direttamente io.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🎯</div>
+              <div class="contatti-point-text">
+                <strong>Prima chiamata gratuita</strong>
+                <span>30 minuti di analisi operativa — senza impegno, senza pitch commerciale.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🔒</div>
+              <div class="contatti-point-text">
+                <strong>Riservatezza garantita</strong>
+                <span>Tutto quello che condividi resta confidenziale. NDA disponibile su richiesta.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="contact-form">
+            <form id="contact-form" novalidate>
+              <div class="form-two-col">
+                <div class="form-row">
+                  <label for="nome">Nome *</label>
+                  <input type="text" id="nome" name="nome" placeholder="Mario Rossi" autocomplete="name" />
+                </div>
+                <div class="form-row">
+                  <label for="azienda">Azienda *</label>
+                  <input type="text" id="azienda" name="azienda" placeholder="Azienda Srl" />
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="mario@azienda.it" autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <label for="messaggio">Descrivi il processo o il problema *</label>
+                <textarea id="messaggio" name="messaggio" rows="5" placeholder="Es: Il nostro team commerciale passa 2 ore al giorno ad aggiornare il CRM manualmente. Vorremmo capire se si può automatizzare..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Invia la richiesta →</button>
+            </form>
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">✅</div>
+              <h3>Richiesta ricevuta.</h3>
+              <p>Ti rispondo entro 24 ore per organizzare la prima chiamata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <!-- Sostituisci con il path del tuo logo -->
+          <!-- <img src="LOGO_SJM.png" alt="SJM Systems Engineering" /> -->
+          <span class="footer-logo-text">SJM Systems Engineering</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#come-funziona">Come Funziona</a></li>
+          <li><a href="#case-studies">Casi Studio</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <!-- Aggiungi LinkedIn: <li><a href="https://linkedin.com/in/TUO-PROFILO" target="_blank">LinkedIn</a></li> -->
+        </ul>
+        <p class="footer-copy">© 2024 SJM Systems Engineering. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── Nav sticky ───
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ─── Mobile menu ───
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+    }
+
+    // ─── Scroll reveal ───
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay for grid children
+          const siblings = Array.from(entry.target.parentElement.children);
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.08) + 's';
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ─── FAQ accordion ───
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Chiudi tutti
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      // Apri quello cliccato se era chiuso
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ─── Form validation & submit ───
+    const form = document.getElementById('contact-form');
+    const successBox = document.getElementById('form-success');
+
+    function showError(input, msg) {
+      input.classList.add('error');
+      let err = input.parentElement.querySelector('.form-error-msg');
+      if (!err) {
+        err = document.createElement('span');
+        err.className = 'form-error-msg';
+        input.parentElement.appendChild(err);
+      }
+      err.textContent = msg;
+    }
+
+    function clearError(input) {
+      input.classList.remove('error');
+      const err = input.parentElement.querySelector('.form-error-msg');
+      if (err) err.remove();
+    }
+
+    ['nome', 'azienda', 'email', 'messaggio'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => clearError(el));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      const nome = document.getElementById('nome');
+      const azienda = document.getElementById('azienda');
+      const email = document.getElementById('email');
+      const messaggio = document.getElementById('messaggio');
+
+      if (!nome.value.trim()) { showError(nome, 'Inserisci il tuo nome'); valid = false; }
+      if (!azienda.value.trim()) { showError(azienda, 'Inserisci il nome dell\'azienda'); valid = false; }
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRe.test(email.value.trim())) { showError(email, 'Inserisci un\'email valida'); valid = false; }
+      if (messaggio.value.trim().length < 20) { showError(messaggio, 'Descrivi brevemente il problema (min. 20 caratteri)'); valid = false; }
+
+      if (!valid) return;
+
+      // Submit button feedback
+      const btn = form.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.textContent = 'Invio in corso...';
+
+      // Simula invio (sostituisci con fetch verso il tuo endpoint)
+      setTimeout(() => {
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+      }, 1200);
+
+      // Per integrare con un backend reale, sostituisci il setTimeout con:
+      // fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+      //   .then(r => r.json())
+      //   .then(() => { form.style.display = 'none'; successBox.style.display = 'block'; })
+      //   .catch(() => { btn.disabled = false; btn.textContent = 'Riprova →'; });
+    });
+  </script>
+
