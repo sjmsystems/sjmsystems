@@ -77,14 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "SJM Systems Engineering — Agenti AI per PMI italiane" },
+      {
+        name: "description",
+        content:
+          "SJM Systems Engineering progetta agenti AI custom per PMI italiane: architetture costruite sui tuoi processi reali, integrate negli strumenti che già usi.",
+      },
+      { name: "author", content: "SJM Systems Engineering" },
+      { property: "og:site_name", content: "SJM Systems Engineering" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      {
+        property: "og:title",
+        content: "SJM Systems Engineering — Agenti AI per PMI italiane",
+      },
+      {
+        property: "og:description",
+        content:
+          "Forze lavoro digitali progettate sui tuoi processi reali. Risultati misurabili in 30–60 giorni.",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
