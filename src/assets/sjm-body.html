@@ -527,17 +527,26 @@
       btn.disabled = true;
       btn.textContent = 'Invio in corso...';
 
-      // Simula invio (sostituisci con fetch verso il tuo endpoint)
-      setTimeout(() => {
-        form.style.display = 'none';
-        successBox.style.display = 'block';
-      }, 1200);
-
-      // Per integrare con un backend reale, sostituisci il setTimeout con:
-      // fetch('/api/contact', { method: 'POST', body: new FormData(form) })
-      //   .then(r => r.json())
-      //   .then(() => { form.style.display = 'none'; successBox.style.display = 'block'; })
-      //   .catch(() => { btn.disabled = false; btn.textContent = 'Riprova →'; });
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: nome.value.trim(),
+          azienda: azienda.value.trim(),
+          email: email.value.trim(),
+          messaggio: messaggio.value.trim(),
+        }),
+      })
+        .then(async (r) => {
+          if (!r.ok) throw new Error('send_failed');
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Riprova →';
+          showError(messaggio, 'Invio non riuscito. Riprova tra qualche istante.');
+        });
     });
   </script>
 
