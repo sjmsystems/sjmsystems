@@ -104,11 +104,11 @@
       align-items: center;
       gap: 10px;
     }
-    /* NOTE: Se il logo è su sfondo scuro, applica filter: brightness(0) invert(1) per renderlo bianco */
     .nav-logo img {
-      height: 32px;
+      height: 48px;
       width: auto;
-      /* filter: brightness(0) invert(1); */ /* decommentare se logo su sfondo bianco */
+      display: block;
+      mix-blend-mode: multiply;
     }
     .nav-logo-text {
       font-family: var(--font-display);
@@ -850,7 +850,7 @@
       gap: 10px;
     }
     /* NOTE: Logo nel footer — stessa regola del nav per sfondo scuro */
-    .footer-logo img { height: 24px; width: auto; }
+    .footer-logo img { height: 40px; width: auto; display: block; }
     .footer-logo-text {
       font-family: var(--font-display);
       font-size: 14px;
