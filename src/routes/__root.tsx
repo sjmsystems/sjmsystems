@@ -96,6 +96,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Forze lavoro digitali progettate sui tuoi processi reali. Risultati misurabili in 30–60 giorni.",
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "SJM Systems Engineering — Agenti AI per PMI italiane" },
+      { name: "twitter:title", content: "SJM Systems Engineering — Agenti AI per PMI italiane" },
+      { name: "description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
+      { property: "og:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
+      { name: "twitter:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CeRPrR8NYzaH8LeMUoqcMZpYMMy1/social-images/social-1781036846962-ChatGPT_Image_9_giu_2026,_22_27_18.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CeRPrR8NYzaH8LeMUoqcMZpYMMy1/social-images/social-1781036846962-ChatGPT_Image_9_giu_2026,_22_27_18.webp" },
     ],
     links: [
       {
