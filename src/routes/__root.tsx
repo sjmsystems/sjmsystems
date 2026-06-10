@@ -147,13 +147,37 @@ function RootComponent() {
 
   useEffect(() => {
     const enlargeChatBubble = () => {
-      const container = document.querySelector<HTMLElement>(".relevanceai-chat-bubble-container");
+      const bottomRightElements = [
+        ...document.elementsFromPoint(window.innerWidth - 70, window.innerHeight - 70),
+        ...document.elementsFromPoint(window.innerWidth - 48, window.innerHeight - 48),
+        ...document.elementsFromPoint(window.innerWidth - 96, window.innerHeight - 48),
+      ];
+      const fixedBottomRight = Array.from(document.body.children).find((element) => {
+        if (!(element instanceof HTMLElement)) return false;
+        const style = window.getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        return (
+          style.position === "fixed" &&
+          rect.right > window.innerWidth - 160 &&
+          rect.bottom > window.innerHeight - 160 &&
+          rect.width <= 180 &&
+          rect.height <= 180
+        );
+      }) as HTMLElement | undefined;
+      const pointHost = bottomRightElements
+        .map((element) => (element instanceof HTMLElement ? element.closest("body > div") : null))
+        .find((element): element is HTMLElement => Boolean(element));
+      const container =
+        document.querySelector<HTMLElement>(".relevanceai-chat-bubble-container") ??
+        fixedBottomRight ??
+        pointHost;
       if (container) {
         container.style.setProperty("z-index", "2147483647", "important");
-        container.style.setProperty("transform", "scale(1.85)", "important");
+        container.style.setProperty("transform", "scale(2.15)", "important");
         container.style.setProperty("transform-origin", "bottom right", "important");
-        container.style.setProperty("right", "36px", "important");
-        container.style.setProperty("bottom", "36px", "important");
+        container.style.setProperty("right", "48px", "important");
+        container.style.setProperty("bottom", "48px", "important");
+        container.style.setProperty("position", "fixed", "important");
       }
 
       const button = document.querySelector<HTMLButtonElement>(
