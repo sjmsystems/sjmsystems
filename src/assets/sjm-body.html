@@ -574,23 +574,6 @@
       mobileMenu.classList.remove('open');
     }
 
-    const enlargeExternalChatbot = () => {
-      Array.from(document.body.children).forEach((el) => {
-        if (!(el instanceof HTMLElement) || el.id === 'root') return;
-        const style = getComputedStyle(el);
-        const rect = el.getBoundingClientRect();
-        const isBottomRightFixed = style.position === 'fixed' && rect.right > innerWidth - 170 && rect.bottom > innerHeight - 170 && rect.width <= 160 && rect.height <= 160;
-        if (!isBottomRightFixed) return;
-        el.style.setProperty('z-index', '2147483647', 'important');
-        el.style.setProperty('transform', 'scale(2.35)', 'important');
-        el.style.setProperty('transform-origin', 'bottom right', 'important');
-        el.style.setProperty('right', '54px', 'important');
-        el.style.setProperty('bottom', '54px', 'important');
-      });
-    };
-    enlargeExternalChatbot();
-    setInterval(enlargeExternalChatbot, 350);
-
     // ─── Scroll reveal ───
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
