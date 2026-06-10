@@ -156,8 +156,8 @@ function RelevanceChatWidget() {
     right: "20px",
     bottom: "20px",
     zIndex: 2147483647,
-    width: "64px",
-    height: "64px",
+    width: "96px",
+    height: "96px",
     borderRadius: "999px",
     border: "1px solid rgba(255,255,255,0.9)",
     background: isOpen
