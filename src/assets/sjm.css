@@ -2306,6 +2306,13 @@ body > div:has(button[aria-label*="RelevanceAI"]),
 button[aria-label*="RelevanceAI"] {
   z-index: 2147483647 !important;
 }
+.relevanceai-chat-bubble-container {
+  z-index: 2147483647 !important;
+  transform: scale(1.85) !important;
+  transform-origin: bottom right !important;
+  right: 36px !important;
+  bottom: 36px !important;
+}
 iframe[src*="relevanceai"][src*="bubble"],
 iframe[title*="hat bubble"],
 body > div:has(button[aria-label*="RelevanceAI"]),
