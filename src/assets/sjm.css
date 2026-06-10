@@ -2297,28 +2297,75 @@ section#hero h1.hero-title span.highlight-italic {
 
 
 
-/* Relevance AI chat bubble — sempre davanti */
-[id^="relevanceai"],
-[class*="relevanceai"],
-iframe[src*="relevanceai"],
-iframe[title*="elevance"],
-iframe[title*="hat bubble"],
-body > div:has(button[aria-label*="RelevanceAI"]),
-button[aria-label*="RelevanceAI"] {
-  z-index: 2147483647 !important;
+/* Chatbot SJM — widget stabile, senza script esterno fragile */
+.sjm-chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
 }
 
-/* Riduci dimensione del solo launcher su mobile (no transform: rompe il click) */
+.sjm-chat-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 92px;
+  width: min(380px, calc(100vw - 40px));
+  height: min(560px, calc(100vh - 124px));
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 15px;
+  background: #FFFFFF;
+  box-shadow: 0 24px 80px rgba(3,7,18,0.35);
+}
+
+.sjm-chat-panel iframe {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  border: 0;
+}
+
+.sjm-chat-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background: #3ECFB2;
+  color: #050914;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 500;
+  box-shadow: 0 18px 46px rgba(3,7,18,0.28);
+}
+
+.sjm-chat-toggle span {
+  transform: translateY(-2px);
+}
+
 @media (max-width: 640px) {
-  button[aria-label*="RelevanceAI"] {
-    width: 52px !important;
-    height: 52px !important;
-    min-width: 52px !important;
-    min-height: 52px !important;
+  .sjm-chat-widget {
+    right: 16px;
+    bottom: 14px;
   }
-  button[aria-label*="RelevanceAI"] svg,
-  button[aria-label*="RelevanceAI"] img {
-    width: 26px !important;
-    height: 26px !important;
+  .sjm-chat-toggle {
+    width: 52px;
+    height: 52px;
+    font-size: 36px;
+  }
+  .sjm-chat-panel {
+    top: 76px !important;
+    right: 12px !important;
+    bottom: 76px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
   }
 }
