@@ -1853,3 +1853,29 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
   /* 5) Footer logo più grande e visibile */
   .footer-logo img { height: 48px !important; }
 }
+
+/* ═══════════════════════════════════════════════════
+   MOBILE HEADER CONTRAST FIX — light readable bar
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #main-nav,
+  #main-nav.hero-readable-nav,
+  #main-nav.hero-readable-nav.scrolled,
+  #main-nav:not(.scrolled) {
+    background: rgba(255,255,255,0.96) !important;
+    border-bottom: 1px solid rgba(15,20,36,0.12) !important;
+    box-shadow: 0 8px 24px rgba(15,20,36,0.10) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    background: rgba(15,20,36,0.06) !important;
+    border: 1px solid rgba(15,20,36,0.18) !important;
+  }
+
+  #main-nav .nav-hamburger span,
+  #main-nav.hero-readable-nav .nav-hamburger span {
+    background: #0F1424 !important;
+  }
+}
