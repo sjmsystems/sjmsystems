@@ -1285,34 +1285,42 @@
     line-height: 1.1 !important;
   }
 
-  /* Hero stats: single horizontal scroll row */
+  /* Hero stats: griglia 3 colonne compatta, niente scroll orizzontale */
   .hero-stats {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    gap: 16px !important;
-    padding: 8px 4px 12px;
-    margin: 0 -4px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    flex-direction: unset !important;
+    flex-wrap: unset !important;
+    overflow: visible !important;
+    gap: 8px !important;
+    padding: 4px 0 0 !important;
+    margin: 0 !important;
+    width: 100%;
   }
-  .hero-stats::-webkit-scrollbar { display: none; }
   .hero-stat {
-    flex: 0 0 auto;
-    min-width: 130px;
-    scroll-snap-align: start;
-    text-align: left !important;
+    flex: unset !important;
+    min-width: 0 !important;
     width: auto !important;
-    padding: 12px 14px;
-    border: 1px solid rgba(255,255,255,0.08);
+    text-align: center !important;
+    padding: 12px 8px !important;
+    border: 1px solid rgba(255,255,255,0.10);
     border-radius: 12px;
-    background: rgba(255,255,255,0.02);
+    background: rgba(255,255,255,0.03);
   }
   .hero-stat-divider { display: none !important; }
-  .hero-stat-num { font-size: 22px !important; }
-  .hero-stat-label { font-size: 11px !important; }
+  .hero-stat-num {
+    font-size: clamp(20px, 6vw, 26px) !important;
+    line-height: 1.1 !important;
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin-top: 6px;
+    display: block;
+    white-space: normal !important;
+  }
+
 
   /* Come Funziona: accordion verticale */
   .steps-grid {
