@@ -2306,6 +2306,6 @@ iframe[title*="elevance"] {
 }
 iframe[src*="relevanceai"][src*="bubble"],
 iframe[title*="hat bubble"] {
-  width: 88px !important;
-  height: 88px !important;
+  width: 120px !important;
+  height: 120px !important;
 }
