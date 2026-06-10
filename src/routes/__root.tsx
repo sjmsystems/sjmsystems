@@ -101,8 +101,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
       { property: "og:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
       { name: "twitter:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CeRPrR8NYzaH8LeMUoqcMZpYMMy1/social-images/social-1781036846962-ChatGPT_Image_9_giu_2026,_22_27_18.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/CeRPrR8NYzaH8LeMUoqcMZpYMMy1/social-images/social-1781036846962-ChatGPT_Image_9_giu_2026,_22_27_18.webp" },
+      { property: "og:image", content: "https://sjmsystems.it/__l5e/assets-v1/2b2ee7e9-3929-47f6-bded-0ae67e574c37/social-card.png" },
+      { property: "og:image:width", content: "1248" },
+      { property: "og:image:height", content: "1248" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:alt", content: "SJM Systems Engineering — Forze lavoro digitali, progettate sui vostri processi" },
+      { name: "twitter:image", content: "https://sjmsystems.it/__l5e/assets-v1/2b2ee7e9-3929-47f6-bded-0ae67e574c37/social-card.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
