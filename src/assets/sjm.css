@@ -1469,9 +1469,9 @@
 nav,
 nav.scrolled,
 nav:not(.scrolled) {
-  background: linear-gradient(180deg, rgba(10,12,18,0.94) 0%, rgba(10,12,18,0.72) 64%, rgba(10,12,18,0) 100%) !important;
-  border-bottom: 0 !important;
-  backdrop-filter: blur(3px);
+  background: rgba(10,12,18,0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(14px);
 }
 nav .nav-logo img {
   mix-blend-mode: normal !important;
@@ -1479,9 +1479,12 @@ nav .nav-logo img {
 }
 nav .nav-logo-text,
 nav .nav-links a {
-  color: #F4F8FF !important;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.85);
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.95);
 }
+nav .nav-links a { font-size: 15px !important; }
 nav .nav-links a:hover {
   color: #FFFFFF !important;
 }
