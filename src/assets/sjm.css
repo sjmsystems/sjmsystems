@@ -2204,3 +2204,91 @@ section#hero h1.hero-title span.highlight-italic {
     margin: 0 auto 24px;
   }
 }
+
+/* ─── Phone stage with floating log cards (desktop only) ─── */
+.phone-stage {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.phone-stage .phone-mockup {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(15,20,36,0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(126,244,229,0.18);
+  border-radius: 14px;
+  box-shadow: 0 20px 40px -18px rgba(15,20,36,0.55);
+  color: #F7F8FC;
+  min-width: 170px;
+  z-index: 3;
+  animation: float-card 6s ease-in-out infinite;
+}
+.fc-icon {
+  width: 32px; height: 32px;
+  border-radius: 10px;
+  background: rgba(126,244,229,0.12);
+  color: #7EF4E5;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.fc-icon-accent {
+  background: linear-gradient(135deg, #7EF4E5, #5fd9c8);
+  color: #0F1424;
+}
+.fc-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.fc-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #F7F8FC;
+  white-space: nowrap;
+}
+.fc-title-accent { color: #7EF4E5; font-weight: 700; }
+.fc-meta {
+  font-size: 10px;
+  color: rgba(247,248,252,0.55);
+  white-space: nowrap;
+}
+
+/* Positions (desktop) */
+.fc-tl  { top: 8%;  left: -8%;  animation-delay: 0s;   }
+.fc-cl  { top: 46%; left: -18%; animation-delay: 1.2s; }
+.fc-br  { top: 38%; right: -14%; animation-delay: 2.4s; }
+.fc-kpi { bottom: 6%; right: -6%;
+  background: linear-gradient(135deg, rgba(126,244,229,0.22), rgba(126,244,229,0.06));
+  border-color: rgba(126,244,229,0.45);
+  animation-delay: 3.6s;
+}
+
+@keyframes float-card {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Tablet: show only 2 cards */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .fc-cl, .fc-br { display: none; }
+  .fc-tl  { left: -4%; }
+  .fc-kpi { right: -2%; }
+}
+
+/* Mobile: hide floating cards, keep clean phone */
+@media (max-width: 767px) {
+  .phone-stage { min-height: 0; }
+  .float-card { display: none; }
+}
