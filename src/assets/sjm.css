@@ -1768,3 +1768,88 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
     scroll-snap-stop: normal;
   }
 }
+
+/* ═══════════════════════════════════════════════════
+   MOBILE FIXES — 2026-06-10
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* 1) Nav: nascondi "SJM Systems Engineering" su mobile, mantieni logo grande, hamburger evidente */
+  #main-nav .nav-logo-text,
+  #main-nav.hero-readable-nav .nav-logo-text { display: none !important; }
+  #main-nav .nav-logo img { height: 44px !important; }
+
+  /* Hamburger: aggiungi sfondo pill così sembra un bottone, non un "+" */
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    width: 44px !important;
+    height: 44px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+    border-radius: 10px !important;
+    gap: 5px !important;
+  }
+  #main-nav .nav-hamburger span,
+  #main-nav.hero-readable-nav .nav-hamburger span {
+    width: 22px !important;
+    height: 2.5px !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+    border-radius: 2px !important;
+  }
+
+  /* 2) Step numbers: tutti con la gradient attiva (non solo il 01) */
+  .step-num,
+  .step-item .step-num {
+    background: linear-gradient(135deg, #4A7FA5, #7B5EA7) !important;
+    border-color: transparent !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  /* 3) Dashboard operativa: label + value su due righe per evitare squish */
+  .about-metric {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    padding: 14px 0 !important;
+  }
+  .about-metric-label {
+    font-size: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+  }
+  .about-metric-value {
+    font-size: 15px !important;
+    text-align: left !important;
+    line-height: 1.35 !important;
+    word-break: break-word;
+  }
+
+  /* 4) FAQ: testi più compatti + bottone "Mostra tutte" leggibile */
+  .faq-item .faq-question {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+  .faq-item .faq-answer {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  .faq-toggle-all {
+    background: #4A7FA5 !important;
+    border: 1px solid #4A7FA5 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 14px 24px !important;
+    box-shadow: 0 6px 18px rgba(74,127,165,0.28);
+  }
+  .faq-toggle-all:hover {
+    background: #3d6c8e !important;
+    border-color: #3d6c8e !important;
+  }
+
+  /* 5) Footer logo più grande e visibile */
+  .footer-logo img { height: 48px !important; }
+}
