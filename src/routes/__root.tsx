@@ -147,6 +147,15 @@ function RootComponent() {
 
   useEffect(() => {
     const enlargeChatBubble = () => {
+      const container = document.querySelector<HTMLElement>(".relevanceai-chat-bubble-container");
+      if (container) {
+        container.style.setProperty("z-index", "2147483647", "important");
+        container.style.setProperty("transform", "scale(1.85)", "important");
+        container.style.setProperty("transform-origin", "bottom right", "important");
+        container.style.setProperty("right", "36px", "important");
+        container.style.setProperty("bottom", "36px", "important");
+      }
+
       const button = document.querySelector<HTMLButtonElement>(
         'button[aria-label*="RelevanceAI"], button[aria-label*="Chat Bubble"], button[aria-label*="chat bubble"]',
       );
