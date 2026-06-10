@@ -148,6 +148,8 @@ function RelevanceChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const chatUrl =
     "https://app.relevanceai.com/agents/d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713/embed-chat?hide_tool_steps=true&hide_file_uploads=false&hide_conversation_list=false&bubble_style=agent&primary_color=%233ECFB2&bubble_icon=pd%2Fchat&input_placeholder_text=Type+your+message...&hide_logo=true&hide_description=false";
+  const agentImageUrl =
+    "https://userdata-d7b62b.stack.tryrelevance.com/files/public/c32d1d9d-99cd-45b2-915d-2e468808d18a/agent-emoji-ChatGPT%20Image%2010%20giu%202026%2C%2017_51_02.png/ad172d8f-7fc1-4d2e-8f33-5bdcb7a690c8.png";
 
   const launcherStyle: CSSProperties = {
     position: "fixed",
@@ -158,7 +160,7 @@ function RelevanceChatWidget() {
     height: "64px",
     borderRadius: "999px",
     border: "1px solid rgba(255,255,255,0.9)",
-    background: "var(--color-verdino, #3ECFB2)",
+    background: isOpen ? "var(--color-verdino, #3ECFB2)" : "#fff",
     color: "#061014",
     boxShadow: "0 18px 46px rgba(3,7,18,0.35)",
     display: "flex",
@@ -206,16 +208,12 @@ function RelevanceChatWidget() {
             ×
           </span>
         ) : (
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none">
-            <path
-              d="M5.5 18.5h-.8A2.7 2.7 0 0 1 2 15.8V6.7A2.7 2.7 0 0 1 4.7 4h14.6A2.7 2.7 0 0 1 22 6.7v9.1a2.7 2.7 0 0 1-2.7 2.7h-7.2l-4.5 3.1a1.3 1.3 0 0 1-2.1-1.1v-2Z"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path d="M7.5 10h9M7.5 14h5.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          </svg>
+          <img
+            src={agentImageUrl}
+            alt="Seb"
+            loading="eager"
+            style={{ width: "100%", height: "100%", borderRadius: "999px", objectFit: "cover", display: "block" }}
+          />
         )}
       </button>
     </>
