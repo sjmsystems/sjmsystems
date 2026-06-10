@@ -338,7 +338,7 @@
             <p>No. Il sistema viene consegnato già configurato e operativo. Formiamo il referente che lo userà quotidianamente — di solito bastano 2-3 ore. Per le aziende che preferiscono non gestire niente internamente, offriamo contratti di consulenza continuativa.</p>
           </div>
         </div>
-        <div class="faq-item reveal">
+        <div class="faq-item faq-extra reveal">
           <button class="faq-question" onclick="toggleFaq(this)">
             Come si misura il ritorno dell'investimento?
             <span class="faq-icon">+</span>
@@ -347,7 +347,7 @@
             <p>Prima di iniziare, definiamo insieme la metrica di risultato: ore di lavoro manuale eliminate, tempo di risposta ridotto, pipeline aggiornata senza intervento manuale, ecc. Il ROI si misura su quelle metriche — non su numeri teorici.</p>
           </div>
         </div>
-        <div class="faq-item reveal">
+        <div class="faq-item faq-extra reveal">
           <button class="faq-question" onclick="toggleFaq(this)">
             Lavorate solo con certi settori?
             <span class="faq-icon">+</span>
@@ -356,7 +356,7 @@
             <p>I verticali in cui lavoriamo con priorità oggi: broker assicurativi e consulenti previdenziali, società di servizi con alto volume di supporto clienti, cliniche private e poliambulatori, studi professionali strutturati, agenzie immobiliari, palestre e centri fitness con più sedi. Se la tua azienda ha processi ripetitivi e referenti saturi, la conversazione vale.</p>
           </div>
         </div>
-        <div class="faq-item reveal">
+        <div class="faq-item faq-extra reveal">
           <button class="faq-question" onclick="toggleFaq(this)">
             Come inizia il processo? C'è un impegno minimo?
             <span class="faq-icon">+</span>
@@ -366,6 +366,7 @@
           </div>
         </div>
       </div>
+      <button type="button" class="faq-toggle-all" id="faq-toggle-all" onclick="toggleFaqAll(this)">Mostra tutte le domande</button>
     </div>
   </section>
 
@@ -458,6 +459,9 @@
     </div>
   </footer>
 
+  <!-- Fixed mobile CTA -->
+  <a href="#contatti" class="mobile-cta" id="mobile-cta">Parliamo del tuo progetto →</a>
+
   <script>
     // ─── Nav sticky ───
     const nav = document.getElementById('main-nav');
@@ -500,6 +504,35 @@
       // Apri quello cliccato se era chiuso
       if (!isOpen) item.classList.add('open');
     }
+
+    // ─── FAQ "Mostra tutte" (mobile) ───
+    function toggleFaqAll(btn) {
+      const expanded = btn.classList.toggle('expanded');
+      document.querySelectorAll('.faq-extra').forEach(el => el.classList.toggle('show', expanded));
+      btn.textContent = expanded ? 'Mostra meno domande' : 'Mostra tutte le domande';
+    }
+
+    // ─── Steps accordion (mobile only) ───
+    document.querySelectorAll('.step-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          item.classList.toggle('open');
+        }
+      });
+    });
+
+    // ─── Hide mobile CTA when in Contatti ───
+    const mobileCta = document.getElementById('mobile-cta');
+    const contattiSection = document.getElementById('contatti');
+    if (mobileCta && contattiSection && 'IntersectionObserver' in window) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          mobileCta.classList.toggle('hidden', entry.isIntersecting);
+        });
+      }, { threshold: 0.15 });
+      ctaObserver.observe(contattiSection);
+    }
+
 
     // ─── Form validation & submit ───
     const form = document.getElementById('contact-form');
