@@ -1511,6 +1511,31 @@ nav .nav-links a:hover {
   filter: none !important;
 }
 
+#main-nav.hero-readable-nav .nav-hamburger span {
+  background: #FFFFFF !important;
+  opacity: 1 !important;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.65);
+}
+
+@media (max-width: 768px) {
+  #main-nav.hero-readable-nav .mobile-menu {
+    background: #FFFFFF !important;
+    border-top: 1px solid rgba(15,20,36,0.10) !important;
+    box-shadow: 0 18px 34px rgba(15,20,36,0.14);
+  }
+
+  #main-nav.hero-readable-nav .mobile-menu a {
+    color: #27324A !important;
+    -webkit-text-fill-color: #27324A !important;
+    opacity: 1 !important;
+  }
+
+  #main-nav.hero-readable-nav .mobile-menu a:last-child {
+    color: #4A7FA5 !important;
+    -webkit-text-fill-color: #4A7FA5 !important;
+  }
+}
+
 /* Founder credentials block */
 .founder-credentials {
   font-family: 'Inter', system-ui, sans-serif;
