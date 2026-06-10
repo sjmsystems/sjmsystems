@@ -21,10 +21,10 @@ export const Route = createFileRoute("/")({
           "Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://sjmsystems.lovable.app/" },
+      { property: "og:url", content: "https://sjmsystems.it/" },
     ],
     links: [
-      { rel: "canonical", href: "https://sjmsystems.lovable.app/" },
+      { rel: "canonical", href: "https://sjmsystems.it/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
@@ -41,14 +41,14 @@ export const Route = createFileRoute("/")({
             {
               "@type": "Organization",
               name: "SJM Systems Engineering",
-              url: "https://sjmsystems.lovable.app/",
+              url: "https://sjmsystems.it/",
               description:
                 "Progettiamo agenti AI custom per PMI italiane, costruiti sui processi reali del cliente e integrati negli strumenti già in uso.",
             },
             {
               "@type": "WebSite",
               name: "SJM Systems Engineering",
-              url: "https://sjmsystems.lovable.app/",
+              url: "https://sjmsystems.it/",
             },
           ],
         }),
