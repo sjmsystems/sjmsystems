@@ -1502,3 +1502,36 @@ nav .nav-links a:hover {
   font-weight: 800 !important;
   filter: none !important;
 }
+
+/* Founder credentials block */
+.founder-credentials {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #6B7A99 !important;
+  border-left: 1px solid #4A7FA5;
+  padding: 4px 0 4px 12px;
+  margin: 14px 0 18px;
+  max-width: 640px;
+}
+.founder-credentials strong {
+  color: #8A99B8;
+  font-weight: 600;
+}
+.cred-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(74,127,165,0.35);
+  color: #C9D1E0;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.cred-google-badge img {
+  display: block;
+  border-radius: 2px;
+}
