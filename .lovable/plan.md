@@ -1,66 +1,61 @@
 ## Obiettivo
 
-Nella sezione "About / Founder" la sfera `tech-orb.png` (in alto sopra la card "SJM · Dashboard operativa") è un'immagine quadrata fluttuante che stona con il resto della pagina, dove l'elemento dominante sono i video verticali (demo, process). Va sostituita con un mockup **verticale** che riprenda lo stesso linguaggio visivo dei video.
+Su desktop, accanto al telefono nella sezione About c'è molto spazio bianco. Lo riempiamo con **log card fluttuanti** che "orbitano" attorno al telefono raccontando cosa sta facendo l'agente in background.
 
-## Proposta
+## Soluzione
 
-Sostituire `<img src="/tech/tech-orb.png">` con un **mockup smartphone verticale (9:16)** che mostra un agente AI in azione — coerente per proporzioni, ritmo e palette con `demo-video` e `process-video`.
+Aggiungere 4 piccole card (glass / dark) posizionate absolute attorno al `.phone-mockup`, dentro un wrapper `.phone-stage` che diventa l'area visiva della colonna destra. Ogni card ha un'icona, una label e un timestamp/stato. Animazione fluttuante leggera (float Y di pochi px) sfalsata.
 
-### Cosa contiene il mockup
-
-Un device frame (cornice telefono arrotondata, notch sottile, ombra morbida) che incornicia una conversazione/log agente animata in loop puro CSS:
+### Card proposte
 
 ```text
-┌─────────────────┐
-│   • • •  9:41   │  ← status bar
-├─────────────────┤
-│  Agente SJM     │
-│  ● online       │
-│                 │
-│  ┌───────────┐  │
-│  │ Nuova     │  │  ← bubble in entrata (utente)
-│  │ richiesta │  │
-│  └───────────┘  │
-│                 │
-│      ┌────────┐ │
-│      │ Letto, │ │  ← bubble agente (typing → testo)
-│      │ smisto │ │
-│      │ a HR ✓ │ │
-│      └────────┘ │
-│                 │
-│  ━━━━━━━━━━━━   │  ← progress bar pratiche
-│  12 / 47 oggi   │
-└─────────────────┘
+            ┌───────────────────┐
+            │ ✉  Email smistata │       ← top-left, alta
+            │    HR · 2s fa     │
+            └───────────────────┘
+                       ┌──────────┐
+                       │ [PHONE]  │     ← centro
+                       │          │
+   ┌──────────────────┐│          │
+   │ ⚡ Ticket creato ││          │┌──────────────────┐
+   │   CRM · 14s fa   ││          ││ ✓ Report inviato │
+   └──────────────────┘│          ││   Sales · 31s fa │
+                       └──────────┘└──────────────────┘
+                ┌──────────────────────┐
+                │ ⏱ -42 min/giorno     │  ← bottom, accent
+                │   Operations         │
+                └──────────────────────┘
 ```
 
-Animazione: bubble che scorrono dall'alto verso l'alto in loop lento (~12s), indicatore "typing" a 3 puntini, progress bar che si riempie. Tutto **CSS keyframes** — nessun video reale, nessun JS aggiuntivo.
+4 card totali:
+1. **Email smistata** → HR · ora
+2. **Ticket creato** → CRM · 14s fa
+3. **Report inviato** → Sales · 31s fa
+4. **-42 min/giorno** (KPI accent verde-acqua) → Operations
 
-### Layout e posizionamento
+### Layout
 
-- Stesso slot attuale (sopra `about-card`), ma il mockup diventa l'elemento di apertura visiva della colonna destra.
-- Aspect-ratio fisso 9:19.5 (proporzioni telefono moderno), larghezza max ~240px desktop, ~200px mobile, allineato a destra come gli altri tech-float.
-- Cornice: bordo `1px solid rgba(126,244,229,0.18)`, `border-radius: 32px`, ombra morbida `0 30px 60px -20px rgba(15,20,36,0.45)`, sfondo gradient `#0F1424 → #1a2340` per richiamare i video scuri.
-- Accent color `#7EF4E5` per gli stati attivi (puntino online, progress bar, check) — stesso verde-acqua già usato in hero highlight.
-- Sotto al mockup resta invariata la `about-card` con le metriche.
+- `.phone-stage` diventa contenitore `position: relative`, min-height pari all'altezza del telefono + margini.
+- `.phone-mockup` centrato dentro lo stage.
+- 4 `.float-card` con `position: absolute` su angoli/lati, z-index sopra/sotto il telefono per profondità.
+- Tutte con `backdrop-filter: blur(12px)`, sfondo `rgba(15,20,36,0.72)`, bordo `1px solid rgba(126,244,229,0.18)`, ombra morbida.
+- La card KPI usa background `linear-gradient(135deg, rgba(126,244,229,0.18), rgba(126,244,229,0.04))` per spiccare.
+- Micro-animazione `@keyframes float-card` (translateY ±4px, 6s ease-in-out, delay sfalsato per card).
+- Sotto: la `.about-card` dashboard resta com'è, full-width della colonna.
 
 ### Responsive
 
-- Desktop: mockup affianca la card a destra, larghezza 240px.
-- Mobile (<768px): mockup centrato sopra la card, larghezza 200px, margine verticale 24px.
+- **Desktop (≥1024px)**: card sparse in absolute attorno al telefono come da schema.
+- **Tablet (768-1023px)**: solo 2 card visibili (top-left + bottom-right), le altre `display: none`.
+- **Mobile (<768px)**: tutte le `.float-card` nascoste, resta il telefono centrato come ora.
 
-### Dettagli tecnici
+### File toccati
 
-File toccati:
-- `src/assets/sjm-body.html` — sostituire la riga 316 con il markup del mockup (`<div class="phone-mockup">…</div>` con status bar, header agente, 3 bubble, progress bar).
-- `src/assets/sjm.css` — aggiungere il blocco `.phone-mockup` + keyframes (`@keyframes bubble-rise`, `@keyframes typing-dot`, `@keyframes progress-fill`). Rimuovere/sovrascrivere `.tf-about` non più necessario.
-- Nessun nuovo asset binario, nessuna dipendenza aggiuntiva.
+- `src/assets/sjm-body.html` — wrap del `.phone-mockup` in un `.phone-stage` + 4 `<div class="float-card …">` siblings.
+- `src/assets/sjm.css` — aggiungere `.phone-stage`, `.float-card` (varianti `.fc-tl`, `.fc-cl`, `.fc-br`, `.fc-bl-kpi`), keyframes `float-card`, breakpoint responsive.
 
-### Cosa NON cambia
+Nessun nuovo asset, nessun JS.
 
-- Testo founder, credenziali, lista bullet, dashboard card metriche.
-- Sezioni hero, demo, process, footer.
-- Palette globale, font, header.
+## Verifica
 
-## Verifica finale
-
-Dopo l'implementazione: screenshot desktop (1366) e mobile (390) della sezione About per confermare allineamento, leggibilità e coerenza con i video verticali sopra.
+Screenshot desktop 1366 e mobile 390 della sezione About per confermare bilanciamento e che le card non sovrappongano testo.
