@@ -576,6 +576,23 @@
       pvObserver.observe(processVideo);
     }
 
+    // ─── Demo video autoplay on scroll into view ───
+    const demoVideo = document.getElementById('demoVideo');
+    if (demoVideo && 'IntersectionObserver' in window) {
+      const dvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            demoVideo.play().catch(() => {});
+          } else {
+            demoVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      dvObserver.observe(demoVideo);
+    }
+
+
+
 
 
 
