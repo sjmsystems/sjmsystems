@@ -160,7 +160,9 @@ function RelevanceChatWidget() {
     height: "64px",
     borderRadius: "999px",
     border: "1px solid rgba(255,255,255,0.9)",
-    background: isOpen ? "var(--color-verdino, #3ECFB2)" : "#fff",
+    background: isOpen
+      ? "var(--color-verdino, #3ECFB2)"
+      : `#fff url("${agentImageUrl}") center / cover no-repeat`,
     color: "#061014",
     boxShadow: "0 18px 46px rgba(3,7,18,0.35)",
     display: "flex",
@@ -207,14 +209,7 @@ function RelevanceChatWidget() {
           <span aria-hidden="true" style={{ fontSize: "34px", lineHeight: 1, transform: "translateY(-1px)" }}>
             ×
           </span>
-        ) : (
-          <img
-            src={agentImageUrl}
-            alt="Seb"
-            loading="eager"
-            style={{ width: "100%", height: "100%", borderRadius: "999px", objectFit: "cover", display: "block" }}
-          />
-        )}
+        ) : null}
       </button>
     </>
   );
