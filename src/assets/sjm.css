@@ -613,7 +613,8 @@
     .about-metric {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      gap: 16px;
       padding: 12px 0;
       border-bottom: 1px solid var(--color-border);
     }
@@ -621,12 +622,16 @@
     .about-metric-label {
       font-size: 13px;
       color: var(--color-muted);
+      flex: 0 0 auto;
     }
     .about-metric-value {
       font-family: var(--font-display);
       font-size: 14px;
       font-weight: 600;
       color: var(--color-white);
+      text-align: right;
+      flex: 1 1 auto;
+      min-width: 0;
     }
     .about-metric-value.positive { color: var(--color-verdino); }
     .about-text { font-size: 16px; color: var(--color-muted); line-height: 1.75; margin-bottom: 20px; }
