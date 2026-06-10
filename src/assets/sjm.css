@@ -221,10 +221,13 @@
     .hero-bg-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(10, 12, 18, 0.75);
+      background:
+        linear-gradient(90deg, rgba(10,12,18,0.92) 0%, rgba(10,12,18,0.78) 55%, rgba(10,12,18,0.55) 100%),
+        rgba(10, 12, 18, 0.45);
       z-index: 1;
       pointer-events: none;
     }
+
     #hero > .container { position: relative; z-index: 2; }
     #hero .corner-plus { z-index: 2; }
     .hero-content {
