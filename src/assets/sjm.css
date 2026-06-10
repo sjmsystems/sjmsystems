@@ -1148,3 +1148,61 @@
       .hero-stats { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
       .hero-stat { text-align: center; width: 100%; }
     }
+
+/* ── Founder block ── */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 32px;
+}
+.founder-col { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.founder-photo-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.4),
+    0 0 24px rgba(74, 127, 165, 0.45),
+    0 0 60px rgba(74, 127, 165, 0.35);
+  transition: box-shadow 0.4s ease;
+}
+.founder-photo-wrap:hover {
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.6),
+    0 0 32px rgba(74, 127, 165, 0.6),
+    0 0 80px rgba(74, 127, 165, 0.5);
+}
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+.founder-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  letter-spacing: -0.01em;
+}
+.founder-role {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: #3ECFB2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .founder-col { max-width: 260px; margin: 0 auto; }
+  .founder-text { text-align: left; }
+}
