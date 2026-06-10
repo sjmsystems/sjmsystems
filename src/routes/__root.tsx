@@ -150,12 +150,14 @@ function RelevanceChatWidget() {
     "https://app.relevanceai.com/agents/d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713/embed-chat?hide_tool_steps=false&hide_file_uploads=false&hide_conversation_list=false&primary_color=%233ECFB2&input_placeholder_text=Type+your+message...&hide_logo=false&hide_description=false";
   const panelStyle = {
     position: "fixed" as const,
-    top: "76px",
-    left: "12px",
-    width: "calc(100vw - 24px)",
-    height: "calc(100dvh - 152px)",
+    inset: "76px 12px 76px 12px",
+    width: "auto",
+    height: "auto",
     zIndex: 2147483647,
     display: "block",
+    opacity: 1,
+    visibility: "visible" as const,
+    pointerEvents: "auto" as const,
     overflow: "hidden",
     borderRadius: "15px",
     border: "1px solid rgba(255,255,255,0.85)",
