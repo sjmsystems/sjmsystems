@@ -1511,10 +1511,37 @@ nav .nav-links a:hover {
   filter: none !important;
 }
 
+#main-nav .nav-hamburger,
+#main-nav.hero-readable-nav .nav-hamburger {
+  background: transparent !important;
+  border: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  display: none;
+}
+@media (max-width: 768px) {
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+#main-nav .nav-hamburger span,
 #main-nav.hero-readable-nav .nav-hamburger span {
+  display: block !important;
+  width: 24px !important;
+  height: 2.5px !important;
   background: #FFFFFF !important;
   opacity: 1 !important;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.65);
+  border-radius: 2px !important;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.75) !important;
 }
 
 @media (max-width: 768px) {
