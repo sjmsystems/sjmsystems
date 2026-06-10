@@ -1879,3 +1879,12 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
     background: #0F1424 !important;
   }
 }
+
+/* ─── Demo section: dark background, light text override ─── */
+#demo .section-title,
+#demo .section-title .highlight-italic {
+  color: #F7F8FC !important;
+}
+#demo .section-sub {
+  color: rgba(247,248,252,0.72) !important;
+}
