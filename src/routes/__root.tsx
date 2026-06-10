@@ -151,10 +151,11 @@ function RelevanceChatWidget() {
   const panelStyle = {
     position: "fixed" as const,
     top: "76px",
-    right: "12px",
-    bottom: "76px",
     left: "12px",
-    zIndex: 2147483646,
+    width: "calc(100vw - 24px)",
+    height: "calc(100dvh - 152px)",
+    zIndex: 2147483647,
+    display: "block",
     overflow: "hidden",
     borderRadius: "15px",
     border: "1px solid rgba(255,255,255,0.85)",
@@ -178,6 +179,7 @@ function RelevanceChatWidget() {
       <button
         type="button"
         className="sjm-chat-toggle"
+        style={{ position: "relative", zIndex: 2147483647 }}
         aria-label={isOpen ? "Chiudi chat" : "Apri chat"}
         aria-expanded={isOpen}
         onClick={() => setIsOpen((open) => !open)}
