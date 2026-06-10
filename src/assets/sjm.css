@@ -1314,9 +1314,13 @@
   }
   .hero-stat-divider { display: none !important; }
   .hero-stat-num {
-    font-size: clamp(20px, 6vw, 26px) !important;
+    font-size: clamp(18px, 5.2vw, 24px) !important;
     line-height: 1.1 !important;
     display: block;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
   }
   .hero-stat-label {
     font-size: 11px !important;
