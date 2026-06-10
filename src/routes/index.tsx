@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Agenti AI custom per PMI italiane. Eliminiamo colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 30–60 giorni.",
+          "Agenti AI custom per PMI italiane. Eliminiamo colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 20–40 giorni.",
       },
       {
         property: "og:title",
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 30–60 giorni.",
+          "Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://sjmsystems.lovable.app/" },
