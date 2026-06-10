@@ -2357,9 +2357,11 @@ section#hero h1.hero-title span.highlight-italic {
     font-size: 36px;
   }
   .sjm-chat-panel {
-    right: 10px;
+    left: 50%;
+    right: auto;
     bottom: 76px;
-    width: calc(100vw - 20px);
+    width: min(340px, calc(100vw - 24px));
     height: min(620px, calc(100vh - 96px));
+    transform: translateX(-50%);
   }
 }
