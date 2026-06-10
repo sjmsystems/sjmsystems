@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Forze lavoro digitali progettate sui tuoi processi reali. Risultati misurabili in 30–60 giorni.",
+          "Forze lavoro digitali progettate sui tuoi processi reali. Risultati misurabili in 20–40 giorni.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "SJM Systems Engineering — Agenti AI per PMI italiane" },
