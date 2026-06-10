@@ -2307,3 +2307,14 @@ body > div:has(button[aria-label*="RelevanceAI"]),
 button[aria-label*="RelevanceAI"] {
   z-index: 2147483647 !important;
 }
+
+/* Riduci dimensione bubble su mobile */
+@media (max-width: 640px) {
+  iframe[src*="relevanceai"][src*="bubble"],
+  iframe[title*="hat bubble"],
+  button[aria-label*="RelevanceAI"],
+  body > div:has(button[aria-label*="RelevanceAI"]) {
+    transform: scale(0.65) !important;
+    transform-origin: bottom right !important;
+  }
+}
