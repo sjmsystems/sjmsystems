@@ -21,10 +21,10 @@ export const Route = createFileRoute("/")({
           "Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://sjmsystems.lovable.app/" },
+      { property: "og:url", content: "https://sjmsystems.it/" },
     ],
     links: [
-      { rel: "canonical", href: "https://sjmsystems.lovable.app/" },
+      { rel: "canonical", href: "https://sjmsystems.it/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
