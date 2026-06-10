@@ -145,15 +145,6 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
-  const toggleChatbot = () => {
-    window.dispatchEvent(
-      new MessageEvent("message", {
-        origin: "https://app.relevanceai.com",
-        data: { name: "relevanceai-chat-bubble", type: "toggle" },
-      }),
-    );
-  };
-
   useEffect(() => {
     const enlargeChatBubble = () => {
       const bottomRightElements = [
@@ -231,16 +222,6 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
-      <button
-        type="button"
-        className="sjm-chat-launcher"
-        aria-label="Apri chatbot"
-        onClick={toggleChatbot}
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M12 3.75c-4.56 0-8.25 3.22-8.25 7.2 0 2.18 1.1 4.13 2.84 5.45l-.48 2.74a.75.75 0 0 0 1.03.8l3.08-1.3c.57.1 1.17.16 1.78.16 4.56 0 8.25-3.22 8.25-7.2S16.56 3.75 12 3.75Zm-3.1 8.05a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1Zm3.1 0a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1Zm3.1 0a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1Z" />
-        </svg>
-      </button>
     </QueryClientProvider>
   );
 }
