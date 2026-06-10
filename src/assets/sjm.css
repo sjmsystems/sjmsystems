@@ -1768,6 +1768,13 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
   .credibility-strip{ padding: 14px 0; }
   .credibility-label{ font-size: 11px; }
   .credibility-client{ font-size: 14px; }
+  .credibility-inner{ flex-direction: column; gap: 10px; text-align: center; }
+  .credibility-clients{
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .credibility-sep{ display: none; }
 }
 
 /* ─── Light scroll-snap between main sections (desktop only) ─── */
