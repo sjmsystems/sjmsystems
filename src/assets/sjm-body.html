@@ -541,6 +541,23 @@
       ctaObserver.observe(contattiSection);
     }
 
+    // ─── Process video autoplay on scroll into view ───
+    const processVideo = document.getElementById('processVideo');
+    if (processVideo && 'IntersectionObserver' in window) {
+      const pvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            processVideo.play().catch(() => {});
+          } else {
+            processVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      pvObserver.observe(processVideo);
+    }
+
+
+
 
     // ─── Form validation & submit ───
     const form = document.getElementById('contact-form');
