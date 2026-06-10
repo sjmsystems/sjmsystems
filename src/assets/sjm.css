@@ -1206,3 +1206,16 @@
   .founder-col { max-width: 260px; margin: 0 auto; }
   .founder-text { text-align: left; }
 }
+
+/* ── Social link (LinkedIn) ── */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7A99;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-link:hover { color: #4A7FA5; transform: translateY(-1px); }
+.social-link svg { display: block; }
+.founder-linkedin { margin-left: 8px; vertical-align: middle; }
+.footer-links .social-link { padding: 2px; }
