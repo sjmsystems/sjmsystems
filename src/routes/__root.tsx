@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -135,28 +135,90 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    if (document.querySelector('script[data-relevanceai-share-id]')) return;
-    const script = document.createElement("script");
-    script.defer = true;
-    script.src = "https://app.relevanceai.com/embed/chat-bubble.js";
-    script.setAttribute(
-      "data-relevanceai-share-id",
-      "d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713",
-    );
-    script.setAttribute(
-      "data-share-styles",
-      "hide_tool_steps=true&hide_file_uploads=false&hide_conversation_list=false&bubble_style=agent&primary_color=%233ECFB2&bubble_icon=pd%2Fchat&input_placeholder_text=Type+your+message...&hide_logo=true&hide_description=false",
-    );
-    document.body.appendChild(script);
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <RelevanceChatWidget />
     </QueryClientProvider>
+  );
+}
+
+function RelevanceChatWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const chatUrl =
+    "https://app.relevanceai.com/agents/d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713/embed-chat?hide_tool_steps=true&hide_file_uploads=false&hide_conversation_list=false&bubble_style=agent&primary_color=%233ECFB2&bubble_icon=pd%2Fchat&input_placeholder_text=Type+your+message...&hide_logo=true&hide_description=false";
+
+  const launcherStyle: CSSProperties = {
+    position: "fixed",
+    right: "20px",
+    bottom: "20px",
+    zIndex: 2147483647,
+    width: "64px",
+    height: "64px",
+    borderRadius: "999px",
+    border: "1px solid rgba(255,255,255,0.9)",
+    background: "var(--color-verdino, #3ECFB2)",
+    color: "#061014",
+    boxShadow: "0 18px 46px rgba(3,7,18,0.35)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    pointerEvents: "auto",
+  };
+
+  const panelStyle: CSSProperties = {
+    position: "fixed",
+    right: "20px",
+    bottom: "96px",
+    zIndex: 2147483646,
+    width: "min(390px, calc(100vw - 40px))",
+    height: "min(620px, calc(100vh - 124px))",
+    borderRadius: "16px",
+    overflow: "hidden",
+    border: "1px solid rgba(255,255,255,0.85)",
+    background: "#fff",
+    boxShadow: "0 24px 80px rgba(3,7,18,0.4)",
+  };
+
+  return (
+    <>
+      {isOpen ? (
+        <div style={panelStyle} aria-label="Chat SJM Systems Engineering">
+          <iframe
+            title="Chat SJM Systems Engineering"
+            src={chatUrl}
+            style={{ display: "block", width: "100%", height: "100%", border: 0 }}
+            allow="clipboard-read; clipboard-write"
+          />
+        </div>
+      ) : null}
+      <button
+        type="button"
+        aria-label={isOpen ? "Chiudi chat" : "Apri chat"}
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((open) => !open)}
+        style={launcherStyle}
+      >
+        {isOpen ? (
+          <span aria-hidden="true" style={{ fontSize: "34px", lineHeight: 1, transform: "translateY(-1px)" }}>
+            ×
+          </span>
+        ) : (
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30" fill="none">
+            <path
+              d="M5.5 18.5h-.8A2.7 2.7 0 0 1 2 15.8V6.7A2.7 2.7 0 0 1 4.7 4h14.6A2.7 2.7 0 0 1 22 6.7v9.1a2.7 2.7 0 0 1-2.7 2.7h-7.2l-4.5 3.1a1.3 1.3 0 0 1-2.1-1.1v-2Z"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path d="M7.5 10h9M7.5 14h5.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+        )}
+      </button>
+    </>
   );
 }
 
