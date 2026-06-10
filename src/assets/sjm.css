@@ -1219,3 +1219,138 @@
 .social-link svg { display: block; }
 .founder-linkedin { margin-left: 8px; vertical-align: middle; }
 .footer-links .social-link { padding: 2px; }
+
+/* ── FAQ "Mostra tutte" toggle (mobile only) ── */
+.faq-toggle-all {
+  display: none;
+  margin: 24px auto 0;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid rgba(74, 127, 165, 0.5);
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.faq-toggle-all:hover { background: rgba(74, 127, 165, 0.15); border-color: #4A7FA5; }
+
+/* ── Fixed mobile CTA ── */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 90;
+  padding: 14px 20px;
+  background: #4A7FA5;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(74, 127, 165, 0.45), 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.mobile-cta.hidden {
+  opacity: 0;
+  transform: translateY(120%);
+  pointer-events: none;
+}
+
+/* ── Mobile optimisations (≤767px) ── */
+@media (max-width: 767px) {
+  /* Hero title smaller */
+  .hero-title {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hero stats: single horizontal scroll row */
+  .hero-stats {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 16px !important;
+    padding: 8px 4px 12px;
+    margin: 0 -4px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .hero-stats::-webkit-scrollbar { display: none; }
+  .hero-stat {
+    flex: 0 0 auto;
+    min-width: 130px;
+    scroll-snap-align: start;
+    text-align: left !important;
+    width: auto !important;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+  }
+  .hero-stat-divider { display: none !important; }
+  .hero-stat-num { font-size: 22px !important; }
+  .hero-stat-label { font-size: 11px !important; }
+
+  /* Come Funziona: accordion verticale */
+  .steps-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px !important;
+  }
+  .step-item {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    text-align: left !important;
+    padding: 16px !important;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.02);
+    cursor: pointer;
+    position: relative;
+  }
+  .step-item .step-num { margin: 0 !important; }
+  .step-item .step-title { margin: 0 !important; grid-column: 2; }
+  .step-item::after {
+    content: '+';
+    grid-column: 3;
+    font-size: 24px;
+    color: #4A7FA5;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+  .step-item.open::after { transform: rotate(45deg); }
+  .step-item .step-desc {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height 0.3s ease, margin 0.3s ease;
+  }
+  .step-item.open .step-desc {
+    max-height: 300px;
+    margin-top: 8px;
+  }
+
+  /* FAQ: nascondi extras finché non si espande */
+  .faq-extra { display: none; }
+  .faq-extra.show { display: block; }
+  .faq-toggle-all { display: block; }
+
+  /* Show fixed CTA */
+  .mobile-cta { display: block; }
+
+  /* Spazio per non coprire il footer con la CTA fissa */
+  footer { padding-bottom: 90px !important; }
+}
