@@ -1732,3 +1732,39 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
   }
   .marquee-band { box-shadow: 0 10px 24px -14px rgba(123,94,167,0.3); }
 }
+
+/* ─── Credibility strip ─── */
+.credibility-strip{
+  background: #0B1020;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 18px 0;
+}
+.credibility-inner{
+  display:flex; align-items:center; justify-content:center;
+  flex-wrap:wrap; gap:14px;
+  font-family: Inter, system-ui, sans-serif;
+}
+.credibility-label{
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #6B7A99; font-weight: 600;
+}
+.credibility-clients{ display:inline-flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.credibility-client{
+  font-size: 15px; font-weight: 600; color: #E6ECF5; letter-spacing: 0.01em;
+}
+.credibility-sep{ color: #4A7FA5; font-weight: 700; }
+@media (max-width: 600px){
+  .credibility-strip{ padding: 14px 0; }
+  .credibility-label{ font-size: 11px; }
+  .credibility-client{ font-size: 14px; }
+}
+
+/* ─── Light scroll-snap between main sections (desktop only) ─── */
+@media (min-width: 1025px) and (hover: hover){
+  html{ scroll-snap-type: y proximity; scroll-padding-top: 80px; }
+  #hero, #case-studies, #servizi, #come-funziona, #about, #faq, #contatti{
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+}
