@@ -2296,3 +2296,16 @@ section#hero h1.hero-title span.highlight-italic {
 
 
 
+
+/* Relevance AI chat bubble — always on top, larger */
+[id^="relevanceai"],
+[class*="relevanceai"],
+iframe[src*="relevanceai"],
+iframe[title*="elevance"] {
+  z-index: 2147483647 !important;
+}
+iframe[src*="relevanceai"][src*="bubble"],
+iframe[title*="hat bubble"] {
+  width: 88px !important;
+  height: 88px !important;
+}
