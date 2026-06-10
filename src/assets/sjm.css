@@ -1888,3 +1888,123 @@ a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipu
 #demo .section-sub {
   color: rgba(247,248,252,0.72) !important;
 }
+
+/* ═══════════════════════════════════════════════════
+   FINAL READABILITY PASS — contrast-safe text states
+   ═══════════════════════════════════════════════════ */
+@media (min-width: 769px) {
+  #main-nav .mobile-menu { display: none !important; }
+}
+
+#hero .hero-title,
+#hero .hero-title span,
+#hero .hero-sub,
+#hero .hero-stat-num,
+#hero .hero-stat-label {
+  -webkit-text-fill-color: currentColor;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.72) !important;
+}
+
+#hero .hero-title .highlight,
+#hero .hero-title .highlight-italic {
+  background: none !important;
+  color: #8FEFE1 !important;
+  -webkit-text-fill-color: #8FEFE1 !important;
+}
+
+.btn-secondary,
+#hero .btn-secondary {
+  background: rgba(255,255,255,0.88) !important;
+  color: #0F1424 !important;
+  -webkit-text-fill-color: #0F1424 !important;
+  border-color: rgba(255,255,255,0.72) !important;
+}
+
+#servizi .section-title,
+#case-studies .section-title,
+#come-funziona .section-title,
+#about .section-title,
+#faq .section-title,
+#contatti .section-title,
+.service-title,
+.step-title,
+.faq-question,
+.contatti-point-text strong,
+.form-success h3 {
+  color: #0F1424 !important;
+  -webkit-text-fill-color: #0F1424 !important;
+}
+
+#servizi .section-sub,
+#case-studies .section-sub,
+#come-funziona .section-sub,
+#about .about-text,
+#faq .faq-answer p,
+#contatti .section-sub,
+.service-desc,
+.step-desc,
+.cs-problem,
+.cs-quote,
+.contatti-point-text span,
+.form-success p {
+  color: #4B5568 !important;
+  -webkit-text-fill-color: #4B5568 !important;
+}
+
+#demo .section-title,
+#demo .section-title span,
+#demo .section-sub,
+footer,
+footer .footer-logo-text,
+footer .footer-copy,
+footer .footer-links a,
+footer .social-link {
+  -webkit-text-fill-color: currentColor;
+}
+
+footer .footer-links a,
+footer .footer-copy,
+footer .social-link { color: #D8DEEA !important; }
+
+@media (max-width: 768px) {
+  #main-nav .mobile-menu,
+  #main-nav.hero-readable-nav .mobile-menu {
+    background: #FFFFFF !important;
+  }
+  #main-nav .mobile-menu a,
+  #main-nav.hero-readable-nav .mobile-menu a {
+    color: #172033 !important;
+    -webkit-text-fill-color: #172033 !important;
+    font-weight: 600 !important;
+  }
+  #main-nav .mobile-menu a:last-child,
+  #main-nav.hero-readable-nav .mobile-menu a:last-child {
+    color: #2F6F9E !important;
+    -webkit-text-fill-color: #2F6F9E !important;
+  }
+}
+
+/* Hero: no low-contrast clipped gradients on text */
+#hero h1.hero-title span.highlight,
+#hero h1.hero-title span.highlight-italic,
+section#hero h1.hero-title span.highlight,
+section#hero h1.hero-title span.highlight-italic {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: #7EF4E5 !important;
+  -webkit-text-fill-color: #7EF4E5 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  #hero h1.hero-title span.highlight,
+  #hero h1.hero-title span.highlight-italic,
+  section#hero h1.hero-title span.highlight,
+  section#hero h1.hero-title span.highlight-italic {
+    color: #A8FFF4 !important;
+    -webkit-text-fill-color: #A8FFF4 !important;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.85) !important;
+  }
+}
