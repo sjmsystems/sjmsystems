@@ -1464,3 +1464,41 @@
 #hero .hero-stat-label {
   text-shadow: 0 2px 18px rgba(0,0,0,0.6);
 }
+
+/* ─── Hero nav contrast override ─── */
+nav,
+nav.scrolled,
+nav:not(.scrolled) {
+  background: rgba(10,12,18,0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(14px);
+}
+nav .nav-logo img {
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+}
+nav .nav-logo-text,
+nav .nav-links a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.95);
+}
+nav .nav-links a { font-size: 15px !important; }
+nav .nav-links a:hover {
+  color: #FFFFFF !important;
+}
+
+#main-nav.hero-readable-nav,
+#main-nav.hero-readable-nav.scrolled {
+  background: rgba(5,7,12,0.96) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+#main-nav.hero-readable-nav .nav-logo-text,
+#main-nav.hero-readable-nav .nav-links a {
+  color: rgb(255,255,255) !important;
+  -webkit-text-fill-color: rgb(255,255,255) !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+  filter: none !important;
+}
