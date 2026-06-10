@@ -1440,3 +1440,27 @@
   #demo { padding: 64px 0; }
   .demo-header { margin-bottom: 32px; padding: 0 16px; }
 }
+
+/* ─── Hero dark-on-video overrides (defeats light theme refresh) ─── */
+#hero .hero-title,
+#hero .hero-title * {
+  color: #FFFFFF !important;
+}
+#hero .hero-title .highlight,
+#hero .hero-title .highlight-italic {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, #4A7FA5, #7B5EA7, #3ECFB2) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+#hero .hero-sub { color: #D6DCEA !important; }
+#hero .hero-stat-num { color: #FFFFFF !important; }
+#hero .hero-stat-label { color: #B4BECF !important; }
+#hero .hero-stat-divider { background: rgba(255,255,255,0.18) !important; }
+#hero .hero-title,
+#hero .hero-sub,
+#hero .hero-stat-num,
+#hero .hero-stat-label {
+  text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+}
