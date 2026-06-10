@@ -111,7 +111,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
   }),
-  }),
 
   shellComponent: RootShell,
   component: RootComponent,
