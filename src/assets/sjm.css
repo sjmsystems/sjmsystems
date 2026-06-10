@@ -1466,19 +1466,22 @@
 }
 
 /* ─── Hero nav contrast override ─── */
+nav,
+nav.scrolled,
 nav:not(.scrolled) {
   background: linear-gradient(180deg, rgba(10,12,18,0.94) 0%, rgba(10,12,18,0.72) 64%, rgba(10,12,18,0) 100%) !important;
+  border-bottom: 0 !important;
   backdrop-filter: blur(3px);
 }
-nav:not(.scrolled) .nav-logo img {
+nav .nav-logo img {
   mix-blend-mode: normal !important;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
 }
-nav:not(.scrolled) .nav-logo-text,
-nav:not(.scrolled) .nav-links a {
+nav .nav-logo-text,
+nav .nav-links a {
   color: #F4F8FF !important;
   text-shadow: 0 2px 12px rgba(0,0,0,0.85);
 }
-nav:not(.scrolled) .nav-links a:hover {
+nav .nav-links a:hover {
   color: #FFFFFF !important;
 }
