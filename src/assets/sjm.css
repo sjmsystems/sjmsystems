@@ -1983,3 +1983,28 @@ footer .social-link { color: #D8DEEA !important; }
     -webkit-text-fill-color: #2F6F9E !important;
   }
 }
+
+/* Hero: no low-contrast clipped gradients on text */
+#hero h1.hero-title span.highlight,
+#hero h1.hero-title span.highlight-italic,
+section#hero h1.hero-title span.highlight,
+section#hero h1.hero-title span.highlight-italic {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: #7EF4E5 !important;
+  -webkit-text-fill-color: #7EF4E5 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  #hero h1.hero-title span.highlight,
+  #hero h1.hero-title span.highlight-italic,
+  section#hero h1.hero-title span.highlight,
+  section#hero h1.hero-title span.highlight-italic {
+    color: #A8FFF4 !important;
+    -webkit-text-fill-color: #A8FFF4 !important;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.85) !important;
+  }
+}
