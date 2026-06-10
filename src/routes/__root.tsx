@@ -145,6 +145,46 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    const enlargeChatBubble = () => {
+      const button = document.querySelector<HTMLButtonElement>(
+        'button[aria-label*="RelevanceAI"], button[aria-label*="Chat Bubble"], button[aria-label*="chat bubble"]',
+      );
+
+      if (!button) return;
+
+      const bubbleRoot = button.closest<HTMLDivElement>("body > div") ?? button.parentElement;
+      [bubbleRoot, button].forEach((element) => {
+        if (!element) return;
+        element.style.setProperty("z-index", "2147483647", "important");
+        element.style.setProperty("overflow", "visible", "important");
+      });
+
+      if (bubbleRoot) {
+        bubbleRoot.style.setProperty("position", "fixed", "important");
+        bubbleRoot.style.setProperty("right", "32px", "important");
+        bubbleRoot.style.setProperty("bottom", "32px", "important");
+      }
+
+      button.style.setProperty("width", "104px", "important");
+      button.style.setProperty("height", "104px", "important");
+      button.style.setProperty("min-width", "104px", "important");
+      button.style.setProperty("min-height", "104px", "important");
+      button.style.setProperty("transform", "scale(1.55)", "important");
+      button.style.setProperty("transform-origin", "bottom right", "important");
+    };
+
+    enlargeChatBubble();
+    const interval = window.setInterval(enlargeChatBubble, 500);
+    const observer = new MutationObserver(enlargeChatBubble);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      window.clearInterval(interval);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
