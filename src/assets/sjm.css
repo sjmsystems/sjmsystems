@@ -2297,59 +2297,13 @@ section#hero h1.hero-title span.highlight-italic {
 
 
 
-/* Relevance AI chat bubble — always on top, larger */
+/* Relevance AI chat bubble — sempre davanti */
 [id^="relevanceai"],
 [class*="relevanceai"],
 iframe[src*="relevanceai"],
 iframe[title*="elevance"],
-body > div:has(button[aria-label*="RelevanceAI"]),
-button[aria-label*="RelevanceAI"] {
-  z-index: 2147483647 !important;
-}
-.relevanceai-chat-bubble-container {
-  z-index: 2147483647 !important;
-  transform: scale(2.15) !important;
-  transform-origin: bottom right !important;
-  right: 48px !important;
-  bottom: 48px !important;
-  opacity: 0.01 !important;
-}
-.sjm-chat-launcher {
-  position: fixed;
-  right: 32px;
-  bottom: 32px;
-  z-index: 2147483647;
-  width: 112px;
-  height: 112px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.82);
-  background: linear-gradient(135deg, var(--color-verdino), #4A7FA5 58%, var(--color-viola));
-  color: var(--color-white);
-  box-shadow: 0 22px 62px rgba(62, 207, 178, 0.38), 0 10px 30px rgba(0, 0, 0, 0.45);
-}
-.sjm-chat-launcher svg {
-  width: 58px;
-  height: 58px;
-  fill: currentColor;
-}
-iframe[src*="relevanceai"][src*="bubble"],
 iframe[title*="hat bubble"],
 body > div:has(button[aria-label*="RelevanceAI"]),
 button[aria-label*="RelevanceAI"] {
-  width: 168px !important;
-  height: 168px !important;
-  min-width: 168px !important;
-  min-height: 168px !important;
-}
-body > div:has(button[aria-label*="RelevanceAI"]) {
-  position: fixed !important;
-  right: 28px !important;
-  bottom: 28px !important;
-}
-button[aria-label*="RelevanceAI"] svg,
-button[aria-label*="RelevanceAI"] img {
-  width: 76px !important;
-  height: 76px !important;
+  z-index: 2147483647 !important;
 }
