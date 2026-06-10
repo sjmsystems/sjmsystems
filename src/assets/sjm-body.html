@@ -138,7 +138,27 @@
     </div>
   </section>
 
+  <!-- ─── Demo ─── -->
+  <section id="demo">
+    <div class="container">
+      <div class="demo-header reveal">
+        <div class="section-label demo-label">Sistema multi-agente · Live architecture</div>
+        <h2 class="section-title">Più agenti. Un unico risultato.</h2>
+        <p class="section-sub">Ogni agente ha un ruolo preciso. L'orchestratore coordina tutto — tu vedi solo il risultato finale.</p>
+      </div>
+      <div class="demo-video-wrap reveal">
+        <video class="demo-video" id="demoVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/__l5e/assets-v1/ac68b180-a3a6-4ecf-93b7-fbf9b9fd811d/demo-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="demo-cta-wrap reveal">
+        <a href="#contatti" class="btn btn-primary demo-cta">Vedi come funziona nel tuo processo →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Come Funziona ─── -->
+
   <section id="come-funziona">
     <div class="container">
       <div class="steps-header reveal">
@@ -555,6 +575,23 @@
       }, { threshold: 0.35 });
       pvObserver.observe(processVideo);
     }
+
+    // ─── Demo video autoplay on scroll into view ───
+    const demoVideo = document.getElementById('demoVideo');
+    if (demoVideo && 'IntersectionObserver' in window) {
+      const dvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            demoVideo.play().catch(() => {});
+          } else {
+            demoVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      dvObserver.observe(demoVideo);
+    }
+
+
 
 
 

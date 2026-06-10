@@ -1390,3 +1390,45 @@
   .process-video-wrap { margin: 32px auto 40px; }
   .process-video-caption { font-size: 12px; padding: 0 16px; }
 }
+
+/* ─── Demo section ─── */
+#demo {
+  background: #0A0C12;
+  padding: 96px 0;
+  position: relative;
+}
+.demo-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+.demo-label {
+  color: #3ECFB2;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.demo-video-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.demo-video {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(123, 94, 167, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(123, 94, 167, 0.15),
+    0 0 28px rgba(123, 94, 167, 0.45),
+    0 0 70px rgba(123, 94, 167, 0.22);
+  background: #0a0c12;
+}
+.demo-cta-wrap {
+  text-align: center;
+  margin-top: 36px;
+}
+.demo-cta { display: inline-flex; align-items: center; }
+@media (max-width: 767px) {
+  #demo { padding: 64px 0; }
+  .demo-header { margin-bottom: 32px; padding: 0 16px; }
+}
