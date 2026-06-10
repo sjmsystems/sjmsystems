@@ -2311,6 +2311,7 @@ section#hero h1.hero-title span.highlight-italic {
   bottom: 92px;
   width: min(380px, calc(100vw - 40px));
   height: min(560px, calc(100vh - 124px));
+  box-sizing: border-box;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.85);
   border-radius: 15px;
@@ -2357,11 +2358,14 @@ section#hero h1.hero-title span.highlight-italic {
     font-size: 36px;
   }
   .sjm-chat-panel {
-    left: 50%;
-    right: auto;
-    bottom: 76px;
-    width: min(340px, calc(100vw - 24px));
-    height: min(620px, calc(100vh - 96px));
-    transform: translateX(-50%);
+    top: 76px !important;
+    right: 12px !important;
+    bottom: 76px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
   }
 }
