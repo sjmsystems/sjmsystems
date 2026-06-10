@@ -1488,3 +1488,17 @@ nav .nav-links a { font-size: 15px !important; }
 nav .nav-links a:hover {
   color: #FFFFFF !important;
 }
+
+#main-nav.hero-readable-nav,
+#main-nav.hero-readable-nav.scrolled {
+  background: rgba(5,7,12,0.96) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+#main-nav.hero-readable-nav .nav-logo-text,
+#main-nav.hero-readable-nav .nav-links a {
+  color: rgb(255,255,255) !important;
+  -webkit-text-fill-color: rgb(255,255,255) !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+  filter: none !important;
+}
