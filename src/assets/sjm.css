@@ -1354,3 +1354,33 @@
   /* Spazio per non coprire il footer con la CTA fissa */
   footer { padding-bottom: 90px !important; }
 }
+
+/* ─── Process video ─── */
+.process-video-wrap {
+  max-width: 800px;
+  margin: 48px auto 56px;
+  text-align: center;
+}
+.process-video {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(74, 127, 165, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.15),
+    0 0 24px rgba(74, 127, 165, 0.35),
+    0 0 60px rgba(74, 127, 165, 0.18);
+  background: #0a0c12;
+}
+.process-video-caption {
+  margin-top: 18px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #6B7A99;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .process-video-wrap { margin: 32px auto 40px; }
+  .process-video-caption { font-size: 12px; padding: 0 16px; }
+}
