@@ -1610,9 +1610,10 @@ video { display: block; }
 
 /* 2 — Anti-overflow su titoli e parole lunghe */
 h1, h2, h3, h4, .hero-title, .section-title, .servizi-title, .testi-quote {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  hyphens: auto;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 /* 3 — Container coerente e niente scroll orizzontale residuo */
