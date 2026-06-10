@@ -1008,12 +1008,13 @@
     .tech-float {
       position: absolute;
       pointer-events: none;
-      z-index: 0;
-      opacity: 0.85;
-      filter: drop-shadow(0 30px 60px rgba(123,94,167,0.25));
+      z-index: 2;
+      opacity: 1;
+      filter: drop-shadow(0 0 24px rgba(74,127,165,0.55)) drop-shadow(0 30px 60px rgba(123,94,167,0.35));
       animation: float-y 8s ease-in-out infinite;
     }
     .tech-float.tf-hero-right { top: 8%; right: -60px; width: 520px; max-width: 55vw; }
+
     .tech-float.tf-services { top: -40px; right: -80px; width: 380px; opacity: 0.6; animation-delay: -2s; }
     .tech-float.tf-about { width: 100%; max-width: 460px; margin: 0 auto; position: relative; display: block; }
     @keyframes float-y {
