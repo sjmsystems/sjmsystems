@@ -505,6 +505,35 @@
       if (!isOpen) item.classList.add('open');
     }
 
+    // ─── FAQ "Mostra tutte" (mobile) ───
+    function toggleFaqAll(btn) {
+      const expanded = btn.classList.toggle('expanded');
+      document.querySelectorAll('.faq-extra').forEach(el => el.classList.toggle('show', expanded));
+      btn.textContent = expanded ? 'Mostra meno domande' : 'Mostra tutte le domande';
+    }
+
+    // ─── Steps accordion (mobile only) ───
+    document.querySelectorAll('.step-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          item.classList.toggle('open');
+        }
+      });
+    });
+
+    // ─── Hide mobile CTA when in Contatti ───
+    const mobileCta = document.getElementById('mobile-cta');
+    const contattiSection = document.getElementById('contatti');
+    if (mobileCta && contattiSection && 'IntersectionObserver' in window) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          mobileCta.classList.toggle('hidden', entry.isIntersecting);
+        });
+      }, { threshold: 0.15 });
+      ctaObserver.observe(contattiSection);
+    }
+
+
     // ─── Form validation & submit ───
     const form = document.getElementById('contact-form');
     const successBox = document.getElementById('form-success');
