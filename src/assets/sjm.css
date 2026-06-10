@@ -2308,13 +2308,17 @@ button[aria-label*="RelevanceAI"] {
   z-index: 2147483647 !important;
 }
 
-/* Riduci dimensione bubble su mobile */
+/* Riduci dimensione del solo launcher su mobile (no transform: rompe il click) */
 @media (max-width: 640px) {
-  iframe[src*="relevanceai"][src*="bubble"],
-  iframe[title*="hat bubble"],
-  button[aria-label*="RelevanceAI"],
-  body > div:has(button[aria-label*="RelevanceAI"]) {
-    transform: scale(0.65) !important;
-    transform-origin: bottom right !important;
+  button[aria-label*="RelevanceAI"] {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+  }
+  button[aria-label*="RelevanceAI"] svg,
+  button[aria-label*="RelevanceAI"] img {
+    width: 26px !important;
+    height: 26px !important;
   }
 }

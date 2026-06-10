@@ -1,19 +1,11 @@
-## Problema
-Nella strip "Già operativo in" (sotto la hero) compaiono i nomi espliciti **Gamalife** e **Virgin Active**, in contrasto con la policy applicata nei Casi Studio dove i clienti sono anonimizzati per settore.
+Correggerei il problema del chatbot intervenendo solo sul codice che lo carica e sul CSS aggiunto per ridimensionarlo.
 
-## Modifica
-In `src/assets/sjm-body.html` (righe 85–96), sostituire i nomi con etichette di settore coerenti con i casi studio già pubblicati:
+Piano:
+1. Rimuovere il doppio caricamento dello script Relevance AI: ora è sia nell'head sia aggiunto via `useEffect`, e questo può bloccare o rendere instabile l'apertura del widget.
+2. Lasciare un solo caricamento affidabile del widget nella root dell'app, dopo il mount del client.
+3. Sostituire la regola mobile `transform: scale(...)`, perché può ridurre anche l'area cliccabile o spostare l'iframe, con una riduzione più sicura basata su dimensioni/posizionamento del launcher.
+4. Verificare che il widget resti sopra la pagina (`z-index`) e sia cliccabile sia desktop sia mobile.
 
-- `Gamalife` → `Assicurativo / Previdenziale`
-- `Virgin Active` → `Fitness / Centri sportivi`
-
-Risultato finale della strip:
-
-```
-Già operativo in:  Assicurativo / Previdenziale  ·  Fitness / Centri sportivi
-```
-
-Nessun'altra modifica al CSS o alla struttura: gli stili `.credibility-client` restano invariati.
-
-## Verifica
-Dopo l'edit ricontrollare con un grep su `gamalife|virgin` nell'intero repo per assicurarsi che non rimangano altre menzioni.
+File coinvolti:
+- `src/routes/__root.tsx`
+- `src/assets/sjm.css`
