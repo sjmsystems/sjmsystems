@@ -199,7 +199,7 @@ function RelevanceChatWidget() {
             title="Chat SJM Systems Engineering"
             src={chatUrl}
             style={{ display: "block", width: "100%", height: "100%", border: 0 }}
-            allow="clipboard-read; clipboard-write"
+            allow="clipboard-read; clipboard-write; microphone; camera; autoplay"
           />
         </div>
       ) : null}
