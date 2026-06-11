@@ -152,7 +152,7 @@ function RootComponent() {
 function RelevanceChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const chatUrl =
-    "https://app.relevanceai.com/agents/d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713/embed-chat?hide_tool_steps=true&hide_file_uploads=false&hide_conversation_list=false&bubble_style=agent&primary_color=%233ECFB2&bubble_icon=pd%2Fchat&input_placeholder_text=Type+your+message...&hide_logo=true&hide_description=false";
+    "https://app.relevanceai.com/agents/d7b62b/c32d1d9d-99cd-45b2-915d-2e468808d18a/ca2199c5-77fa-4073-8db6-04fd153f8713/embed-chat?hide_tool_steps=false&hide_file_uploads=false&hide_conversation_list=false&bubble_style=agent&primary_color=%233ECFB2&bubble_icon=pd%2Fchat&input_placeholder_text=Scrivi+qui...&hide_logo=true&hide_description=false";
   const agentImageUrl =
     "https://userdata-d7b62b.stack.tryrelevance.com/files/public/c32d1d9d-99cd-45b2-915d-2e468808d18a/agent-emoji-ChatGPT%20Image%2010%20giu%202026%2C%2017_51_02.png/ad172d8f-7fc1-4d2e-8f33-5bdcb7a690c8.png";
 
@@ -199,7 +199,7 @@ function RelevanceChatWidget() {
             title="Chat SJM Systems Engineering"
             src={chatUrl}
             style={{ display: "block", width: "100%", height: "100%", border: 0 }}
-            allow="clipboard-read; clipboard-write; microphone; camera; autoplay"
+            allow="clipboard-read; clipboard-write; microphone; camera; autoplay; fullscreen"
           />
         </div>
       ) : null}
