@@ -1,16 +1,22 @@
-## Obiettivo
-Sostituire l'attuale social image (orizzontale, viene tagliata in anteprime quadrate) con una nuova immagine che caricherai tu in chat.
+## Modifiche
 
-## Passi
-1. Tu carichi la nuova immagine in chat (consigliato: 1200x1200 px quadrata, così è leggibile sia nelle anteprime square di WhatsApp/Telegram sia in quelle orizzontali di LinkedIn/Facebook/Twitter, che la centrano senza tagliare contenuti chiave).
-2. Carico il file su CDN tramite `lovable-assets` e salvo il pointer in `src/assets/social-card.<ext>.asset.json`.
-3. Aggiorno in `src/routes/__root.tsx` i meta `og:image` e `twitter:image` con il nuovo URL CDN.
-4. Aggiungo i meta `og:image:width`, `og:image:height` e `og:image:alt` per dare a crawler/anteprime le dimensioni esatte (evita crop indesiderati quando possibile).
-5. Verifico che la rotta `/` non sovrascriva `og:image` (attualmente non lo fa, ok).
+### 1. `src/assets/sjm-body.html` — sezione `#case-studies`
+Aggiungere una quarta `<div class="cs-card reveal">` subito dopo la terza card, stessa identica struttura (`.cs-sector`, `.cs-problem`, `.cs-result`, `.cs-quote`):
 
-## Note
-- L'URL OG attuale punta a un file `social-1781036846962-...webp` su `storage.googleapis.com`. Lo sostituisco completamente.
-- Le piattaforme cachano le anteprime: dopo il deploy potresti dover forzare il refresh (LinkedIn Post Inspector, Facebook Sharing Debugger, X Card Validator).
-- Se preferisci mantenere un'immagine orizzontale "pulita" (1200x630) e accettare che WhatsApp la mostri square con crop centrale, dimmelo e adatto le dimensioni dei meta.
+- Sector: "Studi Legali / Professionisti con clientela internazionale"
+- Problema: testo fornito
+- `.cs-result`: testo "Soluzione" (avatar digitale, scenari multipli, cinese madrelingua)
+- `.cs-quote`: «"Solo il video in cinese vale già quello che ho pagato." — Avvocato, Milano. Il cliente ha dichiarato che promuoverà attivamente il servizio.»
 
-Quando carichi l'immagine procedo con l'implementazione.
+### 2. `src/assets/sjm-body.html` — Dashboard operativa (righe 370-395)
+- Progetti consegnati: **3 → 4**
+- Settori coperti: aggiungere "· Legale" in coda
+
+### 3. `src/assets/sjm.css` — griglia `.cs-grid` (riga 509)
+Cambiare `grid-template-columns: repeat(3, 1fr)` → `repeat(4, 1fr)`.
+
+Il breakpoint esistente `@media (max-width: 1024px) { .cs-grid { grid-template-columns: 1fr; … } }` (riga 900) già forza una sola colonna su tablet e mobile: la quarta card finisce automaticamente in coda alla terza, come richiesto. Nessuna ulteriore media query necessaria.
+
+Risultato:
+- Desktop (>1024px): 4 card sulla stessa riga
+- Tablet/Mobile (≤1024px): card impilate 1 per riga, la nuova in coda
