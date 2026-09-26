@@ -1,0 +1,761 @@
+import{j as e}from"./index-Bgy4Pixr.js";import{c as i}from"./sjm-DdLdyzzl.js";const n=`
+  <!-- ─── Nav ─── -->
+  <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="SJM Systems Engineering">
+          <img src="/__l5e/assets-v1/95831f2d-f342-4d89-aa6b-45c9ff61180c/sjm-logo.png" alt="" />
+          <span class="nav-logo-text" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">SJM Systems Engineering</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#servizi" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Servizi</a></li>
+          <li><a href="#come-funziona" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Come Funziona</a></li>
+          <li><a href="#case-studies" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Casi Studio</a></li>
+          <li><a href="#about" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Chi Siamo</a></li>
+          <li><a href="#faq" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">FAQ</a></li>
+        </ul>
+        
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#servizi" onclick="closeMobile()">Servizi</a>
+      <a href="#come-funziona" onclick="closeMobile()">Come Funziona</a>
+      <a href="#case-studies" onclick="closeMobile()">Casi Studio</a>
+      <a href="#about" onclick="closeMobile()">Chi Siamo</a>
+      <a href="#faq" onclick="closeMobile()">FAQ</a>
+      <a href="#contatti" onclick="closeMobile()">Parliamo del tuo progetto →</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="/__l5e/assets-v1/4c9a2ddd-455f-454e-a6d3-4a617e067242/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-bg-overlay"></div>
+    <span class="corner-plus tl">+</span><span class="corner-plus tr">+</span>
+    <span class="corner-plus bl">+</span><span class="corner-plus br">+</span>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">Forza lavoro digitale · PMI italiane</div>
+        <h1 class="hero-title reveal">
+          Forze lavoro digitali, <span class="highlight-italic">progettate</span><br>
+          sui <span class="highlight">tuoi processi reali.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Agenti AI custom per le PMI italiane. Nessuna soluzione generica.
+          Solo architetture costruite attorno a come lavori tu — integrate negli strumenti che già usi.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contatti" class="btn btn-primary">Parliamo del tuo progetto →</a>
+          <a href="#come-funziona" class="btn btn-secondary">Scopri come funziona</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hero-stat">
+            <div class="hero-stat-num">20–40gg</div>
+            <div class="hero-stat-label">Primo risultato misurabile</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">0</div>
+            <div class="hero-stat-label">Soluzioni generiche vendute</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Costruiti sui tuoi flussi reali</div>
+          </div>
+        </div>
+      </div>
+      <!-- Floating agent flow (decorativo) -->
+      <div class="hero-visual">
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>richiesta_cliente.incoming</div>
+        <div class="flow-node"><span class="flow-dot dot-viola"></span>agent.qualifica → CRM</div>
+        <div class="flow-node"><span class="flow-dot dot-verdino"></span>risposta.generata ✓</div>
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>log.aggiornato → slack</div>
+      </div>
+    </div>
+    <img src="/tech/tech-network.png" alt="" class="tech-float tf-hero-right" loading="eager" />
+  </section>
+
+  <!-- ─── Credibility strip ─── -->
+  <section id="credibility" class="credibility-strip" aria-label="Clienti operativi">
+    <div class="container">
+      <div class="credibility-inner">
+        <span class="credibility-label">Già operativo in:</span>
+        <span class="credibility-clients">
+          <span class="credibility-client">Assicurativo / Previdenziale</span>
+          <span class="credibility-sep" aria-hidden="true">·</span>
+          <span class="credibility-client">Fitness / Centri sportivi</span>
+          <span class="credibility-sep" aria-hidden="true">·</span>
+          <span class="credibility-client">Software / Servizi digitali B2B</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Marquee band 1 ─── -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Agenti AI custom</span>
+      <span class="marquee-item">Automazione processi</span>
+      <span class="marquee-item">CRM AI-augmented</span>
+      <span class="marquee-item">Knowledge interna</span>
+      <span class="marquee-item">Multi-agent systems</span>
+      <span class="marquee-item">Integrazioni native</span>
+      <span class="marquee-item">Agenti AI custom</span>
+      <span class="marquee-item">Automazione processi</span>
+      <span class="marquee-item">CRM AI-augmented</span>
+      <span class="marquee-item">Knowledge interna</span>
+      <span class="marquee-item">Multi-agent systems</span>
+      <span class="marquee-item">Integrazioni native</span>
+    </div>
+  </div>
+  <!-- ─── Case Studies ─── -->
+  <section id="case-studies">
+    <div class="container">
+      <div class="cs-header reveal">
+        <div class="section-label">Casi studio</div>
+        <h2 class="section-title">Progetti consegnati, risultati reali</h2>
+        <p class="section-sub">Esempi di sistemi costruiti e operativi. I nomi sono resi anonimi, i risultati no.</p>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card reveal">
+          <div class="cs-sector">Assicurativo / Previdenziale</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> I referenti operativi ricevevano ogni giorno le stesse richieste da clienti e agenti interni — domande su prodotti, procedure e policy disperse tra email, documenti e persone diverse. Il carico era insostenibile e le risposte non erano mai uniformi.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di knowledge interna con base documentale strutturata. Risponde autonomamente alle domande ricorrenti, loga le lacune e invia alert automatici al responsabile competente. La knowledge cresce ad ogni interazione.</span>
+          </div>
+          <blockquote class="cs-quote">"Il cervello interno dell'azienda." — CEO cliente. Il progetto è stato esteso alla sede estera con contratto di consulenza continuativa.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Fitness / Centri sportivi strutturati</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> I consulenti interni impiegavano ore a rispondere alle stesse domande fiscali e normative — con risposte disperse tra colleghi, documenti e email. Ogni risposta richiedeva un referente qualificato, sottraendo tempo al lavoro ad alto valore.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di consulenza fiscale interna testato in ambiente operativo reale. Struttura risposte normative accurate in secondi, riducendo il carico sui referenti qualificati e uniformando la qualità delle risposte.</span>
+          </div>
+          <blockquote class="cs-quote">Il sistema è stato presentato al Responsabile Nazionale e proposto formalmente ai vertici aziendali per un rollout su scala.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Software / Servizi digitali B2B</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> Il team operativo riceveva ogni giorno le stesse domande da clienti e operatori interni — su procedure, normative e funzionalità del servizio. Le risposte erano disperse tra documentazione interna, email e referenti diversi, con tempi di risposta lunghi e carichi non sostenibili.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente conversazionale con knowledge RAG sulla documentazione interna. Risponde autonomamente alle domande ricorrenti, logga ogni interazione nel CRM e invia alert email automatici al referente competente per le domande non coperte. La knowledge si aggiorna ad ogni nuovo documento caricato.</span>
+          </div>
+          <blockquote class="cs-quote">"Le domande ripetitive sono sparite dal carico del team. Il sistema sa già rispondere a quello che chiedono ogni giorno." — Responsabile operativo cliente.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Studi Legali / Professionisti con clientela internazionale</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> Produrre contenuti video professionali richiedeva ogni volta un'equipe, attrezzatura e post-produzione — tempi lunghi, costi alti, dipendenza da terzi per ogni singolo contenuto.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Avatar digitale personalizzato con scenari multipli d'uso. Lo studio fornisce lo script, il video è pronto — anche in cinese madrelingua per il pubblico asiatico del cliente.</span>
+          </div>
+          <blockquote class="cs-quote">"Solo il video in cinese vale già quello che ho pagato." — Avvocato, Milano. Il cliente ha dichiarato che promuoverà attivamente il servizio.</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Servizi ─── -->
+  <section id="servizi">
+    <div class="container">
+      <div class="servizi-header reveal">
+        <div>
+          <div class="section-label">Cosa costruiamo</div>
+          <h2 class="section-title">Agenti operativi<br>su misura per la tua azienda</h2>
+        </div>
+        <p class="section-sub">Non vendiamo piattaforme da configurare da soli. Progettiamo, costruiamo e consegniamo sistemi che funzionano — integrati nei tuoi strumenti dal giorno uno.</p>
+      </div>
+      <div class="servizi-grid">
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-avio">🧠</div>
+          <div class="service-title">Libera i tuoi referenti dalle domande ripetitive</div>
+          <p class="service-desc">Un cervello interno aziendale. Risponde a domande su procedure, prodotti e policy — attingendo alla tua documentazione reale. Cresce ad ogni interazione, loga le lacune e le segnala al responsabile.</p>
+          <span class="service-tag">→ Elimina domande ripetitive ai referenti</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-viola">⚙️</div>
+          <div class="service-title">Recupera ore ogni settimana senza assumere nessuno</div>
+          <p class="service-desc">Connetti CRM, ERP, email e strumenti interni in flussi automatici. Le attività manuali — trascrizione dati, follow-up, compilazione form — vengono gestite senza intervento umano.</p>
+          <span class="service-tag">→ Ore recuperate ogni settimana</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-verdino">📊</div>
+          <div class="service-title">Trasforma più contatti in clienti, senza lavoro manuale</div>
+          <p class="service-desc">Il tuo CRM smette di essere un archivio passivo. Log automatici delle interazioni, priorità dei contatti, follow-up intelligenti e sintesi di conversazioni — senza che il commerciale tocchi una riga.</p>
+          <span class="service-tag">→ Pipeline sempre aggiornata, zero effort</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-muted">🏗️</div>
+          <div class="service-title">Gestisci processi complessi senza aggiungere persone</div>
+          <p class="service-desc">Per processi complessi che coinvolgono più reparti. Progettiamo sistemi dove più agenti lavorano in coordinazione — ognuno con un ruolo specifico, tutti integrati nel tuo workflow esistente.</p>
+          <span class="service-tag">→ Operatività end-to-end automatizzata</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Demo ─── -->
+  <section id="demo">
+    <div class="container">
+      <div class="demo-header reveal">
+        <div class="section-label demo-label">Sistema multi-agente · Live architecture</div>
+        <h2 class="section-title">Più agenti. Un unico risultato.</h2>
+        <p class="section-sub">Ogni agente ha un ruolo preciso. L'orchestratore coordina tutto — tu vedi solo il risultato finale.</p>
+      </div>
+      <div class="demo-video-wrap reveal">
+        <video class="demo-video" id="demoVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/__l5e/assets-v1/ac68b180-a3a6-4ecf-93b7-fbf9b9fd811d/demo-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="demo-cta-wrap reveal">
+        <a href="#contatti" class="btn btn-primary demo-cta">Vedi come funziona nel tuo processo →</a>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Come Funziona ─── -->
+
+  <section id="come-funziona">
+    <div class="container">
+      <div class="steps-header reveal">
+        <div class="section-label">Il metodo SJM</div>
+        <h2 class="section-title">Dal problema al sistema che funziona</h2>
+        <p class="section-sub">Nessun discovery infinito. Nessun prototipo che non arriva mai in produzione. Lavoriamo in sprint brevi con un output concreto ad ogni fase.</p>
+      </div>
+      <div class="process-video-wrap reveal">
+        <video class="process-video" id="processVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/__l5e/assets-v1/acf23b32-f2b3-468a-9a3e-a025cd04a4a3/process-video.mp4" type="video/mp4">
+        </video>
+        <p class="process-video-caption">Dal problema al sistema operativo — in 30 giorni.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item reveal">
+          <div class="step-num active">01</div>
+          <div class="step-title">Diagnosi operativa</div>
+          <p class="step-desc">Analizziamo dove l'azienda perde tempo, continuità e risorse. Identifichiamo il collo di bottiglia con il ROI più alto da automatizzare per primo.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">02</div>
+          <div class="step-title">Progettazione dell'architettura</div>
+          <p class="step-desc">Definiamo quali agenti costruire, come si collegano ai tuoi sistemi esistenti e quali metriche userai per misurare i risultati.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">03</div>
+          <div class="step-title">Build e integrazione</div>
+          <p class="step-desc">Costruiamo il sistema sui tuoi processi reali. Lo integriamo negli strumenti che già usi: CRM, email, gestionale, Slack — senza sostituire niente.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">04</div>
+          <div class="step-title">Risultato misurabile</div>
+          <p class="step-desc">In 20–40 giorni hai un sistema in produzione con risultati verificabili. Non un proof-of-concept — un agente operativo che sta già facendo il suo lavoro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Marquee band 2 ─── -->
+  <div class="marquee-band alt" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">PMI italiane</span>
+      <span class="marquee-item">Risultati in 20–40 giorni</span>
+      <span class="marquee-item">Zero lock-in</span>
+      <span class="marquee-item">Costruito sui tuoi processi</span>
+      <span class="marquee-item">Integrazione nativa</span>
+      <span class="marquee-item">Output misurabile</span>
+      <span class="marquee-item">PMI italiane</span>
+      <span class="marquee-item">Risultati in 20–40 giorni</span>
+      <span class="marquee-item">Zero lock-in</span>
+      <span class="marquee-item">Costruito sui tuoi processi</span>
+      <span class="marquee-item">Integrazione nativa</span>
+      <span class="marquee-item">Output misurabile</span>
+    </div>
+  </div>
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <div class="section-label">Chi siamo</div>
+          <h2 class="section-title">Non vendiamo tecnologia.<br>Vendiamo tempo recuperato.</h2>
+          <div class="founder-grid">
+            <div class="founder-col">
+              <div class="founder-photo-wrap">
+                <img src="/__l5e/assets-v1/c2e92648-3d9b-40e1-bcee-6d1f76892625/founder-sebastian.png" alt="Sebastián Javier Mellace, founder di SJM Systems Engineering" class="founder-photo" loading="lazy" />
+              </div>
+              <div class="founder-name">
+                Sebastián Javier Mellace
+                <a href="https://www.linkedin.com/in/sebastian-javier-mellace-3864471aa/" target="_blank" rel="noopener noreferrer" class="social-link founder-linkedin" aria-label="LinkedIn di Sebastián Javier Mellace">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
+              </div>
+              <div class="founder-role">Founder &amp; AI Systems Architect</div>
+            </div>
+            <div class="founder-credentials">
+              Formato presso <strong>Learning Heroes</strong> — centro universitario specializzato in tecnologie disruptive, powered by
+              <span class="cred-google-badge">
+                <img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" alt="Google" width="14" height="14" loading="lazy" />
+                Google
+              </span>.
+              Máster IA Heroes · 60 ECTS · +13.000 alumni nel mondo.
+            </div>
+            <div class="founder-text">
+              <p class="about-text">SJM Systems Engineering nasce da una premessa semplice: la maggior parte delle PMI italiane strutturate ha già processi che funzionano. Il problema non è la tecnologia — è che quei processi assorbono troppo tempo, troppi referenti e troppa energia manuale.</p>
+              <p class="about-text">Il nostro lavoro è diagnosticare dove l'azienda perde continuità e costruire agenti operativi che tappano quei buchi — integrandosi con gli strumenti che già usi, senza stravolgere niente.</p>
+              <ul class="about-list">
+                <li>Lavoriamo solo su colli di bottiglia reali, non su proof of concept dimostrativi</li>
+                <li>Ogni progetto ha una metrica di risultato definita prima di iniziare</li>
+                <li>Consegniamo sistemi operativi, non presentazioni da rivedere tra sei mesi</li>
+                <li>Sono il tuo interlocutore tecnico e commerciale, senza middleman</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="phone-stage">
+            <div class="float-card fc-tl" aria-hidden="true">
+              <div class="fc-icon">✉</div>
+              <div class="fc-body">
+                <div class="fc-title">Email smistata</div>
+                <div class="fc-meta">HR · 2s fa</div>
+              </div>
+            </div>
+            <div class="float-card fc-cl" aria-hidden="true">
+              <div class="fc-icon">⚡</div>
+              <div class="fc-body">
+                <div class="fc-title">Ticket creato</div>
+                <div class="fc-meta">CRM · 14s fa</div>
+              </div>
+            </div>
+            <div class="float-card fc-br" aria-hidden="true">
+              <div class="fc-icon">✓</div>
+              <div class="fc-body">
+                <div class="fc-title">Report inviato</div>
+                <div class="fc-meta">Sales · 31s fa</div>
+              </div>
+            </div>
+            <div class="phone-mockup" aria-hidden="true">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="phone-dots"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="phone-header">
+                    <div class="phone-avatar">SJM</div>
+                    <div class="phone-meta">
+                      <div class="phone-name">Agente SJM</div>
+                      <div class="phone-status"><span class="phone-dot"></span> online · processa pratiche</div>
+                    </div>
+                  </div>
+                  <div class="phone-feed">
+                    <div class="phone-bubble pb-in pb-1">Nuova richiesta cliente — pratica #4821</div>
+                    <div class="phone-bubble pb-out pb-2">Letta. Smisto a HR e apro ticket interno.</div>
+                    <div class="phone-bubble pb-out pb-3">Risposta inviata <b>✓</b></div>
+                    <div class="phone-bubble pb-in pb-4">Nuova mail commerciale</div>
+                    <div class="phone-bubble pb-out pb-5"><span class="phone-typing"><i></i><i></i><i></i></span></div>
+                  </div>
+                  <div class="phone-progress">
+                    <div class="phone-progress-label"><span>Pratiche oggi</span><span><b>12</b> / 47</span></div>
+                    <div class="phone-progress-track"><div class="phone-progress-bar"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-header">SJM · Dashboard operativa</div>
+            <div class="about-metric">
+              <span class="about-metric-label">Progetti consegnati ·</span>
+              <span class="about-metric-value">4</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Settori coperti</span>
+              <span class="about-metric-value">Assicurativo · HR · Fitness · Professionale · Legale</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tempo medio al primo risultato</span>
+              <span class="about-metric-value positive">20–40 giorni</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Dipendenza da piattaforme terze</span>
+              <span class="about-metric-value positive">Zero lock-in</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tipo di contratto</span>
+              <span class="about-metric-value">Progetto fisso o consulenza continuativa</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Integrazione sistemi esistenti</span>
+              <span class="about-metric-value positive">Sempre inclusa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">Domande frequenti</div>
+        <h2 class="section-title">Quello che ci chiedono i CEO prima di partire</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto tempo ci vuole per vedere i primi risultati?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Lavoriamo per avere un sistema operativo e misurabile in 20–40 giorni. Non un prototipo — un agente che sta già facendo il suo lavoro in produzione. La prima settimana è dedicata alla diagnosi e alla progettazione; dal giorno 8 iniziamo a costruire.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Devo cambiare i miei strumenti o processi attuali?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Costruiamo attorno a quello che già usi. Se hai un CRM, un ERP, o lavori su email e Slack — gli agenti si integrano lì. Non chiediamo mai di sostituire strumenti esistenti: aggiungiamo operatività a quello che funziona già.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Serve un team tecnico interno per gestire il sistema?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Il sistema viene consegnato già configurato e operativo. Formiamo il referente che lo userà quotidianamente — di solito bastano 2-3 ore. Per le aziende che preferiscono non gestire niente internamente, offriamo contratti di consulenza continuativa.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come si misura il ritorno dell'investimento?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Prima di iniziare, definiamo insieme la metrica di risultato: ore di lavoro manuale eliminate, tempo di risposta ridotto, pipeline aggiornata senza intervento manuale, ecc. Il ROI si misura su quelle metriche — non su numeri teorici.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Lavorate solo con certi settori?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I verticali in cui lavoriamo con priorità oggi: broker assicurativi e consulenti previdenziali, società di servizi con alto volume di supporto clienti, cliniche private e poliambulatori, studi professionali strutturati, agenzie immobiliari, palestre e centri fitness con più sedi. Se la tua azienda ha processi ripetitivi e referenti saturi, la conversazione vale.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come inizia il processo? C'è un impegno minimo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Si inizia con una chiamata gratuita di 30 minuti in cui analizziamo i tuoi processi e capiamo insieme se c'è un progetto sensato da costruire. Se non vediamo un valore concreto per la tua azienda, lo diciamo chiaramente — senza spingere verso un impegno che non ha senso.</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="faq-toggle-all" id="faq-toggle-all" onclick="toggleFaqAll(this)">Mostra tutte le domande</button>
+    </div>
+  </section>
+  <!-- ─── Contatti ─── -->
+  <section id="contatti">
+    <div class="container">
+      <div class="contatti-grid">
+        <div class="contatti-content reveal">
+          <div class="section-label">Parliamo</div>
+          <h2 class="section-title">Hai un processo che assorbe troppo tempo?</h2>
+          <p class="section-sub">Raccontaci il problema. In 30 minuti capiamo insieme se c'è un sistema da costruire — e qual è il punto di partenza con il ritorno più alto.</p>
+          <div class="contatti-points">
+            <div class="contatti-point">
+              <div class="contatti-point-icon">⚡</div>
+              <div class="contatti-point-text">
+                <strong>Risposta entro 24 ore</strong>
+                <span>Nessun form che finisce nel vuoto. Ti rispondo direttamente io.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🎯</div>
+              <div class="contatti-point-text">
+                <strong>Prima chiamata gratuita</strong>
+                <span>30 minuti di analisi operativa — senza impegno, senza pitch commerciale.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🔒</div>
+              <div class="contatti-point-text">
+                <strong>Riservatezza garantita</strong>
+                <span>Tutto quello che condividi resta confidenziale. NDA disponibile su richiesta.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="contact-form">
+            <div style="background: rgba(62, 207, 178, 0.08); border: 1px solid rgba(62, 207, 178, 0.25); border-radius: 8px; padding: 16px; margin-bottom: 24px; text-align: center;">
+              <div style="font-family: var(--font-display, 'Space Grotesk', sans-serif); font-weight: 600; color: #fff; font-size: 15px; margin-bottom: 6px;">
+                Vuoi scegliere subito il giorno e l'ora?
+              </div>
+              <p style="font-size: 13px; color: var(--color-muted, #8A99B5); margin-bottom: 14px; line-height: 1.5;">
+                Puoi fissare direttamente la tua Discovery Call di 30 minuti sul calendario disponibilità in tempo reale.
+              </p>
+              <a href="/prenota" class="btn btn-primary" style="display: inline-block; width: 100%; text-align: center; padding: 12px 20px; font-size: 14px;">
+                Scegli giorno e ora sul calendario →
+              </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <span style="background: var(--color-surface, #111520); padding: 0 12px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; text-transform: uppercase; color: var(--color-muted, #6B7A99); letter-spacing: 0.1em;">oppure compila il messaggio</span>
+            </div>
+            <form id="contact-form" novalidate>
+              <div class="form-two-col">
+                <div class="form-row">
+                  <label for="nome">Nome *</label>
+                  <input type="text" id="nome" name="nome" placeholder="Mario Rossi" autocomplete="name" />
+                </div>
+                <div class="form-row">
+                  <label for="azienda">Azienda *</label>
+                  <input type="text" id="azienda" name="azienda" placeholder="Azienda Srl" />
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="mario@azienda.it" autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <label for="messaggio">Descrivi il processo o il problema *</label>
+                <textarea id="messaggio" name="messaggio" rows="5" placeholder="Es: Il nostro team commerciale passa 2 ore al giorno ad aggiornare il CRM manualmente. Vorremmo capire se si può automatizzare..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Invia la richiesta →</button>
+            </form>
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">✅</div>
+              <h3>Richiesta ricevuta.</h3>
+              <p>Ti rispondo entro 24 ore per organizzare la prima chiamata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="/__l5e/assets-v1/95831f2d-f342-4d89-aa6b-45c9ff61180c/sjm-logo.png" alt="SJM Systems Engineering" />
+        </div>
+        <ul class="footer-links">
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#come-funziona">Come Funziona</a></li>
+          <li><a href="#case-studies">Casi Studio</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="mailto:info@sjmsystems.it">info@sjmsystems.it</a></li>
+          <li><a href="https://www.linkedin.com/in/sebastianjmellace" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/sebastian-javier-mellace-3864471aa/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn di Sebastián Javier Mellace">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copy">© 2026 SJM Systems Engineering. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed mobile CTA -->
+  <a href="#contatti" class="mobile-cta" id="mobile-cta">Parliamo del tuo progetto →</a>
+
+  <script>
+    // ─── Nav sticky ───
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ─── Mobile menu ───
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+    }
+
+    // ─── Scroll reveal ───
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay for grid children
+          const siblings = Array.from(entry.target.parentElement.children);
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.08) + 's';
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ─── FAQ accordion ───
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Chiudi tutti
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      // Apri quello cliccato se era chiuso
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ─── FAQ "Mostra tutte" (mobile) ───
+    function toggleFaqAll(btn) {
+      const expanded = btn.classList.toggle('expanded');
+      document.querySelectorAll('.faq-extra').forEach(el => el.classList.toggle('show', expanded));
+      btn.textContent = expanded ? 'Mostra meno domande' : 'Mostra tutte le domande';
+    }
+
+    // ─── Steps accordion (mobile only) ───
+    document.querySelectorAll('.step-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          item.classList.toggle('open');
+        }
+      });
+    });
+
+    // ─── Hide mobile CTA when in Contatti ───
+    const mobileCta = document.getElementById('mobile-cta');
+    const contattiSection = document.getElementById('contatti');
+    if (mobileCta && contattiSection && 'IntersectionObserver' in window) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          mobileCta.classList.toggle('hidden', entry.isIntersecting);
+        });
+      }, { threshold: 0.15 });
+      ctaObserver.observe(contattiSection);
+    }
+
+    // ─── Process video autoplay on scroll into view ───
+    const processVideo = document.getElementById('processVideo');
+    if (processVideo && 'IntersectionObserver' in window) {
+      const pvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            processVideo.play().catch(() => {});
+          } else {
+            processVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      pvObserver.observe(processVideo);
+    }
+
+    // ─── Demo video autoplay on scroll into view ───
+    const demoVideo = document.getElementById('demoVideo');
+    if (demoVideo && 'IntersectionObserver' in window) {
+      const dvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            demoVideo.play().catch(() => {});
+          } else {
+            demoVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      dvObserver.observe(demoVideo);
+    }
+
+
+
+
+
+
+    // ─── Form validation & submit ───
+    const form = document.getElementById('contact-form');
+    const successBox = document.getElementById('form-success');
+
+    function showError(input, msg) {
+      input.classList.add('error');
+      let err = input.parentElement.querySelector('.form-error-msg');
+      if (!err) {
+        err = document.createElement('span');
+        err.className = 'form-error-msg';
+        input.parentElement.appendChild(err);
+      }
+      err.textContent = msg;
+    }
+
+    function clearError(input) {
+      input.classList.remove('error');
+      const err = input.parentElement.querySelector('.form-error-msg');
+      if (err) err.remove();
+    }
+
+    ['nome', 'azienda', 'email', 'messaggio'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => clearError(el));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      const nome = document.getElementById('nome');
+      const azienda = document.getElementById('azienda');
+      const email = document.getElementById('email');
+      const messaggio = document.getElementById('messaggio');
+
+      if (!nome.value.trim()) { showError(nome, 'Inserisci il tuo nome'); valid = false; }
+      if (!azienda.value.trim()) { showError(azienda, 'Inserisci il nome dell\\'azienda'); valid = false; }
+      const emailRe = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailRe.test(email.value.trim())) { showError(email, 'Inserisci un\\'email valida'); valid = false; }
+      if (messaggio.value.trim().length < 20) { showError(messaggio, 'Descrivi brevemente il problema (min. 20 caratteri)'); valid = false; }
+
+      if (!valid) return;
+
+      // Submit button feedback
+      const btn = form.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.textContent = 'Invio in corso...';
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: nome.value.trim(),
+          azienda: azienda.value.trim(),
+          email: email.value.trim(),
+          messaggio: messaggio.value.trim(),
+        }),
+      })
+        .then(async (r) => {
+          if (!r.ok) throw new Error('send_failed');
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Riprova →';
+          showError(messaggio, 'Invio non riuscito. Riprova tra qualche istante.');
+        });
+    });
+  <\/script>
+
+`;function t(){return e.jsxs(e.Fragment,{children:[e.jsx("style",{dangerouslySetInnerHTML:{__html:i}}),e.jsx("div",{dangerouslySetInnerHTML:{__html:n}})]})}export{t as component};

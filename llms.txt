@@ -1,0 +1,9 @@
+# SJM Systems Engineering
+
+> Progettiamo agenti AI custom per PMI italiane: forze lavoro digitali costruite sui processi reali del cliente e integrate negli strumenti già in uso (CRM, ERP, email, Slack).
+
+SJM Systems Engineering non vende piattaforme generiche da configurare. Diagnostica i flussi operativi, costruisce architetture su misura e consegna sistemi che producono risultati misurabili in 30–60 giorni.
+
+## Pages
+
+- [Homepage](/): Servizi, metodo, casi studio, FAQ e contatti di SJM Systems Engineering.

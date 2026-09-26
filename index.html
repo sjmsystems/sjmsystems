@@ -1,0 +1,3143 @@
+<!DOCTYPE html><html lang="it-IT"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/styles-DVn66iiR.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" data-precedence="default"/><title>SJM Systems Engineering — Agenti AI per PMI italiane</title><meta name="author" content="SJM Systems Engineering"/><meta property="og:site_name" content="SJM Systems Engineering"/><meta name="twitter:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta name="twitter:description" content="Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali."/><meta property="og:image" content="https://sjmsystems.it/__l5e/assets-v1/bd93b0f0-43d5-4ee4-bfef-d5293b50c091/social-card.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="1200"/><meta property="og:image:type" content="image/jpeg"/><meta property="og:image:alt" content="SJM Systems Engineering — Forze lavoro digitali, progettate sui vostri processi"/><meta name="twitter:image" content="https://sjmsystems.it/__l5e/assets-v1/bd93b0f0-43d5-4ee4-bfef-d5293b50c091/social-card.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Agenti AI custom per PMI italiane. Eliminiamo colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 20–40 giorni."/><meta property="og:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta property="og:description" content="Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni."/><meta property="og:type" content="website"/><meta property="og:url" content="https://sjmsystems.it/"/><link rel="modulepreload" href="/assets/index-Bgy4Pixr.js"/><link rel="modulepreload" href="/assets/index-CkVFHewJ.js"/><link rel="modulepreload" href="/assets/sjm-DdLdyzzl.js"/><link rel="canonical" href="https://sjmsystems.it/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"SJM Systems Engineering","url":"https://sjmsystems.it/","description":"Progettiamo agenti AI custom per PMI italiane, costruiti sui processi reali del cliente e integrati negli strumenti già in uso."},{"@type":"WebSite","name":"SJM Systems Engineering","url":"https://sjmsystems.it/"}]}</script></head><body style="min-height:100vh"><!--$--><style>    /* ─── CSS Variables ─── */
+    :root {
+      --color-bg:       #0A0C12;
+      --color-surface:  #111520;
+      --color-border:   #1E2535;
+      --color-avio:     #4A7FA5;
+      --color-viola:    #7B5EA7;
+      --color-verdino:  #3ECFB2;
+      --color-text:     #E8EAF0;
+      --color-muted:    #6B7A99;
+      --color-white:    #FFFFFF;
+      --font-display:   'Space Grotesk', sans-serif;
+      --font-body:      'Inter', sans-serif;
+      --font-mono:      'JetBrains Mono', monospace;
+      --radius:         12px;
+      --radius-sm:      8px;
+      --transition:     0.25s ease;
+      --max-width:      1120px;
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ─── Layout Utilities ─── */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section { padding: 96px 0; }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--color-verdino);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--color-white);
+      margin-bottom: 20px;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--color-muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin: 0 auto; }
+
+    /* ─── Reveal Animation ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── Navigation ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(10, 12, 18, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 88px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo img {
+      height: 72px;
+      width: auto;
+      display: block;
+      mix-blend-mode: multiply;
+    }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-white);
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-muted);
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--color-text); }
+    .nav-cta {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-white);
+      background: var(--color-avio);
+      padding: 9px 20px;
+      border-radius: var(--radius-sm);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--color-text);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: 16px 24px 24px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 12px 0;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-muted);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--color-avio); font-weight: 600; }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      transition: transform var(--transition), opacity var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--color-avio);
+      color: var(--color-white);
+      box-shadow: 0 4px 24px rgba(74, 127, 165, 0.3);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 32px rgba(74, 127, 165, 0.45); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-text);
+      border: 1px solid var(--color-border);
+    }
+    .btn-secondary:hover { border-color: var(--color-avio); color: var(--color-avio); }
+
+    /* ─── Hero ─── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+      background: #0a0c12;
+    }
+    .hero-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(10,12,18,0.92) 0%, rgba(10,12,18,0.78) 55%, rgba(10,12,18,0.55) 100%),
+        rgba(10, 12, 18, 0.45);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #hero > .container { position: relative; z-index: 2; }
+    #hero .corner-plus { z-index: 2; }
+    .hero-content {
+      position: relative;
+      max-width: 760px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-verdino);
+      border: 1px solid rgba(62, 207, 178, 0.25);
+      background: rgba(62, 207, 178, 0.06);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 28px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--color-verdino);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.08;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.55);
+    }
+    .hero-title .highlight {
+      background: linear-gradient(135deg, var(--color-avio), var(--color-viola));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #C9D1E0;
+      line-height: 1.7;
+      max-width: 580px;
+      margin-bottom: 40px;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 56px;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .hero-stat {}
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.55);
+    }
+    .hero-stat-label {
+      font-size: 13px;
+      color: #B4BECF;
+      margin-top: 2px;
+      text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-stat-divider {
+      width: 1px;
+      background: var(--color-border);
+      align-self: stretch;
+    }
+
+    /* Agent flow diagram */
+    .hero-visual {
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 420px;
+      opacity: 1;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .flow-node {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(18, 22, 34, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(74, 127, 165, 0.45);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #E6EBF5;
+      margin-bottom: 10px;
+      box-shadow: 0 8px 24px -8px rgba(0,0,0,0.6), 0 0 0 1px rgba(74,127,165,0.15);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .flow-node:nth-child(2) { animation-delay: 0.5s; margin-left: 32px; }
+    .flow-node:nth-child(3) { animation-delay: 1s; margin-left: 64px; }
+    .flow-node:nth-child(4) { animation-delay: 1.5s; margin-left: 32px; }
+    .flow-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-avio { background: var(--color-avio); }
+    .dot-viola { background: var(--color-viola); }
+    .dot-verdino { background: var(--color-verdino); }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* ─── Servizi ─── */
+    #servizi { background: var(--color-surface); }
+    .servizi-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .servizi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-avio), var(--color-viola));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .service-card:hover {
+      border-color: rgba(74, 127, 165, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .service-icon-avio { background: rgba(74, 127, 165, 0.15); }
+    .service-icon-viola { background: rgba(123, 94, 167, 0.15); }
+    .service-icon-verdino { background: rgba(62, 207, 178, 0.15); }
+    .service-icon-muted { background: rgba(107, 122, 153, 0.15); }
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.65;
+    }
+    .service-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-verdino);
+      border: 1px solid rgba(62, 207, 178, 0.2);
+      background: rgba(62, 207, 178, 0.05);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-top: 16px;
+    }
+
+    /* ─── Come Funziona ─── */
+    #come-funziona {}
+    .steps-header { text-align: center; margin-bottom: 64px; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(12.5%);
+      right: calc(12.5%);
+      height: 1px;
+      background: linear-gradient(90deg, var(--color-border), var(--color-avio), var(--color-viola), var(--color-border));
+    }
+    .step-item {
+      padding: 0 20px;
+      text-align: center;
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-white);
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .step-item:hover .step-num {
+      border-color: var(--color-avio);
+      box-shadow: 0 0 0 4px rgba(74, 127, 165, 0.15);
+    }
+    .step-num.active {
+      background: linear-gradient(135deg, var(--color-avio), var(--color-viola));
+      border-color: transparent;
+    }
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 10px;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: var(--color-muted);
+      line-height: 1.65;
+    }
+
+    /* ─── Case Studies ─── */
+    #case-studies { background: var(--color-surface); }
+    .cs-header { margin-bottom: 56px; }
+    .cs-grid {
+      display: grid;
+       grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .cs-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .cs-card:hover {
+      border-color: rgba(74, 127, 165, 0.35);
+      transform: translateY(-4px);
+    }
+    .cs-sector {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-avio);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .cs-problem {
+      font-size: 13px;
+      color: var(--color-muted);
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--color-border);
+      line-height: 1.6;
+    }
+    .cs-problem strong { color: var(--color-text); font-weight: 500; }
+    .cs-result {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--color-text);
+      line-height: 1.5;
+    }
+    .cs-result-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      background: rgba(62, 207, 178, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .cs-result-icon::after {
+      content: '✓';
+      font-size: 10px;
+      color: var(--color-verdino);
+    }
+    .cs-quote {
+      font-style: italic;
+      font-size: 13px;
+      color: var(--color-muted);
+      border-left: 2px solid var(--color-avio);
+      padding-left: 12px;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+
+    /* ─── About ─── */
+    #about {
+      display: block;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(360px, 420px);
+      gap: 64px;
+      align-items: start;
+    }
+    .about-content {}
+    .about-visual {
+      position: relative;
+    }
+    .about-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      position: relative;
+    }
+    .about-card-header {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-card-header::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--color-verdino);
+      animation: pulse-dot 2s infinite;
+    }
+    .about-metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .about-metric:last-child { border-bottom: none; }
+    .about-metric-label {
+      font-size: 13px;
+      color: var(--color-muted);
+      flex: 0 0 auto;
+    }
+    .about-metric-value {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-white);
+      text-align: right;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .about-metric-value.positive { color: var(--color-verdino); }
+    .about-text { font-size: 16px; color: var(--color-muted); line-height: 1.75; margin-bottom: 20px; }
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--color-text);
+    }
+    .about-list li::before {
+      content: '→';
+      color: var(--color-avio);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── FAQ ─── */
+    #faq { background: var(--color-surface); }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-item {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: rgba(74, 127, 165, 0.35); }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-white);
+      gap: 16px;
+      transition: color var(--transition);
+    }
+    .faq-question:hover { color: var(--color-avio); }
+    .faq-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--color-muted);
+      transition: transform var(--transition), background var(--transition), border-color var(--transition);
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--color-avio);
+      border-color: var(--color-avio);
+      color: white;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0 24px 20px;
+    }
+    .faq-answer p {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── Contatti ─── */
+    #contatti {}
+    .contatti-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contatti-content .section-title { margin-bottom: 16px; }
+    .contatti-content .section-sub { margin-bottom: 40px; }
+    .contatti-points {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contatti-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .contatti-point-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: rgba(74, 127, 165, 0.1);
+      border: 1px solid rgba(74, 127, 165, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .contatti-point-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 2px;
+    }
+    .contatti-point-text span {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+    .contact-form {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 36px;
+    }
+    .form-row { margin-bottom: 20px; }
+    .form-row label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .form-row input,
+    .form-row textarea {
+      width: 100%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      resize: none;
+    }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder { color: var(--color-muted); }
+    .form-row input:focus,
+    .form-row textarea:focus {
+      border-color: var(--color-avio);
+      box-shadow: 0 0 0 3px rgba(74, 127, 165, 0.12);
+    }
+    .form-row input.error,
+    .form-row textarea.error { border-color: #e05c5c; }
+    .form-error-msg {
+      display: block;
+      font-size: 12px;
+      color: #e05c5c;
+      margin-top: 5px;
+    }
+    .form-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      background: var(--color-avio);
+      color: white;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 0;
+    }
+    .form-success-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    .form-success h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 8px;
+    }
+    .form-success p {
+      font-size: 14px;
+      color: var(--color-muted);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: 40px 0;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    /* NOTE: Logo nel footer — stessa regola del nav per sfondo scuro */
+    .footer-logo img { height: 40px; width: auto; display: block; }
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-white);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--color-muted);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--color-text); }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 1024px) {
+      .hero-visual { display: none; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .steps-grid::before { display: none; }
+      .about-grid { gap: 48px; }
+      .cs-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .servizi-header { flex-direction: column; align-items: flex-start; }
+      .servizi-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { order: -1; }
+      .contatti-grid { grid-template-columns: 1fr; gap: 40px; }
+      .form-two-col { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; justify-content: center; text-align: center; flex-wrap: wrap; }
+      .hero-stat { text-align: center; }
+      .hero-stat-divider { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-links { flex-wrap: wrap; gap: 16px; }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       MODERN LIGHT REFRESH OVERRIDES
+       ═══════════════════════════════════════════════════ */
+    :root {
+      --color-bg:       #F7F8FC;
+      --color-surface:  #FFFFFF;
+      --color-border:   #E4E8F2;
+      --color-text:     #0F1424;
+      --color-muted:    #5B6478;
+      --color-white:    #0F1424;
+      --grad-soft:      radial-gradient(1200px 600px at 80% -10%, rgba(123,94,167,0.18), transparent 60%),
+                        radial-gradient(900px 500px at -10% 30%, rgba(62,207,178,0.18), transparent 60%),
+                        radial-gradient(800px 600px at 50% 110%, rgba(74,127,165,0.14), transparent 60%);
+    }
+    body { background: var(--color-bg); color: var(--color-text); }
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: var(--grad-soft);
+      z-index: -2; pointer-events: none;
+    }
+    body::after {
+      content: "";
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(15,20,36,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,20,36,0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+      z-index: -1; pointer-events: none;
+    }
+    nav.scrolled { background: rgba(247,248,252,0.85); border-bottom: 1px solid var(--color-border); }
+    .nav-logo-text, .nav-links a { color: #0F1424 !important; }
+    .section-title, .hero-title { color: #0F1424 !important; }
+    .hero-title .highlight {
+      background: linear-gradient(90deg, #7B5EA7, #3ECFB2 60%, #4A7FA5);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    #hero { background: transparent; }
+    .hero-grid-bg { opacity: 0.35 !important; }
+    .hero-glow { opacity: 0.5 !important; }
+    .service-card, .cs-card, .about-card, .faq-item, .step-item {
+      background: rgba(255,255,255,0.7) !important;
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(228,232,242,0.9) !important;
+      box-shadow: 0 8px 30px -12px rgba(15,20,36,0.08);
+    }
+    .service-card:hover, .cs-card:hover { box-shadow: 0 20px 50px -20px rgba(123,94,167,0.25); transform: translateY(-4px); transition: all .3s ease; }
+    .btn-primary { background: linear-gradient(135deg, #7B5EA7, #3ECFB2); color: #fff !important; box-shadow: 0 10px 30px -10px rgba(123,94,167,0.5); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(123,94,167,0.6); }
+    .btn-secondary { border: 1px solid var(--color-border); color: #0F1424 !important; background: rgba(255,255,255,0.7); }
+    .hero-stat-num, .about-metric-value { color: #0F1424 !important; }
+    .hero-stat-label, .about-metric-label, .service-desc, .step-desc, .cs-problem, .faq-answer, .about-text {
+      color: #5B6478 !important;
+    }
+    .flow-node { background: rgba(255,255,255,0.85) !important; border: 1px solid var(--color-border) !important; color: #0F1424 !important; box-shadow: 0 6px 20px -8px rgba(15,20,36,0.1); }
+    footer { background: #0F1424 !important; color: #E8EAF0 !important; }
+
+    /* ─── Marquee scorrevole trasversale ─── */
+    .marquee-band {
+      position: relative;
+      overflow: hidden;
+      padding: 28px 0;
+      background: linear-gradient(90deg, #7B5EA7 0%, #4A7FA5 50%, #3ECFB2 100%);
+      transform: rotate(-2deg);
+      margin: 60px -40px;
+      box-shadow: 0 20px 50px -20px rgba(123,94,167,0.35);
+    }
+    .marquee-band.alt {
+      background: linear-gradient(90deg, #0F1424, #1E2535 50%, #0F1424);
+      transform: rotate(1.5deg);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 48px;
+      width: max-content;
+      animation: marquee-scroll 38s linear infinite;
+      will-change: transform;
+    }
+    .marquee-item {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 48px;
+    }
+    .marquee-item::after {
+      content: "✦";
+      color: rgba(255,255,255,0.55);
+      font-size: 0.7em;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── Tech transparent images ─── */
+    .tech-float {
+      position: absolute;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 1;
+      filter: drop-shadow(0 0 24px rgba(74,127,165,0.55)) drop-shadow(0 30px 60px rgba(123,94,167,0.35));
+      animation: float-y 8s ease-in-out infinite;
+    }
+    .tech-float.tf-hero-right { top: 8%; right: -60px; width: 520px; max-width: 55vw; }
+
+    .tech-float.tf-services { top: -40px; right: -80px; width: 380px; opacity: 0.6; animation-delay: -2s; }
+    .tech-float.tf-about { width: 100%; max-width: 460px; margin: 0 auto; position: relative; display: block; }
+    @keyframes float-y {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-18px); }
+    }
+    #hero .container, #servizi { position: relative; }
+    #hero { overflow: hidden; }
+
+    @media (max-width: 768px) {
+      .tech-float.tf-hero-right, .tech-float.tf-services { display: none; }
+      .marquee-band { margin: 40px -20px; }
+    }
+
+    /* ─── Italic accent (Learning Heroes-style) ─── */
+    .hero-title .highlight-italic,
+    .section-title .highlight-italic {
+      font-style: italic;
+      font-weight: 500;
+      background: linear-gradient(90deg, #7B5EA7, #3ECFB2);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      padding-right: 0.05em;
+    }
+
+    /* ─── Corner plus markers ─── */
+    #hero { position: relative; }
+    .corner-plus {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 300;
+      font-size: 28px;
+      color: #7B5EA7;
+      opacity: 0.55;
+      z-index: 2;
+      line-height: 1;
+      user-select: none;
+    }
+    .corner-plus.tl { top: 90px; left: 24px; }
+    .corner-plus.tr { top: 90px; right: 24px; }
+    .corner-plus.bl { bottom: 24px; left: 24px; }
+    .corner-plus.br { bottom: 24px; right: 24px; }
+
+    /* ─── Testimonianze ─── */
+    #testimonianze { padding: 100px 0; position: relative; }
+    .testi-header { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+    .testi-proof {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      padding: 32px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(123,94,167,0.06), rgba(62,207,178,0.06));
+      border: 1px solid rgba(123,94,167,0.15);
+      margin-bottom: 56px;
+    }
+    .testi-proof-item { text-align: center; }
+    .testi-proof-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: #0F1424;
+      letter-spacing: -0.02em;
+    }
+    .testi-proof-num span { font-size: 0.55em; color: #5B6478; font-weight: 500; }
+    .testi-proof-label {
+      font-size: 13px; color: #5B6478; margin-top: 6px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .testi-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .testi-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(228,232,242,0.9);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 8px 30px -12px rgba(15,20,36,0.08);
+      display: flex; flex-direction: column; gap: 24px;
+      transition: all .3s ease;
+    }
+    .testi-card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -20px rgba(123,94,167,0.25); }
+    .testi-quote {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px; line-height: 1.55; color: #0F1424;
+      font-weight: 500;
+    }
+    .testi-author { display: flex; align-items: center; gap: 14px; }
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, #7B5EA7, #3ECFB2);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-family: 'Space Grotesk', sans-serif; font-size: 14px;
+    }
+    .testi-name { font-weight: 600; color: #0F1424; font-size: 15px; }
+    .testi-role { font-size: 13px; color: #5B6478; }
+    @media (max-width: 900px) {
+      .testi-proof { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: 1fr; }
+      .corner-plus { font-size: 20px; }
+    }
+
+    /* ─── Mobile polish ─── */
+    html, body { overflow-x: hidden; max-width: 100%; }
+    .container { box-sizing: border-box; }
+    @media (max-width: 768px) {
+      .nav-inner { height: 64px; }
+      .nav-logo { gap: 8px; min-width: 0; }
+      .nav-logo img { height: 40px; }
+      .nav-logo-text {
+        font-size: 13px;
+        line-height: 1.15;
+        max-width: 130px;
+        white-space: normal;
+      }
+      .nav-hamburger { flex: 0 0 auto; }
+      .hero-title { font-size: clamp(34px, 9vw, 52px) !important; line-height: 1.1; }
+      .hero-sub { font-size: 16px !important; }
+      .section-title { font-size: clamp(28px, 7vw, 40px) !important; line-height: 1.15; }
+      .section-sub { font-size: 15px !important; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-cta-group { flex-direction: column; align-items: stretch; gap: 12px; }
+      .corner-plus.tl { top: 72px; left: 12px; }
+      .corner-plus.tr { top: 72px; right: 12px; }
+      .corner-plus.bl { bottom: 12px; left: 12px; }
+      .corner-plus.br { bottom: 12px; right: 12px; }
+      .footer-logo img { height: 32px; }
+      .contact-form { padding: 20px !important; }
+      .service-card, .cs-card, .about-card, .faq-item, .step-item { padding: 20px !important; }
+      .testi-proof { padding: 20px; gap: 16px; }
+      .marquee-item { font-size: 14px !important; }
+    }
+    @media (max-width: 480px) {
+      .container { padding-left: 16px; padding-right: 16px; }
+      .nav-logo-text { display: none; }
+      .nav-logo img { height: 44px; }
+      .hero-stats { flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+      .hero-stat { text-align: center; width: 100%; }
+    }
+
+/* ── Founder block ── */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 32px;
+}
+.founder-col { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.founder-photo-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.4),
+    0 0 24px rgba(74, 127, 165, 0.45),
+    0 0 60px rgba(74, 127, 165, 0.35);
+  transition: box-shadow 0.4s ease;
+}
+.founder-photo-wrap:hover {
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.6),
+    0 0 32px rgba(74, 127, 165, 0.6),
+    0 0 80px rgba(74, 127, 165, 0.5);
+}
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+.founder-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0F1424;
+  margin-top: 20px;
+  letter-spacing: -0.01em;
+}
+.founder-role {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: #3ECFB2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .founder-col { max-width: 260px; margin: 0 auto; }
+  .founder-text { text-align: left; }
+}
+
+/* ── Social link (LinkedIn) ── */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7A99;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-link:hover { color: #4A7FA5; transform: translateY(-1px); }
+.social-link svg { display: block; }
+.founder-linkedin { margin-left: 8px; vertical-align: middle; }
+.footer-links .social-link { padding: 2px; }
+
+/* ── FAQ "Mostra tutte" toggle (mobile only) ── */
+.faq-toggle-all {
+  display: none;
+  margin: 24px auto 0;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid rgba(74, 127, 165, 0.5);
+  border-radius: 999px;
+  color: #fff;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.faq-toggle-all:hover { background: rgba(74, 127, 165, 0.15); border-color: #4A7FA5; }
+
+/* ── Fixed mobile CTA ── */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 90;
+  padding: 14px 20px;
+  background: #4A7FA5;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(74, 127, 165, 0.45), 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.mobile-cta.hidden {
+  opacity: 0;
+  transform: translateY(120%);
+  pointer-events: none;
+}
+
+/* ── Mobile optimisations (≤767px) ── */
+@media (max-width: 767px) {
+  /* Hero title smaller */
+  .hero-title {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hero stats: griglia 3 colonne compatta, niente scroll orizzontale */
+  .hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    flex-direction: unset !important;
+    flex-wrap: unset !important;
+    overflow: visible !important;
+    gap: 8px !important;
+    padding: 4px 0 0 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+  .hero-stat {
+    flex: unset !important;
+    min-width: 0 !important;
+    width: auto !important;
+    text-align: center !important;
+    padding: 12px 8px !important;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-stat-divider { display: none !important; }
+  .hero-stat-num {
+    font-size: clamp(18px, 5.2vw, 24px) !important;
+    line-height: 1.1 !important;
+    display: block;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+  .hero-stat-label {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    margin-top: 6px;
+    display: block;
+    white-space: normal !important;
+  }
+
+
+  /* Come Funziona: accordion verticale */
+  .steps-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px !important;
+  }
+  .step-item {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    text-align: left !important;
+    padding: 16px !important;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    background: rgba(255,255,255,0.02);
+    cursor: pointer;
+    position: relative;
+  }
+  .step-item .step-num { margin: 0 !important; }
+  .step-item .step-title { margin: 0 !important; grid-column: 2; }
+  .step-item::after {
+    content: '+';
+    grid-column: 3;
+    font-size: 24px;
+    color: #4A7FA5;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.25s ease;
+  }
+  .step-item.open::after { transform: rotate(45deg); }
+  .step-item .step-desc {
+    grid-column: 1 / -1;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: max-height 0.3s ease, margin 0.3s ease;
+  }
+  .step-item.open .step-desc {
+    max-height: 300px;
+    margin-top: 8px;
+  }
+
+  /* FAQ: nascondi extras finché non si espande */
+  .faq-extra { display: none; }
+  .faq-extra.show { display: block; }
+  .faq-toggle-all { display: block; }
+
+  /* Show fixed CTA */
+  .mobile-cta { display: block; }
+
+  /* Spazio per non coprire il footer con la CTA fissa */
+  footer { padding-bottom: 90px !important; }
+}
+
+/* ─── Process video ─── */
+.process-video-wrap {
+  max-width: 800px;
+  margin: 48px auto 56px;
+  text-align: center;
+}
+.process-video {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(74, 127, 165, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(74, 127, 165, 0.15),
+    0 0 24px rgba(74, 127, 165, 0.35),
+    0 0 60px rgba(74, 127, 165, 0.18);
+  background: #0a0c12;
+}
+.process-video-caption {
+  margin-top: 18px;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #6B7A99;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 767px) {
+  .process-video-wrap { margin: 32px auto 40px; }
+  .process-video-caption { font-size: 12px; padding: 0 16px; }
+}
+
+/* ─── Demo section ─── */
+#demo {
+  background: #0A0C12;
+  padding: 96px 0;
+  position: relative;
+}
+.demo-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+.demo-label {
+  color: #3ECFB2;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.demo-video-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.demo-video {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(123, 94, 167, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(123, 94, 167, 0.15),
+    0 0 28px rgba(123, 94, 167, 0.45),
+    0 0 70px rgba(123, 94, 167, 0.22);
+  background: #0a0c12;
+}
+.demo-cta-wrap {
+  text-align: center;
+  margin-top: 36px;
+}
+.demo-cta { display: inline-flex; align-items: center; }
+@media (max-width: 767px) {
+  #demo { padding: 64px 0; }
+  .demo-header { margin-bottom: 32px; padding: 0 16px; }
+}
+
+/* ─── Hero dark-on-video overrides (defeats light theme refresh) ─── */
+#hero .hero-title,
+#hero .hero-title * {
+  color: #FFFFFF !important;
+}
+#hero .hero-title .highlight,
+#hero .hero-title .highlight-italic {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, #4A7FA5, #7B5EA7, #3ECFB2) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+#hero .hero-sub { color: #D6DCEA !important; }
+#hero .hero-stat-num { color: #FFFFFF !important; }
+#hero .hero-stat-label { color: #B4BECF !important; }
+#hero .hero-stat-divider { background: rgba(255,255,255,0.18) !important; }
+#hero .hero-title,
+#hero .hero-sub,
+#hero .hero-stat-num,
+#hero .hero-stat-label {
+  text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+}
+
+/* ─── Hero nav contrast override ─── */
+nav,
+nav.scrolled,
+nav:not(.scrolled) {
+  background: rgba(10,12,18,0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(14px);
+}
+nav .nav-logo img {
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35));
+}
+nav .nav-logo-text,
+nav .nav-links a {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.95);
+}
+nav .nav-links a { font-size: 15px !important; }
+nav .nav-links a:hover {
+  color: #FFFFFF !important;
+}
+
+#main-nav.hero-readable-nav,
+#main-nav.hero-readable-nav.scrolled {
+  background: rgba(5,7,12,0.96) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+#main-nav.hero-readable-nav .nav-logo-text,
+#main-nav.hero-readable-nav .nav-links a {
+  color: rgb(255,255,255) !important;
+  -webkit-text-fill-color: rgb(255,255,255) !important;
+  opacity: 1 !important;
+  font-weight: 800 !important;
+  filter: none !important;
+}
+
+#main-nav .nav-hamburger,
+#main-nav.hero-readable-nav .nav-hamburger {
+  background: transparent !important;
+  border: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  display: none;
+}
+@media (max-width: 768px) {
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+#main-nav .nav-hamburger span,
+#main-nav.hero-readable-nav .nav-hamburger span {
+  display: block !important;
+  width: 24px !important;
+  height: 2.5px !important;
+  background: #FFFFFF !important;
+  opacity: 1 !important;
+  border-radius: 2px !important;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.75) !important;
+}
+
+@media (max-width: 768px) {
+  #main-nav.hero-readable-nav .mobile-menu {
+    background: #FFFFFF !important;
+    border-top: 1px solid rgba(15,20,36,0.10) !important;
+    box-shadow: 0 18px 34px rgba(15,20,36,0.14);
+  }
+
+  #main-nav.hero-readable-nav .mobile-menu a {
+    color: #27324A !important;
+    -webkit-text-fill-color: #27324A !important;
+    opacity: 1 !important;
+  }
+
+  #main-nav.hero-readable-nav .mobile-menu a:last-child {
+    color: #4A7FA5 !important;
+    -webkit-text-fill-color: #4A7FA5 !important;
+  }
+}
+
+/* Founder credentials block */
+.founder-credentials {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #6B7A99 !important;
+  border-left: 1px solid #4A7FA5;
+  padding: 4px 0 4px 12px;
+  margin: 14px 0 18px;
+  max-width: 640px;
+}
+.founder-credentials strong {
+  color: #8A99B8;
+  font-weight: 600;
+}
+.cred-google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(74,127,165,0.35);
+  color: #C9D1E0;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.cred-google-badge img {
+  display: block;
+  border-radius: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE POLISH PASS — only spacing, overflow, sizing, a11y.
+   Does not change colors, content, or section structure.
+   ═══════════════════════════════════════════════════════════ */
+
+/* 1 — Universal media safety: nessuna immagine/video sfora mai */
+img, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+}
+video { display: block; }
+
+/* 2 — Anti-overflow su titoli e parole lunghe */
+h1, h2, h3, h4, .hero-title, .section-title, .servizi-title, .testi-quote {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+
+/* 3 — Container coerente e niente scroll orizzontale residuo */
+html, body { overflow-x: clip; }
+.container { padding-left: clamp(16px, 4vw, 40px); padding-right: clamp(16px, 4vw, 40px); }
+
+/* 4 — Tablet (768–1024): allineamenti e griglie ─────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section { padding: 80px 0; }
+  .servizi-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .testi-proof { grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 24px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .founder-grid { grid-template-columns: 220px 1fr; gap: 32px; }
+  .contatti-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-two-col { grid-template-columns: 1fr 1fr; }
+  .process-video { max-width: 700px; }
+  .demo-video { max-width: 760px; }
+  .hero-stats { gap: 28px; flex-wrap: wrap; }
+}
+
+/* 5 — Mobile (≤767): rifinitura proporzioni e padding ─────────── */
+@media (max-width: 767px) {
+  section { padding: 56px 0; }
+  #demo, #testimonianze, #come-funziona { padding: 56px 0; }
+
+  /* Hero proporzionato: titolo legibile, sub non gigante, CTA piene */
+  .hero-title { font-size: clamp(30px, 8.5vw, 40px) !important; }
+  .hero-sub  { font-size: 15px !important; line-height: 1.55 !important; }
+  .hero-content { padding-top: 12px; padding-bottom: 12px; }
+  .hero-cta-group .btn { font-size: 15px; padding: 14px 18px; }
+
+  /* Foto founder centrata, mai tagliata, dimensione contenuta */
+  .founder-col { max-width: 240px; margin: 0 auto; }
+  .founder-photo-wrap { aspect-ratio: 3 / 4; max-width: 240px; margin: 0 auto; }
+  .founder-photo { object-position: center top; }
+  .founder-credentials { max-width: 100%; font-size: 12.5px; }
+
+  /* Form contatti: campi grandi (no zoom iOS), padding comodo, bottone full-width */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 16px !important;
+    padding: 12px 14px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-form textarea { min-height: 120px; }
+  .contact-form label { font-size: 13px; }
+  .contact-form .btn { width: 100%; justify-content: center; font-size: 15px; padding: 14px 18px; }
+  .form-two-col { gap: 14px; }
+
+  /* Video: mai più larghi dello schermo, niente shadow esagerate che laggano */
+  .process-video-wrap, .demo-video-wrap { padding: 0 12px; }
+  .process-video, .demo-video {
+    box-shadow:
+      0 0 0 1px rgba(74,127,165,0.18),
+      0 0 18px rgba(74,127,165,0.25) !important;
+  }
+  .demo-video {
+    box-shadow:
+      0 0 0 1px rgba(123,94,167,0.18),
+      0 0 18px rgba(123,94,167,0.30) !important;
+  }
+
+  /* Marquee meno aggressivo su mobile */
+  .marquee-band { margin: 32px -20px; padding: 18px 0; }
+
+  /* Testimonianze: proof grid in 2 colonne pulite */
+  .testi-proof { grid-template-columns: repeat(2, 1fr) !important; gap: 14px; padding: 18px; }
+  .testi-proof-num { font-size: 26px; }
+  .testi-proof-label { font-size: 11px; letter-spacing: 0.06em; }
+
+  /* Service / About / Step / FAQ cards: padding leggibile */
+  .service-card, .cs-card, .about-card, .faq-item {
+    padding: 18px !important;
+    border-radius: 14px;
+  }
+  .service-title, .step-title { font-size: 17px !important; line-height: 1.3; }
+  .service-desc, .step-desc, .about-text, .faq-answer { font-size: 14.5px !important; line-height: 1.6; }
+  .section-sub { font-size: 14.5px !important; line-height: 1.55; }
+
+  /* Spaziatura tra header sezione e contenuto */
+  .servizi-header, .testi-header, .demo-header { margin-bottom: 28px; }
+}
+
+/* 6 — Ridurre animazioni pesanti su mobile + rispettare reduce-motion */
+@media (max-width: 767px) {
+  .tech-float, .hero-glow { animation: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track { animation: none !important; }
+}
+
+/* 7 — Iframe / video background hero: cover sempre, niente bande */
+#hero video, .hero-bg video, .hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 8 — Anti tap-delay e tocco corretto */
+a, button, .btn { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+/* 9 — Niente shadow gigante che causa repaint costoso sotto i 480px */
+@media (max-width: 480px) {
+  .service-card, .testi-card, .about-card, .contact-form {
+    box-shadow: 0 4px 14px -6px rgba(15,20,36,0.12) !important;
+  }
+  .marquee-band { box-shadow: 0 10px 24px -14px rgba(123,94,167,0.3); }
+}
+
+/* ─── Credibility strip ─── */
+.credibility-strip{
+  background: #0B1020;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 18px 0;
+}
+.credibility-inner{
+  display:flex; align-items:center; justify-content:center;
+  flex-wrap:wrap; gap:14px;
+  font-family: Inter, system-ui, sans-serif;
+}
+.credibility-label{
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #6B7A99; font-weight: 600;
+}
+.credibility-clients{ display:inline-flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.credibility-client{
+  font-size: 15px; font-weight: 600; color: #E6ECF5; letter-spacing: 0.01em;
+}
+.credibility-sep{ color: #4A7FA5; font-weight: 700; }
+@media (max-width: 600px){
+  .credibility-strip{ padding: 14px 0; }
+  .credibility-label{ font-size: 11px; }
+  .credibility-client{ font-size: 14px; }
+  .credibility-inner{ flex-direction: column; gap: 10px; text-align: center; }
+  .credibility-clients{
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .credibility-sep{ display: none; }
+}
+
+/* ─── Light scroll-snap between main sections (desktop only) ─── */
+@media (min-width: 1025px) and (hover: hover){
+  html{ scroll-snap-type: y proximity; scroll-padding-top: 80px; }
+  #hero, #case-studies, #servizi, #come-funziona, #about, #faq, #contatti{
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE FIXES — 2026-06-10
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* 1) Nav: nascondi "SJM Systems Engineering" su mobile, mantieni logo grande, hamburger evidente */
+  #main-nav .nav-logo-text,
+  #main-nav.hero-readable-nav .nav-logo-text { display: none !important; }
+  #main-nav .nav-logo img { height: 44px !important; }
+
+  /* Hamburger: aggiungi sfondo pill così sembra un bottone, non un "+" */
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    width: 44px !important;
+    height: 44px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
+    border-radius: 10px !important;
+    gap: 5px !important;
+  }
+  #main-nav .nav-hamburger span,
+  #main-nav.hero-readable-nav .nav-hamburger span {
+    width: 22px !important;
+    height: 2.5px !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+    border-radius: 2px !important;
+  }
+
+  /* 2) Step numbers: tutti con la gradient attiva (non solo il 01) */
+  .step-num,
+  .step-item .step-num {
+    background: linear-gradient(135deg, #4A7FA5, #7B5EA7) !important;
+    border-color: transparent !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  /* 3) Dashboard operativa: label + value su due righe per evitare squish */
+  .about-metric {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+    padding: 14px 0 !important;
+  }
+  .about-metric-label {
+    font-size: 12px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+  }
+  .about-metric-value {
+    font-size: 15px !important;
+    text-align: left !important;
+    line-height: 1.35 !important;
+    word-break: break-word;
+  }
+
+  /* 4) FAQ: testi più compatti + bottone "Mostra tutte" leggibile */
+  .faq-item .faq-question {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+  .faq-item .faq-answer {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+  .faq-toggle-all {
+    background: #4A7FA5 !important;
+    border: 1px solid #4A7FA5 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    padding: 14px 24px !important;
+    box-shadow: 0 6px 18px rgba(74,127,165,0.28);
+  }
+  .faq-toggle-all:hover {
+    background: #3d6c8e !important;
+    border-color: #3d6c8e !important;
+  }
+
+  /* 5) Footer logo più grande e visibile */
+  .footer-logo img { height: 48px !important; }
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE HEADER CONTRAST FIX — light readable bar
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #main-nav,
+  #main-nav.hero-readable-nav,
+  #main-nav.hero-readable-nav.scrolled,
+  #main-nav:not(.scrolled) {
+    background: rgba(255,255,255,0.96) !important;
+    border-bottom: 1px solid rgba(15,20,36,0.12) !important;
+    box-shadow: 0 8px 24px rgba(15,20,36,0.10) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  #main-nav .nav-hamburger,
+  #main-nav.hero-readable-nav .nav-hamburger {
+    background: rgba(15,20,36,0.06) !important;
+    border: 1px solid rgba(15,20,36,0.18) !important;
+  }
+
+  #main-nav .nav-hamburger span,
+  #main-nav.hero-readable-nav .nav-hamburger span {
+    background: #0F1424 !important;
+  }
+}
+
+/* ─── Demo section: dark background, light text override ─── */
+#demo .section-title,
+#demo .section-title .highlight-italic {
+  color: #F7F8FC !important;
+}
+#demo .section-sub {
+  color: rgba(247,248,252,0.72) !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   FINAL READABILITY PASS — contrast-safe text states
+   ═══════════════════════════════════════════════════ */
+@media (min-width: 769px) {
+  #main-nav .mobile-menu { display: none !important; }
+}
+
+#hero .hero-title,
+#hero .hero-title span,
+#hero .hero-sub,
+#hero .hero-stat-num,
+#hero .hero-stat-label {
+  -webkit-text-fill-color: currentColor;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.72) !important;
+}
+
+#hero .hero-title .highlight,
+#hero .hero-title .highlight-italic {
+  background: none !important;
+  color: #8FEFE1 !important;
+  -webkit-text-fill-color: #8FEFE1 !important;
+}
+
+.btn-secondary,
+#hero .btn-secondary {
+  background: rgba(255,255,255,0.88) !important;
+  color: #0F1424 !important;
+  -webkit-text-fill-color: #0F1424 !important;
+  border-color: rgba(255,255,255,0.72) !important;
+}
+
+#servizi .section-title,
+#case-studies .section-title,
+#come-funziona .section-title,
+#about .section-title,
+#faq .section-title,
+#contatti .section-title,
+.service-title,
+.step-title,
+.faq-question,
+.contatti-point-text strong,
+.form-success h3 {
+  color: #0F1424 !important;
+  -webkit-text-fill-color: #0F1424 !important;
+}
+
+#servizi .section-sub,
+#case-studies .section-sub,
+#come-funziona .section-sub,
+#about .about-text,
+#faq .faq-answer p,
+#contatti .section-sub,
+.service-desc,
+.step-desc,
+.cs-problem,
+.cs-quote,
+.contatti-point-text span,
+.form-success p {
+  color: #4B5568 !important;
+  -webkit-text-fill-color: #4B5568 !important;
+}
+
+#demo .section-title,
+#demo .section-title span,
+#demo .section-sub,
+footer,
+footer .footer-logo-text,
+footer .footer-copy,
+footer .footer-links a,
+footer .social-link {
+  -webkit-text-fill-color: currentColor;
+}
+
+footer .footer-links a,
+footer .footer-copy,
+footer .social-link { color: #D8DEEA !important; }
+
+@media (max-width: 768px) {
+  #main-nav .mobile-menu,
+  #main-nav.hero-readable-nav .mobile-menu {
+    background: #FFFFFF !important;
+  }
+  #main-nav .mobile-menu a,
+  #main-nav.hero-readable-nav .mobile-menu a {
+    color: #172033 !important;
+    -webkit-text-fill-color: #172033 !important;
+    font-weight: 600 !important;
+  }
+  #main-nav .mobile-menu a:last-child,
+  #main-nav.hero-readable-nav .mobile-menu a:last-child {
+    color: #2F6F9E !important;
+    -webkit-text-fill-color: #2F6F9E !important;
+  }
+}
+
+/* Hero: no low-contrast clipped gradients on text */
+#hero h1.hero-title span.highlight,
+#hero h1.hero-title span.highlight-italic,
+section#hero h1.hero-title span.highlight,
+section#hero h1.hero-title span.highlight-italic {
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: #7EF4E5 !important;
+  -webkit-text-fill-color: #7EF4E5 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+  #hero h1.hero-title span.highlight,
+  #hero h1.hero-title span.highlight-italic,
+  section#hero h1.hero-title span.highlight,
+  section#hero h1.hero-title span.highlight-italic {
+    color: #A8FFF4 !important;
+    -webkit-text-fill-color: #A8FFF4 !important;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.85) !important;
+  }
+}
+
+/* ─── Phone mockup (replaces sphere in About section) ─── */
+.phone-mockup {
+  width: 100%;
+  max-width: 240px;
+  margin: 0 0 24px auto;
+  display: flex;
+  justify-content: center;
+}
+.phone-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  border-radius: 36px;
+  padding: 10px;
+  background: linear-gradient(160deg, #1a2340 0%, #0F1424 100%);
+  border: 1px solid rgba(126,244,229,0.18);
+  box-shadow:
+    0 30px 60px -20px rgba(15,20,36,0.55),
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 0 40px -10px rgba(126,244,229,0.15);
+  overflow: hidden;
+}
+.phone-notch {
+  position: absolute;
+  top: 14px; left: 50%;
+  transform: translateX(-50%);
+  width: 56px; height: 6px;
+  background: #05080F;
+  border-radius: 999px;
+  z-index: 2;
+}
+.phone-screen {
+  position: relative;
+  width: 100%; height: 100%;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #0B1020 0%, #131a2e 100%);
+  padding: 22px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  color: #E8ECF5;
+  font-size: 11px;
+  line-height: 1.3;
+}
+.phone-statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(232,236,245,0.7);
+  padding: 0 4px;
+}
+.phone-dots { display: inline-flex; gap: 3px; }
+.phone-dots i {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: rgba(232,236,245,0.7);
+}
+.phone-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.phone-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7EF4E5, #2F6F9E);
+  color: #0F1424;
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+.phone-meta { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.phone-name { font-weight: 600; font-size: 11px; color: #F7F8FC; }
+.phone-status {
+  font-size: 9px;
+  color: rgba(232,236,245,0.55);
+  display: flex; align-items: center; gap: 4px;
+  white-space: nowrap;
+}
+.phone-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #7EF4E5;
+  box-shadow: 0 0 6px #7EF4E5;
+  animation: phone-pulse 1.6s ease-in-out infinite;
+}
+@keyframes phone-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.phone-feed {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+  position: relative;
+  padding: 2px 0;
+}
+.phone-bubble {
+  max-width: 82%;
+  padding: 6px 9px;
+  border-radius: 12px;
+  font-size: 10px;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: phone-bubble 14s ease-in-out infinite;
+}
+.phone-bubble.pb-in {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.06);
+  color: #E8ECF5;
+  border-bottom-left-radius: 4px;
+}
+.phone-bubble.pb-out {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #7EF4E5, #5fd9c8);
+  color: #0F1424;
+  border-bottom-right-radius: 4px;
+  font-weight: 500;
+}
+.phone-bubble.pb-1 { animation-delay: 0s; }
+.phone-bubble.pb-2 { animation-delay: 1.5s; }
+.phone-bubble.pb-3 { animation-delay: 3s; }
+.phone-bubble.pb-4 { animation-delay: 5.5s; }
+.phone-bubble.pb-5 { animation-delay: 7s; }
+@keyframes phone-bubble {
+  0%   { opacity: 0; transform: translateY(8px); }
+  6%   { opacity: 1; transform: translateY(0); }
+  55%  { opacity: 1; transform: translateY(0); }
+  65%  { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+.phone-typing { display: inline-flex; gap: 3px; padding: 1px 2px; }
+.phone-typing i {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #0F1424;
+  opacity: 0.4;
+  animation: phone-typing-dot 1.2s ease-in-out infinite;
+}
+.phone-typing i:nth-child(2) { animation-delay: 0.2s; }
+.phone-typing i:nth-child(3) { animation-delay: 0.4s; }
+@keyframes phone-typing-dot {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
+.phone-progress {
+  margin-top: auto;
+  padding: 8px 4px 2px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.phone-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: rgba(232,236,245,0.65);
+}
+.phone-progress-label b { color: #7EF4E5; font-weight: 700; }
+.phone-progress-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+.phone-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7EF4E5, #5fd9c8);
+  border-radius: 999px;
+  animation: phone-progress 14s ease-in-out infinite;
+}
+@keyframes phone-progress {
+  0%   { width: 8%; }
+  60%  { width: 62%; }
+  100% { width: 90%; }
+}
+
+@media (max-width: 768px) {
+  .phone-mockup {
+    max-width: 200px;
+    margin: 0 auto 24px;
+  }
+}
+
+/* ─── Phone stage with floating log cards ─── */
+.phone-stage {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 32px;
+  padding: 24px 0;
+}
+.phone-stage .phone-mockup {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  width: 220px;
+  max-width: 220px;
+}
+.float-card {
+  position: absolute;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  background: rgba(15,20,36,0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 9px;
+  box-shadow: 0 10px 24px -12px rgba(15,20,36,0.5);
+  color: #F7F8FC;
+  z-index: 3;
+  white-space: nowrap;
+  animation: float-card 6s ease-in-out infinite;
+}
+.fc-icon {
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  background: rgba(126,244,229,0.14);
+  color: #7EF4E5;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.fc-body { display: flex; flex-direction: column; gap: 1px; }
+.fc-title {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #F7F8FC;
+  line-height: 1.2;
+}
+.fc-meta {
+  font-size: 8.5px;
+  color: rgba(247,248,252,0.55);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* Desktop: 3 cards stacked on the LEFT of the phone */
+@media (min-width: 1024px) {
+  .float-card { display: flex; }
+  .fc-tl { top: 20px;                              right: calc(100% + 14px); animation-delay: 0s; }
+  .fc-cl { top: 50%; transform: translateY(-50%);  right: calc(100% + 14px); animation-delay: 1.2s; }
+  .fc-br { bottom: 20px;                           right: calc(100% + 14px); animation-delay: 2.4s; }
+  .fc-cl { animation: float-card-mid 6s ease-in-out infinite 1.2s; }
+}
+
+@keyframes float-card {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+@keyframes float-card-mid {
+  0%, 100% { transform: translateY(-50%); }
+  50%      { transform: translateY(calc(-50% - 4px)); }
+}
+
+/* Tablet: hide cards */
+@media (max-width: 1023px) {
+  .float-card { display: none; }
+}
+
+/* Mobile: clean phone */
+@media (max-width: 767px) {
+  .phone-stage .phone-mockup { width: 200px; max-width: 200px; }
+}
+
+
+
+
+/* Chatbot SJM — widget stabile, senza script esterno fragile */
+.sjm-chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+}
+
+.sjm-chat-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 92px;
+  width: min(380px, calc(100vw - 40px));
+  height: min(560px, calc(100vh - 124px));
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.85);
+  border-radius: 15px;
+  background: #FFFFFF;
+  box-shadow: 0 24px 80px rgba(3,7,18,0.35);
+}
+
+.sjm-chat-panel iframe {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  border: 0;
+}
+
+.sjm-chat-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background: #3ECFB2;
+  color: #050914;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 500;
+  box-shadow: 0 18px 46px rgba(3,7,18,0.28);
+}
+
+.sjm-chat-toggle span {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .sjm-chat-widget {
+    right: 16px;
+    bottom: 14px;
+  }
+  .sjm-chat-toggle {
+    width: 52px;
+    height: 52px;
+    font-size: 36px;
+  }
+  .sjm-chat-panel {
+    top: 76px !important;
+    right: 12px !important;
+    bottom: 76px !important;
+    left: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+}
+</style><div>
+  <!-- ─── Nav ─── -->
+  <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="SJM Systems Engineering">
+          <img src="/__l5e/assets-v1/95831f2d-f342-4d89-aa6b-45c9ff61180c/sjm-logo.png" alt="" />
+          <span class="nav-logo-text" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">SJM Systems Engineering</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#servizi" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Servizi</a></li>
+          <li><a href="#come-funziona" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Come Funziona</a></li>
+          <li><a href="#case-studies" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Casi Studio</a></li>
+          <li><a href="#about" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">Chi Siamo</a></li>
+          <li><a href="#faq" style="color: #FFFFFF; -webkit-text-fill-color: #FFFFFF; opacity: 1; font-weight: 800; text-shadow: 0 2px 14px rgba(0,0,0,0.95);">FAQ</a></li>
+        </ul>
+        
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#servizi" onclick="closeMobile()">Servizi</a>
+      <a href="#come-funziona" onclick="closeMobile()">Come Funziona</a>
+      <a href="#case-studies" onclick="closeMobile()">Casi Studio</a>
+      <a href="#about" onclick="closeMobile()">Chi Siamo</a>
+      <a href="#faq" onclick="closeMobile()">FAQ</a>
+      <a href="#contatti" onclick="closeMobile()">Parliamo del tuo progetto →</a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="/__l5e/assets-v1/4c9a2ddd-455f-454e-a6d3-4a617e067242/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-bg-overlay"></div>
+    <span class="corner-plus tl">+</span><span class="corner-plus tr">+</span>
+    <span class="corner-plus bl">+</span><span class="corner-plus br">+</span>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">Forza lavoro digitale · PMI italiane</div>
+        <h1 class="hero-title reveal">
+          Forze lavoro digitali, <span class="highlight-italic">progettate</span><br>
+          sui <span class="highlight">tuoi processi reali.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Agenti AI custom per le PMI italiane. Nessuna soluzione generica.
+          Solo architetture costruite attorno a come lavori tu — integrate negli strumenti che già usi.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contatti" class="btn btn-primary">Parliamo del tuo progetto →</a>
+          <a href="#come-funziona" class="btn btn-secondary">Scopri come funziona</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="hero-stat">
+            <div class="hero-stat-num">20–40gg</div>
+            <div class="hero-stat-label">Primo risultato misurabile</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">0</div>
+            <div class="hero-stat-label">Soluzioni generiche vendute</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">100%</div>
+            <div class="hero-stat-label">Costruiti sui tuoi flussi reali</div>
+          </div>
+        </div>
+      </div>
+      <!-- Floating agent flow (decorativo) -->
+      <div class="hero-visual">
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>richiesta_cliente.incoming</div>
+        <div class="flow-node"><span class="flow-dot dot-viola"></span>agent.qualifica → CRM</div>
+        <div class="flow-node"><span class="flow-dot dot-verdino"></span>risposta.generata ✓</div>
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>log.aggiornato → slack</div>
+      </div>
+    </div>
+    <img src="/tech/tech-network.png" alt="" class="tech-float tf-hero-right" loading="eager" />
+  </section>
+
+  <!-- ─── Credibility strip ─── -->
+  <section id="credibility" class="credibility-strip" aria-label="Clienti operativi">
+    <div class="container">
+      <div class="credibility-inner">
+        <span class="credibility-label">Già operativo in:</span>
+        <span class="credibility-clients">
+          <span class="credibility-client">Assicurativo / Previdenziale</span>
+          <span class="credibility-sep" aria-hidden="true">·</span>
+          <span class="credibility-client">Fitness / Centri sportivi</span>
+          <span class="credibility-sep" aria-hidden="true">·</span>
+          <span class="credibility-client">Software / Servizi digitali B2B</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Marquee band 1 ─── -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">Agenti AI custom</span>
+      <span class="marquee-item">Automazione processi</span>
+      <span class="marquee-item">CRM AI-augmented</span>
+      <span class="marquee-item">Knowledge interna</span>
+      <span class="marquee-item">Multi-agent systems</span>
+      <span class="marquee-item">Integrazioni native</span>
+      <span class="marquee-item">Agenti AI custom</span>
+      <span class="marquee-item">Automazione processi</span>
+      <span class="marquee-item">CRM AI-augmented</span>
+      <span class="marquee-item">Knowledge interna</span>
+      <span class="marquee-item">Multi-agent systems</span>
+      <span class="marquee-item">Integrazioni native</span>
+    </div>
+  </div>
+  <!-- ─── Case Studies ─── -->
+  <section id="case-studies">
+    <div class="container">
+      <div class="cs-header reveal">
+        <div class="section-label">Casi studio</div>
+        <h2 class="section-title">Progetti consegnati, risultati reali</h2>
+        <p class="section-sub">Esempi di sistemi costruiti e operativi. I nomi sono resi anonimi, i risultati no.</p>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-card reveal">
+          <div class="cs-sector">Assicurativo / Previdenziale</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> I referenti operativi ricevevano ogni giorno le stesse richieste da clienti e agenti interni — domande su prodotti, procedure e policy disperse tra email, documenti e persone diverse. Il carico era insostenibile e le risposte non erano mai uniformi.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di knowledge interna con base documentale strutturata. Risponde autonomamente alle domande ricorrenti, loga le lacune e invia alert automatici al responsabile competente. La knowledge cresce ad ogni interazione.</span>
+          </div>
+          <blockquote class="cs-quote">"Il cervello interno dell'azienda." — CEO cliente. Il progetto è stato esteso alla sede estera con contratto di consulenza continuativa.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Fitness / Centri sportivi strutturati</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> I consulenti interni impiegavano ore a rispondere alle stesse domande fiscali e normative — con risposte disperse tra colleghi, documenti e email. Ogni risposta richiedeva un referente qualificato, sottraendo tempo al lavoro ad alto valore.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente di consulenza fiscale interna testato in ambiente operativo reale. Struttura risposte normative accurate in secondi, riducendo il carico sui referenti qualificati e uniformando la qualità delle risposte.</span>
+          </div>
+          <blockquote class="cs-quote">Il sistema è stato presentato al Responsabile Nazionale e proposto formalmente ai vertici aziendali per un rollout su scala.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Software / Servizi digitali B2B</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> Il team operativo riceveva ogni giorno le stesse domande da clienti e operatori interni — su procedure, normative e funzionalità del servizio. Le risposte erano disperse tra documentazione interna, email e referenti diversi, con tempi di risposta lunghi e carichi non sostenibili.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Agente conversazionale con knowledge RAG sulla documentazione interna. Risponde autonomamente alle domande ricorrenti, logga ogni interazione nel CRM e invia alert email automatici al referente competente per le domande non coperte. La knowledge si aggiorna ad ogni nuovo documento caricato.</span>
+          </div>
+          <blockquote class="cs-quote">"Le domande ripetitive sono sparite dal carico del team. Il sistema sa già rispondere a quello che chiedono ogni giorno." — Responsabile operativo cliente.</blockquote>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-sector">Studi Legali / Professionisti con clientela internazionale</div>
+          <p class="cs-problem">
+            <strong>Problema:</strong> Produrre contenuti video professionali richiedeva ogni volta un'equipe, attrezzatura e post-produzione — tempi lunghi, costi alti, dipendenza da terzi per ogni singolo contenuto.
+          </p>
+          <div class="cs-result">
+            <div class="cs-result-icon"></div>
+            <span>Avatar digitale personalizzato con scenari multipli d'uso. Lo studio fornisce lo script, il video è pronto — anche in cinese madrelingua per il pubblico asiatico del cliente.</span>
+          </div>
+          <blockquote class="cs-quote">"Solo il video in cinese vale già quello che ho pagato." — Avvocato, Milano. Il cliente ha dichiarato che promuoverà attivamente il servizio.</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Servizi ─── -->
+  <section id="servizi">
+    <div class="container">
+      <div class="servizi-header reveal">
+        <div>
+          <div class="section-label">Cosa costruiamo</div>
+          <h2 class="section-title">Agenti operativi<br>su misura per la tua azienda</h2>
+        </div>
+        <p class="section-sub">Non vendiamo piattaforme da configurare da soli. Progettiamo, costruiamo e consegniamo sistemi che funzionano — integrati nei tuoi strumenti dal giorno uno.</p>
+      </div>
+      <div class="servizi-grid">
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-avio">🧠</div>
+          <div class="service-title">Libera i tuoi referenti dalle domande ripetitive</div>
+          <p class="service-desc">Un cervello interno aziendale. Risponde a domande su procedure, prodotti e policy — attingendo alla tua documentazione reale. Cresce ad ogni interazione, loga le lacune e le segnala al responsabile.</p>
+          <span class="service-tag">→ Elimina domande ripetitive ai referenti</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-viola">⚙️</div>
+          <div class="service-title">Recupera ore ogni settimana senza assumere nessuno</div>
+          <p class="service-desc">Connetti CRM, ERP, email e strumenti interni in flussi automatici. Le attività manuali — trascrizione dati, follow-up, compilazione form — vengono gestite senza intervento umano.</p>
+          <span class="service-tag">→ Ore recuperate ogni settimana</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-verdino">📊</div>
+          <div class="service-title">Trasforma più contatti in clienti, senza lavoro manuale</div>
+          <p class="service-desc">Il tuo CRM smette di essere un archivio passivo. Log automatici delle interazioni, priorità dei contatti, follow-up intelligenti e sintesi di conversazioni — senza che il commerciale tocchi una riga.</p>
+          <span class="service-tag">→ Pipeline sempre aggiornata, zero effort</span>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon service-icon-muted">🏗️</div>
+          <div class="service-title">Gestisci processi complessi senza aggiungere persone</div>
+          <p class="service-desc">Per processi complessi che coinvolgono più reparti. Progettiamo sistemi dove più agenti lavorano in coordinazione — ognuno con un ruolo specifico, tutti integrati nel tuo workflow esistente.</p>
+          <span class="service-tag">→ Operatività end-to-end automatizzata</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Demo ─── -->
+  <section id="demo">
+    <div class="container">
+      <div class="demo-header reveal">
+        <div class="section-label demo-label">Sistema multi-agente · Live architecture</div>
+        <h2 class="section-title">Più agenti. Un unico risultato.</h2>
+        <p class="section-sub">Ogni agente ha un ruolo preciso. L'orchestratore coordina tutto — tu vedi solo il risultato finale.</p>
+      </div>
+      <div class="demo-video-wrap reveal">
+        <video class="demo-video" id="demoVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/__l5e/assets-v1/ac68b180-a3a6-4ecf-93b7-fbf9b9fd811d/demo-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="demo-cta-wrap reveal">
+        <a href="#contatti" class="btn btn-primary demo-cta">Vedi come funziona nel tuo processo →</a>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Come Funziona ─── -->
+
+  <section id="come-funziona">
+    <div class="container">
+      <div class="steps-header reveal">
+        <div class="section-label">Il metodo SJM</div>
+        <h2 class="section-title">Dal problema al sistema che funziona</h2>
+        <p class="section-sub">Nessun discovery infinito. Nessun prototipo che non arriva mai in produzione. Lavoriamo in sprint brevi con un output concreto ad ogni fase.</p>
+      </div>
+      <div class="process-video-wrap reveal">
+        <video class="process-video" id="processVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="/__l5e/assets-v1/acf23b32-f2b3-468a-9a3e-a025cd04a4a3/process-video.mp4" type="video/mp4">
+        </video>
+        <p class="process-video-caption">Dal problema al sistema operativo — in 30 giorni.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item reveal">
+          <div class="step-num active">01</div>
+          <div class="step-title">Diagnosi operativa</div>
+          <p class="step-desc">Analizziamo dove l'azienda perde tempo, continuità e risorse. Identifichiamo il collo di bottiglia con il ROI più alto da automatizzare per primo.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">02</div>
+          <div class="step-title">Progettazione dell'architettura</div>
+          <p class="step-desc">Definiamo quali agenti costruire, come si collegano ai tuoi sistemi esistenti e quali metriche userai per misurare i risultati.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">03</div>
+          <div class="step-title">Build e integrazione</div>
+          <p class="step-desc">Costruiamo il sistema sui tuoi processi reali. Lo integriamo negli strumenti che già usi: CRM, email, gestionale, Slack — senza sostituire niente.</p>
+        </div>
+        <div class="step-item reveal">
+          <div class="step-num active">04</div>
+          <div class="step-title">Risultato misurabile</div>
+          <p class="step-desc">In 20–40 giorni hai un sistema in produzione con risultati verificabili. Non un proof-of-concept — un agente operativo che sta già facendo il suo lavoro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Marquee band 2 ─── -->
+  <div class="marquee-band alt" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">PMI italiane</span>
+      <span class="marquee-item">Risultati in 20–40 giorni</span>
+      <span class="marquee-item">Zero lock-in</span>
+      <span class="marquee-item">Costruito sui tuoi processi</span>
+      <span class="marquee-item">Integrazione nativa</span>
+      <span class="marquee-item">Output misurabile</span>
+      <span class="marquee-item">PMI italiane</span>
+      <span class="marquee-item">Risultati in 20–40 giorni</span>
+      <span class="marquee-item">Zero lock-in</span>
+      <span class="marquee-item">Costruito sui tuoi processi</span>
+      <span class="marquee-item">Integrazione nativa</span>
+      <span class="marquee-item">Output misurabile</span>
+    </div>
+  </div>
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content reveal">
+          <div class="section-label">Chi siamo</div>
+          <h2 class="section-title">Non vendiamo tecnologia.<br>Vendiamo tempo recuperato.</h2>
+          <div class="founder-grid">
+            <div class="founder-col">
+              <div class="founder-photo-wrap">
+                <img src="/__l5e/assets-v1/c2e92648-3d9b-40e1-bcee-6d1f76892625/founder-sebastian.png" alt="Sebastián Javier Mellace, founder di SJM Systems Engineering" class="founder-photo" loading="lazy" />
+              </div>
+              <div class="founder-name">
+                Sebastián Javier Mellace
+                <a href="https://www.linkedin.com/in/sebastian-javier-mellace-3864471aa/" target="_blank" rel="noopener noreferrer" class="social-link founder-linkedin" aria-label="LinkedIn di Sebastián Javier Mellace">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
+              </div>
+              <div class="founder-role">Founder &amp; AI Systems Architect</div>
+            </div>
+            <div class="founder-credentials">
+              Formato presso <strong>Learning Heroes</strong> — centro universitario specializzato in tecnologie disruptive, powered by
+              <span class="cred-google-badge">
+                <img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" alt="Google" width="14" height="14" loading="lazy" />
+                Google
+              </span>.
+              Máster IA Heroes · 60 ECTS · +13.000 alumni nel mondo.
+            </div>
+            <div class="founder-text">
+              <p class="about-text">SJM Systems Engineering nasce da una premessa semplice: la maggior parte delle PMI italiane strutturate ha già processi che funzionano. Il problema non è la tecnologia — è che quei processi assorbono troppo tempo, troppi referenti e troppa energia manuale.</p>
+              <p class="about-text">Il nostro lavoro è diagnosticare dove l'azienda perde continuità e costruire agenti operativi che tappano quei buchi — integrandosi con gli strumenti che già usi, senza stravolgere niente.</p>
+              <ul class="about-list">
+                <li>Lavoriamo solo su colli di bottiglia reali, non su proof of concept dimostrativi</li>
+                <li>Ogni progetto ha una metrica di risultato definita prima di iniziare</li>
+                <li>Consegniamo sistemi operativi, non presentazioni da rivedere tra sei mesi</li>
+                <li>Sono il tuo interlocutore tecnico e commerciale, senza middleman</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="phone-stage">
+            <div class="float-card fc-tl" aria-hidden="true">
+              <div class="fc-icon">✉</div>
+              <div class="fc-body">
+                <div class="fc-title">Email smistata</div>
+                <div class="fc-meta">HR · 2s fa</div>
+              </div>
+            </div>
+            <div class="float-card fc-cl" aria-hidden="true">
+              <div class="fc-icon">⚡</div>
+              <div class="fc-body">
+                <div class="fc-title">Ticket creato</div>
+                <div class="fc-meta">CRM · 14s fa</div>
+              </div>
+            </div>
+            <div class="float-card fc-br" aria-hidden="true">
+              <div class="fc-icon">✓</div>
+              <div class="fc-body">
+                <div class="fc-title">Report inviato</div>
+                <div class="fc-meta">Sales · 31s fa</div>
+              </div>
+            </div>
+            <div class="phone-mockup" aria-hidden="true">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <div class="phone-statusbar">
+                    <span>9:41</span>
+                    <span class="phone-dots"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="phone-header">
+                    <div class="phone-avatar">SJM</div>
+                    <div class="phone-meta">
+                      <div class="phone-name">Agente SJM</div>
+                      <div class="phone-status"><span class="phone-dot"></span> online · processa pratiche</div>
+                    </div>
+                  </div>
+                  <div class="phone-feed">
+                    <div class="phone-bubble pb-in pb-1">Nuova richiesta cliente — pratica #4821</div>
+                    <div class="phone-bubble pb-out pb-2">Letta. Smisto a HR e apro ticket interno.</div>
+                    <div class="phone-bubble pb-out pb-3">Risposta inviata <b>✓</b></div>
+                    <div class="phone-bubble pb-in pb-4">Nuova mail commerciale</div>
+                    <div class="phone-bubble pb-out pb-5"><span class="phone-typing"><i></i><i></i><i></i></span></div>
+                  </div>
+                  <div class="phone-progress">
+                    <div class="phone-progress-label"><span>Pratiche oggi</span><span><b>12</b> / 47</span></div>
+                    <div class="phone-progress-track"><div class="phone-progress-bar"></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-header">SJM · Dashboard operativa</div>
+            <div class="about-metric">
+              <span class="about-metric-label">Progetti consegnati ·</span>
+              <span class="about-metric-value">4</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Settori coperti</span>
+              <span class="about-metric-value">Assicurativo · HR · Fitness · Professionale · Legale</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tempo medio al primo risultato</span>
+              <span class="about-metric-value positive">20–40 giorni</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Dipendenza da piattaforme terze</span>
+              <span class="about-metric-value positive">Zero lock-in</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Tipo di contratto</span>
+              <span class="about-metric-value">Progetto fisso o consulenza continuativa</span>
+            </div>
+            <div class="about-metric">
+              <span class="about-metric-label">Integrazione sistemi esistenti</span>
+              <span class="about-metric-value positive">Sempre inclusa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">Domande frequenti</div>
+        <h2 class="section-title">Quello che ci chiedono i CEO prima di partire</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quanto tempo ci vuole per vedere i primi risultati?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Lavoriamo per avere un sistema operativo e misurabile in 20–40 giorni. Non un prototipo — un agente che sta già facendo il suo lavoro in produzione. La prima settimana è dedicata alla diagnosi e alla progettazione; dal giorno 8 iniziamo a costruire.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Devo cambiare i miei strumenti o processi attuali?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Costruiamo attorno a quello che già usi. Se hai un CRM, un ERP, o lavori su email e Slack — gli agenti si integrano lì. Non chiediamo mai di sostituire strumenti esistenti: aggiungiamo operatività a quello che funziona già.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Serve un team tecnico interno per gestire il sistema?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No. Il sistema viene consegnato già configurato e operativo. Formiamo il referente che lo userà quotidianamente — di solito bastano 2-3 ore. Per le aziende che preferiscono non gestire niente internamente, offriamo contratti di consulenza continuativa.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come si misura il ritorno dell'investimento?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Prima di iniziare, definiamo insieme la metrica di risultato: ore di lavoro manuale eliminate, tempo di risposta ridotto, pipeline aggiornata senza intervento manuale, ecc. Il ROI si misura su quelle metriche — non su numeri teorici.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Lavorate solo con certi settori?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I verticali in cui lavoriamo con priorità oggi: broker assicurativi e consulenti previdenziali, società di servizi con alto volume di supporto clienti, cliniche private e poliambulatori, studi professionali strutturati, agenzie immobiliari, palestre e centri fitness con più sedi. Se la tua azienda ha processi ripetitivi e referenti saturi, la conversazione vale.</p>
+          </div>
+        </div>
+        <div class="faq-item faq-extra reveal">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Come inizia il processo? C'è un impegno minimo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Si inizia con una chiamata gratuita di 30 minuti in cui analizziamo i tuoi processi e capiamo insieme se c'è un progetto sensato da costruire. Se non vediamo un valore concreto per la tua azienda, lo diciamo chiaramente — senza spingere verso un impegno che non ha senso.</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="faq-toggle-all" id="faq-toggle-all" onclick="toggleFaqAll(this)">Mostra tutte le domande</button>
+    </div>
+  </section>
+  <!-- ─── Contatti ─── -->
+  <section id="contatti">
+    <div class="container">
+      <div class="contatti-grid">
+        <div class="contatti-content reveal">
+          <div class="section-label">Parliamo</div>
+          <h2 class="section-title">Hai un processo che assorbe troppo tempo?</h2>
+          <p class="section-sub">Raccontaci il problema. In 30 minuti capiamo insieme se c'è un sistema da costruire — e qual è il punto di partenza con il ritorno più alto.</p>
+          <div class="contatti-points">
+            <div class="contatti-point">
+              <div class="contatti-point-icon">⚡</div>
+              <div class="contatti-point-text">
+                <strong>Risposta entro 24 ore</strong>
+                <span>Nessun form che finisce nel vuoto. Ti rispondo direttamente io.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🎯</div>
+              <div class="contatti-point-text">
+                <strong>Prima chiamata gratuita</strong>
+                <span>30 minuti di analisi operativa — senza impegno, senza pitch commerciale.</span>
+              </div>
+            </div>
+            <div class="contatti-point">
+              <div class="contatti-point-icon">🔒</div>
+              <div class="contatti-point-text">
+                <strong>Riservatezza garantita</strong>
+                <span>Tutto quello che condividi resta confidenziale. NDA disponibile su richiesta.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="contact-form">
+            <div style="background: rgba(62, 207, 178, 0.08); border: 1px solid rgba(62, 207, 178, 0.25); border-radius: 8px; padding: 16px; margin-bottom: 24px; text-align: center;">
+              <div style="font-family: var(--font-display, 'Space Grotesk', sans-serif); font-weight: 600; color: #fff; font-size: 15px; margin-bottom: 6px;">
+                Vuoi scegliere subito il giorno e l'ora?
+              </div>
+              <p style="font-size: 13px; color: var(--color-muted, #8A99B5); margin-bottom: 14px; line-height: 1.5;">
+                Puoi fissare direttamente la tua Discovery Call di 30 minuti sul calendario disponibilità in tempo reale.
+              </p>
+              <a href="/prenota" class="btn btn-primary" style="display: inline-block; width: 100%; text-align: center; padding: 12px 20px; font-size: 14px;">
+                Scegli giorno e ora sul calendario →
+              </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+              <span style="background: var(--color-surface, #111520); padding: 0 12px; font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 11px; text-transform: uppercase; color: var(--color-muted, #6B7A99); letter-spacing: 0.1em;">oppure compila il messaggio</span>
+            </div>
+            <form id="contact-form" novalidate>
+              <div class="form-two-col">
+                <div class="form-row">
+                  <label for="nome">Nome *</label>
+                  <input type="text" id="nome" name="nome" placeholder="Mario Rossi" autocomplete="name" />
+                </div>
+                <div class="form-row">
+                  <label for="azienda">Azienda *</label>
+                  <input type="text" id="azienda" name="azienda" placeholder="Azienda Srl" />
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="mario@azienda.it" autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <label for="messaggio">Descrivi il processo o il problema *</label>
+                <textarea id="messaggio" name="messaggio" rows="5" placeholder="Es: Il nostro team commerciale passa 2 ore al giorno ad aggiornare il CRM manualmente. Vorremmo capire se si può automatizzare..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Invia la richiesta →</button>
+            </form>
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">✅</div>
+              <h3>Richiesta ricevuta.</h3>
+              <p>Ti rispondo entro 24 ore per organizzare la prima chiamata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="/__l5e/assets-v1/95831f2d-f342-4d89-aa6b-45c9ff61180c/sjm-logo.png" alt="SJM Systems Engineering" />
+        </div>
+        <ul class="footer-links">
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#come-funziona">Come Funziona</a></li>
+          <li><a href="#case-studies">Casi Studio</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="mailto:info@sjmsystems.it">info@sjmsystems.it</a></li>
+          <li><a href="https://www.linkedin.com/in/sebastianjmellace" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/sebastian-javier-mellace-3864471aa/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn di Sebastián Javier Mellace">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copy">© 2026 SJM Systems Engineering. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed mobile CTA -->
+  <a href="#contatti" class="mobile-cta" id="mobile-cta">Parliamo del tuo progetto →</a>
+
+  <script>
+    // ─── Nav sticky ───
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ─── Mobile menu ───
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+    }
+
+    // ─── Scroll reveal ───
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay for grid children
+          const siblings = Array.from(entry.target.parentElement.children);
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.08) + 's';
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ─── FAQ accordion ───
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // Chiudi tutti
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      // Apri quello cliccato se era chiuso
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // ─── FAQ "Mostra tutte" (mobile) ───
+    function toggleFaqAll(btn) {
+      const expanded = btn.classList.toggle('expanded');
+      document.querySelectorAll('.faq-extra').forEach(el => el.classList.toggle('show', expanded));
+      btn.textContent = expanded ? 'Mostra meno domande' : 'Mostra tutte le domande';
+    }
+
+    // ─── Steps accordion (mobile only) ───
+    document.querySelectorAll('.step-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+          item.classList.toggle('open');
+        }
+      });
+    });
+
+    // ─── Hide mobile CTA when in Contatti ───
+    const mobileCta = document.getElementById('mobile-cta');
+    const contattiSection = document.getElementById('contatti');
+    if (mobileCta && contattiSection && 'IntersectionObserver' in window) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          mobileCta.classList.toggle('hidden', entry.isIntersecting);
+        });
+      }, { threshold: 0.15 });
+      ctaObserver.observe(contattiSection);
+    }
+
+    // ─── Process video autoplay on scroll into view ───
+    const processVideo = document.getElementById('processVideo');
+    if (processVideo && 'IntersectionObserver' in window) {
+      const pvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            processVideo.play().catch(() => {});
+          } else {
+            processVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      pvObserver.observe(processVideo);
+    }
+
+    // ─── Demo video autoplay on scroll into view ───
+    const demoVideo = document.getElementById('demoVideo');
+    if (demoVideo && 'IntersectionObserver' in window) {
+      const dvObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            demoVideo.play().catch(() => {});
+          } else {
+            demoVideo.pause();
+          }
+        });
+      }, { threshold: 0.35 });
+      dvObserver.observe(demoVideo);
+    }
+
+
+
+
+
+
+    // ─── Form validation & submit ───
+    const form = document.getElementById('contact-form');
+    const successBox = document.getElementById('form-success');
+
+    function showError(input, msg) {
+      input.classList.add('error');
+      let err = input.parentElement.querySelector('.form-error-msg');
+      if (!err) {
+        err = document.createElement('span');
+        err.className = 'form-error-msg';
+        input.parentElement.appendChild(err);
+      }
+      err.textContent = msg;
+    }
+
+    function clearError(input) {
+      input.classList.remove('error');
+      const err = input.parentElement.querySelector('.form-error-msg');
+      if (err) err.remove();
+    }
+
+    ['nome', 'azienda', 'email', 'messaggio'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => clearError(el));
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      const nome = document.getElementById('nome');
+      const azienda = document.getElementById('azienda');
+      const email = document.getElementById('email');
+      const messaggio = document.getElementById('messaggio');
+
+      if (!nome.value.trim()) { showError(nome, 'Inserisci il tuo nome'); valid = false; }
+      if (!azienda.value.trim()) { showError(azienda, 'Inserisci il nome dell\'azienda'); valid = false; }
+      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRe.test(email.value.trim())) { showError(email, 'Inserisci un\'email valida'); valid = false; }
+      if (messaggio.value.trim().length < 20) { showError(messaggio, 'Descrivi brevemente il problema (min. 20 caratteri)'); valid = false; }
+
+      if (!valid) return;
+
+      // Submit button feedback
+      const btn = form.querySelector('.form-submit');
+      btn.disabled = true;
+      btn.textContent = 'Invio in corso...';
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: nome.value.trim(),
+          azienda: azienda.value.trim(),
+          email: email.value.trim(),
+          messaggio: messaggio.value.trim(),
+        }),
+      })
+        .then(async (r) => {
+          if (!r.ok) throw new Error('send_failed');
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Riprova →';
+          showError(messaggio, 'Invio non riuscito. Riprova tra qualche istante.');
+        });
+    });
+  </script>
+
+</div><script>(function(t){let s;try{s=JSON.parse(sessionStorage.getItem(t.storageKey)||"{}")}catch(e){console.error(e);return}const c=t.key||window.history.state?.__TSR_key,r=c?s[c]:void 0;if(t.shouldScrollRestoration&&r&&typeof r=="object"&&Object.keys(r).length>0){for(const e in r){const o=r[e];if(!o||typeof o!="object")continue;const l=o.scrollX,i=o.scrollY;if(!(!Number.isFinite(l)||!Number.isFinite(i))){if(e==="window")window.scrollTo({top:i,left:l,behavior:t.behavior});else if(e){let n;try{n=document.querySelector(e)}catch{continue}n&&(n.scrollLeft=l,n.scrollTop=i)}}}return}const a=window.location.hash.split("#",2)[1];if(a){const e=window.history.state?.__hashScrollIntoViewOptions??!0;if(e){const o=document.getElementById(a);o&&o.scrollIntoView(e)}return}window.scrollTo({top:0,left:0,behavior:t.behavior})})({"storageKey":"tsr-scroll-restoration-v1_3","shouldScrollRestoration":true});document.currentScript.remove()</script><!--/$--><button type="button" aria-label="Apri chat" aria-expanded="false" style="position:fixed;right:20px;bottom:20px;z-index:2147483647;width:80px;height:80px;border-radius:999px;border:1px solid rgba(255,255,255,0.9);background:#fff url(&quot;https://userdata-d7b62b.stack.tryrelevance.com/files/public/c32d1d9d-99cd-45b2-915d-2e468808d18a/agent-emoji-ChatGPT%20Image%2010%20giu%202026%2C%2017_51_02.png/ad172d8f-7fc1-4d2e-8f33-5bdcb7a690c8.png&quot;) center / cover no-repeat;color:#061014;box-shadow:0 18px 46px rgba(3,7,18,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto"></button><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-Bgy4Pixr.js"],assets:$R[5]=[$R[6]={tag:"script",attrs:$R[7]={type:"module",async:!0},children:"import(\"/assets/index-Bgy4Pixr.js\")"}]},"/":$R[8]={preloads:$R[9]=["/assets/index-CkVFHewJ.js","/assets/sjm-DdLdyzzl.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1790444202352,s:"success",ssr:!0},$R[12]={i:"  ",u:1790444202352,s:"success",ssr:!0}],lastMatchId:"  "})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="">import("/assets/index-Bgy4Pixr.js")</script></body></html>
