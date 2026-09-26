@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrenotaRouteImport } from './routes/prenota'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrenotaRoute = PrenotaRouteImport.update({
+  id: '/prenota',
+  path: '/prenota',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,30 +37,34 @@ const ApiContactRoute = ApiContactRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/prenota': typeof PrenotaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/prenota': typeof PrenotaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/prenota': typeof PrenotaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml' | '/api/contact'
+  fullPaths: '/' | '/prenota' | '/sitemap.xml' | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml' | '/api/contact'
-  id: '__root__' | '/' | '/sitemap.xml' | '/api/contact'
+  to: '/' | '/prenota' | '/sitemap.xml' | '/api/contact'
+  id: '__root__' | '/' | '/prenota' | '/sitemap.xml' | '/api/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PrenotaRoute: typeof PrenotaRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiContactRoute: typeof ApiContactRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prenota': {
+      id: '/prenota'
+      path: '/prenota'
+      fullPath: '/prenota'
+      preLoaderRoute: typeof PrenotaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,9 +104,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PrenotaRoute: PrenotaRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

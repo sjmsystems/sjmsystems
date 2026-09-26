@@ -129,7 +129,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body style={{ minHeight: "100vh" }}>
         {children}
         <Scripts />
       </body>
