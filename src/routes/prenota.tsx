@@ -177,7 +177,7 @@ function Prenota() {
           <div className="container nav-inner">
             <a href="/" className="logo" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
               <img
-                src="/__l5e/assets-v1/95831f2d-f342-4d89-aa6b-45c9ff61180c/sjm-logo.png"
+                src="/media/sjm-logo.png"
                 alt="SJM Systems Engineering"
                 style={{ height: "36px", width: "auto" }}
               />
