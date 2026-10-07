@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "1200" },
       { property: "og:image:type", content: "image/jpeg" },
-      { property: "og:image:alt", content: "SJM Systems Engineering — Forze lavoro digitali, progettate sui vostri processi" },
+      { property: "og:image:alt", content: "SJM Systems Engineering — Forze lavoro digitali, progettate sui tuoi processi" },
       { name: "twitter:image", content: "https://sjmsystems.it/media/social-card.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

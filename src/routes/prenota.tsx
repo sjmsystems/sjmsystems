@@ -189,7 +189,7 @@ function Prenota() {
               <a href="/#servizi" style={{ color: "#D8DEEA" }}>Servizi</a>
               <a href="/#come-funziona" style={{ color: "#D8DEEA" }}>Come Funziona</a>
               <a href="/#case-studies" style={{ color: "#D8DEEA" }}>Casi Studio</a>
-              <a href="/#about" style={{ color: "#D8DEEA" }}>Chi Siamo</a>
+              <a href="/#about" style={{ color: "#D8DEEA" }}>Chi sono</a>
               <a href="/#faq" style={{ color: "#D8DEEA" }}>FAQ</a>
             </div>
             <a
@@ -218,7 +218,7 @@ function Prenota() {
               Scegli giorno e ora per la tua prima analisi operativa
             </h1>
             <p className="prenota-subtitle">
-              Analizziamo insieme i processi della tua azienda per individuare dove l'automazione
+              Analizzo insieme a te i processi della tua azienda per individuare dove l'automazione
               e gli agenti AI generano il ritorno più alto. Nessun impegno, nessun pitch commerciale.
             </p>
 
