@@ -1210,6 +1210,7 @@ const n=`    /* ─── CSS Variables ─── */
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   border-radius: 16px;
 }
