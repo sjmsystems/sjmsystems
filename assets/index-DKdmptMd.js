@@ -1,4 +1,4 @@
-import{j as e}from"./index-BS64Sduk.js";import{c as i}from"./sjm-haM0Zipo.js";const n=`
+import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";const n=`
   <!-- ─── Nav ─── -->
   <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
     <div class="container">
@@ -46,7 +46,7 @@ import{j as e}from"./index-BS64Sduk.js";import{c as i}from"./sjm-haM0Zipo.js";co
           eliminando il <span class="highlight">lavoro manuale e ripetitivo</span>.
         </h1>
         <p class="hero-sub reveal">
-          Progetto architetture su misura integrate negli strumenti che usi già, per eliminare le ore perse nei compiti ripetitivi e restituirti il controllo sui tuoi numeri. Nessun software generico da configurare da solo, nessuna promessa magica.
+          Progetto sistemi su misura integrati negli strumenti che usi già, per eliminare le ore perse nei compiti ripetitivi e restituirti il controllo sui tuoi numeri. Nessun software generico da configurare, nessuna promessa magica.
         </p>
         <div class="hero-actions reveal">
           <a href="/prenota" class="btn btn-primary">Prenota una diagnosi operativa (30 min) →</a>
@@ -71,10 +71,10 @@ import{j as e}from"./index-BS64Sduk.js";import{c as i}from"./sjm-haM0Zipo.js";co
       </div>
       <!-- Floating agent flow (decorativo) -->
       <div class="hero-visual">
-        <div class="flow-node"><span class="flow-dot dot-avio"></span>richiesta_cliente.incoming</div>
-        <div class="flow-node"><span class="flow-dot dot-viola"></span>agent.qualifica → CRM</div>
-        <div class="flow-node"><span class="flow-dot dot-verdino"></span>risposta.generata ✓</div>
-        <div class="flow-node"><span class="flow-dot dot-avio"></span>log.aggiornato → slack</div>
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>processo_operativo.incoming</div>
+        <div class="flow-node"><span class="flow-dot dot-viola"></span>sistema.elimina_passaggi_manuali</div>
+        <div class="flow-node"><span class="flow-dot dot-verdino"></span>sync_automatico → gestionale & crm</div>
+        <div class="flow-node"><span class="flow-dot dot-avio"></span>tempo_recuperato · zero_errori ✓</div>
       </div>
     </div>
     <img src="/tech/tech-network.png" alt="" class="tech-float tf-hero-right" loading="eager" />
