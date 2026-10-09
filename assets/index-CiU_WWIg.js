@@ -1,4 +1,4 @@
-import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";const n=`
+import{j as e}from"./index-BS64Sduk.js";import{c as i}from"./sjm-haM0Zipo.js";const n=`
   <!-- ─── Nav ─── -->
   <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
     <div class="container">
@@ -26,7 +26,7 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
       <a href="#case-studies" onclick="closeMobile()">Casi Studio</a>
       <a href="#about" onclick="closeMobile()">Chi sono</a>
       <a href="#faq" onclick="closeMobile()">FAQ</a>
-      <a href="#contatti" onclick="closeMobile()">Parla con me del tuo progetto →</a>
+      <a href="/prenota" onclick="closeMobile()">Prenota una diagnosi operativa →</a>
     </div>
   </nav>
 
@@ -40,17 +40,16 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
     <span class="corner-plus bl">+</span><span class="corner-plus br">+</span>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge reveal">Forza lavoro digitale · PMI italiane</div>
+        <div class="hero-badge reveal">Sistemi Operativi su Misura · PMI Italiane</div>
         <h1 class="hero-title reveal">
-          Forze lavoro digitali, <span class="highlight-italic">progettate</span><br>
-          sui <span class="highlight">tuoi processi reali.</span>
+          Recupera tempo e fatturato,<br>
+          eliminando il <span class="highlight">lavoro manuale e ripetitivo</span>.
         </h1>
         <p class="hero-sub reveal">
-          Agenti AI custom per le PMI italiane. Nessuna soluzione generica.
-          Solo architetture costruite attorno a come lavori tu — integrate negli strumenti che già usi.
+          Progetto architetture su misura integrate negli strumenti che usi già, per eliminare le ore perse nei compiti ripetitivi e restituirti il controllo sui tuoi numeri. Nessun software generico da configurare da solo, nessuna promessa magica.
         </p>
         <div class="hero-actions reveal">
-          <a href="#contatti" class="btn btn-primary">Parla con me del tuo progetto →</a>
+          <a href="/prenota" class="btn btn-primary">Prenota una diagnosi operativa (30 min) →</a>
           <a href="#come-funziona" class="btn btn-secondary">Scopri come funziona</a>
         </div>
         <div class="hero-stats reveal">
@@ -199,6 +198,42 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
     </div>
   </section>
 
+  <!-- ─── Diagnosi del Problema ─── -->
+  <section id="problema" class="problema-section">
+    <div class="container">
+      <div class="problema-header reveal">
+        <div class="section-label">Ti suona familiare?</div>
+        <h2 class="section-title">Dove si disperdono tempo e fatturato?</h2>
+        <p class="section-sub">Nelle aziende strutturate, i colli di bottiglia non dipendono dalla mancanza di impegno del team, ma da abitudini quotidiane che poggiano ancora sul lavoro manuale e sulla memoria.</p>
+      </div>
+      <div class="problema-grid">
+        <div class="problema-card reveal">
+          <div class="problema-card-num">01 · ATTIVITÀ RIPETITIVE</div>
+          <div class="problema-card-title">Ore pagate a ricopiare dati</div>
+          <p class="problema-card-desc">Collaboratori qualificati che passano mezza giornata a trascrivere dati tra fogli Excel, email e gestionale. Lavoro manuale e ripetitivo, pagato a stipendio pieno, su informazioni che l'azienda possiede già.</p>
+        </div>
+        <div class="problema-card reveal">
+          <div class="problema-card-num">02 · FRAGILITÀ ORGANIZZATIVA</div>
+          <div class="problema-card-title">Processi chiusi nella testa di pochi</div>
+          <p class="problema-card-desc">L'operatività dell'azienda dipende dalla memoria storica di una o due figure chiave. Se mancano loro, il flusso si inceppa perché le regole non sono scritte in un sistema replicabile.</p>
+        </div>
+        <div class="problema-card reveal">
+          <div class="problema-card-num">03 · CONTROLLO OPERATIVO</div>
+          <div class="problema-card-title">Rincorrere le persone per sapere a che punto si è</div>
+          <p class="problema-card-desc">Per conoscere lo stato reale di una commessa, di una consegna o di un cliente devi chiedere in giro o fare telefonate interne, anziché avere una fotografia chiara e aggiornata in tempo reale.</p>
+        </div>
+        <div class="problema-card reveal">
+          <div class="problema-card-num">04 · PIPELINE COMMERCIALE</div>
+          <div class="problema-card-title">Preventivi inviati e mai più richiamati</div>
+          <p class="problema-card-desc">Decine di offerte mandate a clienti caldi che finiscono nel nulla senza un ricontatto sistematico. Soldi già per metà guadagnati, lasciati sul tavolo solo perché nessuno ha il tempo o il metodo per fare follow-up fino in fondo.</p>
+        </div>
+      </div>
+      <div class="problema-stacco reveal">
+        Ti aiuto ad eliminare questi attriti senza stravolgere la tua operatività, liberando le tue persone per far girare l'azienda con meno fatica e più controllo.
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Servizi ─── -->
   <section id="servizi">
     <div class="container">
@@ -251,7 +286,7 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
         </video>
       </div>
       <div class="demo-cta-wrap reveal">
-        <a href="#contatti" class="btn btn-primary demo-cta">Vedi come funziona nel tuo processo →</a>
+        <a href="/prenota" class="btn btn-primary demo-cta">Mappa il tuo processo in 30 minuti →</a>
       </div>
     </div>
   </section>
@@ -503,6 +538,20 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
       <button type="button" class="faq-toggle-all" id="faq-toggle-all" onclick="toggleFaqAll(this)">Mostra tutte le domande</button>
     </div>
   </section>
+
+  <!-- ─── Banner Inerzia ─── -->
+  <section id="inerzia" class="inerzia-section">
+    <div class="container">
+      <div class="inerzia-banner reveal">
+        <h2 class="inerzia-title">Quanto ti sarà costato fra un anno lasciare tutto allo stato attuale?</h2>
+        <p class="inerzia-desc">L'inerzia ha un conto salato. Puoi continuare a navigare a vista e spegnere incendi, oppure fermarti mezz'ora per capire esattamente dove stai perdendo fatturato e risolvere il problema.</p>
+        <div class="inerzia-actions">
+          <a href="/prenota" class="btn btn-primary">Prenota la tua diagnosi operativa (30 min) →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Contatti ─── -->
   <section id="contatti">
     <div class="container">
@@ -608,7 +657,7 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
   </footer>
 
   <!-- Fixed mobile CTA -->
-  <a href="#contatti" class="mobile-cta" id="mobile-cta">Parla con me del tuo progetto →</a>
+  <a href="/prenota" class="mobile-cta" id="mobile-cta">Prenota una diagnosi operativa (30 min) →</a>
 
   <script>
     // ─── Nav sticky ───
@@ -786,4 +835,4 @@ import{j as e}from"./index-CyLGBlX1.js";import{c as i}from"./sjm-CoR-3WlV.js";co
     });
   <\/script>
 
-`;function t(){return e.jsxs(e.Fragment,{children:[e.jsx("style",{dangerouslySetInnerHTML:{__html:i}}),e.jsx("div",{dangerouslySetInnerHTML:{__html:n}})]})}export{t as component};
+`;function o(){return e.jsxs(e.Fragment,{children:[e.jsx("style",{dangerouslySetInnerHTML:{__html:i}}),e.jsx("div",{dangerouslySetInnerHTML:{__html:n}})]})}export{o as component};
