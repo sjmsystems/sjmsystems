@@ -1,4 +1,4 @@
-import{j as e}from"./index-CXJHQN5K.js";import{c as i}from"./sjm-Dr3oJat7.js";const n=`
+import{j as e}from"./index-CxxDz8uW.js";import{c as i}from"./sjm-Dr3oJat7.js";const n=`
   <!-- ─── Nav ─── -->
   <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
     <div class="container">
@@ -376,13 +376,13 @@ import{j as e}from"./index-CXJHQN5K.js";import{c as i}from"./sjm-Dr3oJat7.js";co
               Máster IA Heroes · 60 ECTS · +13.000 alumni nel mondo.
             </div>
             <div class="founder-text">
-              <p class="about-text">SJM Systems Engineering nasce da una premessa semplice: la maggior parte delle PMI italiane strutturate ha già processi che funzionano. Il problema non è la tecnologia — è che quei processi assorbono troppo tempo, troppi referenti e troppa energia manuale.</p>
-              <p class="about-text">Il mio lavoro è diagnosticare dove la tua azienda perde continuità e costruire agenti operativi che tappano quei buchi — integrandosi con gli strumenti che già usi, senza stravolgere niente.</p>
+              <p class="about-text">Ho fondato SJM Systems Engineering con un obiettivo chiaro: restituire tempo e controllo a chi guida un'azienda, eliminando il lavoro manuale e ripetitivo.</p>
+              <p class="about-text">Nelle PMI strutturate i processi funzionano già, ma poggiano su un costo nascosto enorme: collaboratori qualificati che passano mezza giornata a ricopiare dati, rincorrere colleghi o spegnere incendi quotidiani. Il mio mestiere è entrare nella tua operatività, mappare dove si disperdono ore e fatturato e progettare sistemi su misura che eliminano i passaggi manuali — integrandosi nei software che usi già, dal primo giorno.</p>
               <ul class="about-list">
-                <li>Lavoro solo su colli di bottiglia reali, non su proof of concept dimostrativi</li>
-                <li>Ogni progetto ha una metrica di risultato definita prima di iniziare</li>
-                <li>Consegno sistemi operativi, non presentazioni da rivedere tra sei mesi</li>
-                <li>Sono il tuo interlocutore tecnico e commerciale, senza middleman</li>
+                <li><span><strong>Solo colli di bottiglia reali:</strong> niente prototipi dimostrativi o demo fini a se stesse. Costruisco solo architetture con un impatto diretto sui tuoi numeri operativi.</span></li>
+                <li><span><strong>Metriche definite prima di partire:</strong> ogni progetto ha un obiettivo di tempo recuperato o costo abbattuto quantificato prima di scrivere una sola riga di codice.</span></li>
+                <li><span><strong>Sistemi in produzione, non slide:</strong> consegno flussi operativi e collaudati in 20–40 giorni, non presentazioni teoriche da archiviare.</span></li>
+                <li><span><strong>Unico interlocutore responsabile:</strong> parli direttamente con l'ingegnere che progetta e costruisce il sistema. Zero commerciali, zero intermediari, zero passaggi a vuoto.</span></li>
               </ul>
             </div>
           </div>
