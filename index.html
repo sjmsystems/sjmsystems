@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="it-IT"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/styles-DVn66iiR.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" data-precedence="default"/><title>SJM Systems Engineering — Agenti AI per PMI italiane</title><meta name="author" content="SJM Systems Engineering"/><meta property="og:site_name" content="SJM Systems Engineering"/><meta name="twitter:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta name="twitter:description" content="Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali."/><meta property="og:image" content="https://sjmsystems.it/media/social-card.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="1200"/><meta property="og:image:type" content="image/jpeg"/><meta property="og:image:alt" content="SJM Systems Engineering — Forze lavoro digitali, progettate sui tuoi processi"/><meta name="twitter:image" content="https://sjmsystems.it/media/social-card.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Agenti AI custom per PMI italiane. Elimino i colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 20–40 giorni."/><meta property="og:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta property="og:description" content="Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni."/><meta property="og:type" content="website"/><meta property="og:url" content="https://sjmsystems.it/"/><link rel="modulepreload" href="/assets/index-D7jo7Ns5.js"/><link rel="modulepreload" href="/assets/index-DKdmptMd.js"/><link rel="modulepreload" href="/assets/sjm-haM0Zipo.js"/><link rel="canonical" href="https://sjmsystems.it/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"SJM Systems Engineering","url":"https://sjmsystems.it/","description":"Progetto agenti AI custom per PMI italiane, costruiti sui processi reali del cliente e integrati negli strumenti già in uso."},{"@type":"WebSite","name":"SJM Systems Engineering","url":"https://sjmsystems.it/"}]}</script></head><body style="min-height:100vh"><!--$--><style>    /* ─── CSS Variables ─── */
+<!DOCTYPE html><html lang="it-IT"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/assets/styles-DVn66iiR.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" data-precedence="default"/><title>SJM Systems Engineering — Agenti AI per PMI italiane</title><meta name="author" content="SJM Systems Engineering"/><meta property="og:site_name" content="SJM Systems Engineering"/><meta name="twitter:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta name="twitter:description" content="Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali."/><meta property="og:image" content="https://sjmsystems.it/media/social-card.jpg"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="1200"/><meta property="og:image:type" content="image/jpeg"/><meta property="og:image:alt" content="SJM Systems Engineering — Forze lavoro digitali, progettate sui tuoi processi"/><meta name="twitter:image" content="https://sjmsystems.it/media/social-card.jpg"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="Agenti AI custom per PMI italiane. Elimino i colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 20–40 giorni."/><meta property="og:title" content="SJM Systems Engineering — Agenti AI per PMI italiane"/><meta property="og:description" content="Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni."/><meta property="og:type" content="website"/><meta property="og:url" content="https://sjmsystems.it/"/><link rel="modulepreload" href="/assets/index-DSYLryb_.js"/><link rel="modulepreload" href="/assets/index-6B102c1L.js"/><link rel="modulepreload" href="/assets/sjm-DQfCuku4.js"/><link rel="canonical" href="https://sjmsystems.it/"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"SJM Systems Engineering","url":"https://sjmsystems.it/","description":"Progetto agenti AI custom per PMI italiane, costruiti sui processi reali del cliente e integrati negli strumenti già in uso."},{"@type":"WebSite","name":"SJM Systems Engineering","url":"https://sjmsystems.it/"}]}</script></head><body style="min-height:100vh"><!--$--><style>    /* ─── CSS Variables ─── */
     :root {
       --color-bg:       #0A0C12;
       --color-surface:  #111520;
@@ -65,7 +65,15 @@
       line-height: 1.7;
     }
     .text-center { text-align: center; }
-    .text-center .section-sub { margin: 0 auto; }
+    .text-center .section-sub,
+    .steps-header .section-sub,
+    .demo-header .section-sub,
+    .faq-header .section-sub,
+    .testi-header .section-sub {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 680px;
+    }
 
     /* ─── Reveal Animation ─── */
     .reveal {
@@ -2415,14 +2423,14 @@ section#hero h1.hero-title span.highlight-italic {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #F59E0B, #EF4444);
+  background: linear-gradient(90deg, var(--color-verdino, #3ECFB2), var(--color-avio, #4A7FA5));
   opacity: 0;
   transition: opacity var(--transition);
 }
 .problema-card:hover {
-  border-color: rgba(245, 158, 11, 0.4);
+  border-color: rgba(62, 207, 178, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 48px rgba(15, 20, 36, 0.12);
 }
 .problema-card:hover::before {
   opacity: 1;
@@ -2431,7 +2439,7 @@ section#hero h1.hero-title span.highlight-italic {
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  color: #F59E0B;
+  color: var(--color-avio, #4A7FA5);
   letter-spacing: 0.08em;
   margin-bottom: 12px;
 }
@@ -2467,8 +2475,8 @@ section#hero h1.hero-title span.highlight-italic {
   padding: 80px 0 0 0;
 }
 .inerzia-banner {
-  background: linear-gradient(135deg, rgba(17, 21, 32, 0.95), rgba(11, 15, 25, 0.98));
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, #111520, #0B0F19);
+  border: 1px solid rgba(62, 207, 178, 0.25);
   border-radius: 16px;
   padding: 56px 48px;
   text-align: center;
@@ -2481,23 +2489,27 @@ section#hero h1.hero-title span.highlight-italic {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #F59E0B, #3ECFB2);
+  background: linear-gradient(90deg, var(--color-viola, #7B5EA7), var(--color-verdino, #3ECFB2));
 }
+.inerzia-banner .inerzia-title,
 .inerzia-title {
   font-family: var(--font-display);
   font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 700;
-  color: var(--color-white);
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   line-height: 1.25;
   margin-bottom: 20px;
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
 }
+.inerzia-banner .inerzia-desc,
 .inerzia-desc {
   font-size: 17px;
-  color: var(--color-text);
-  opacity: 0.9;
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 0.95;
   line-height: 1.7;
   max-width: 720px;
   margin: 0 auto 32px auto;
@@ -2730,22 +2742,22 @@ section#hero h1.hero-title span.highlight-italic {
       </div>
       <div class="problema-grid">
         <div class="problema-card reveal">
-          <div class="problema-card-num">01 · ATTIVITÀ RIPETITIVE</div>
+          <div class="problema-card-num">01 · TEMPO SPRECATO</div>
           <div class="problema-card-title">Ore pagate a ricopiare dati</div>
           <p class="problema-card-desc">Collaboratori qualificati che passano mezza giornata a trascrivere dati tra fogli Excel, email e gestionale. Lavoro manuale e ripetitivo, pagato a stipendio pieno, su informazioni che l'azienda possiede già.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">02 · FRAGILITÀ ORGANIZZATIVA</div>
+          <div class="problema-card-num">02 · DIPENDENZA DA POCHI</div>
           <div class="problema-card-title">Processi chiusi nella testa di pochi</div>
           <p class="problema-card-desc">L'operatività dell'azienda dipende dalla memoria storica di una o due figure chiave. Se mancano loro, il flusso si inceppa perché le regole non sono scritte in un sistema replicabile.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">03 · CONTROLLO OPERATIVO</div>
-          <div class="problema-card-title">Rincorrere le persone per sapere a che punto si è</div>
+          <div class="problema-card-num">03 · STATO DEI LAVORI</div>
+          <div class="problema-card-title">Rincorrere le persone per conoscere lo stato dei lavori</div>
           <p class="problema-card-desc">Per conoscere lo stato reale di una commessa, di una consegna o di un cliente devi chiedere in giro o fare telefonate interne, anziché avere una fotografia chiara e aggiornata in tempo reale.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">04 · PIPELINE COMMERCIALE</div>
+          <div class="problema-card-num">04 · FATTURATO BLOCCATO</div>
           <div class="problema-card-title">Preventivi inviati e mai più richiamati</div>
           <p class="problema-card-desc">Decine di offerte mandate a clienti caldi che finiscono nel nulla senza un ricontatto sistematico. Soldi già per metà guadagnati, lasciati sul tavolo solo perché nessuno ha il tempo o il metodo per fare follow-up fino in fondo.</p>
         </div>
@@ -2764,7 +2776,7 @@ section#hero h1.hero-title span.highlight-italic {
           <div class="section-label">Cosa costruisco</div>
           <h2 class="section-title">Agenti operativi<br>su misura per la tua azienda</h2>
         </div>
-        <p class="section-sub">Non vendo piattaforme da configurare da solo. Progetto, costruisco e consegno sistemi che funzionano — integrati nei tuoi strumenti dal primo giorno.</p>
+        <p class="section-sub">Non vendo piattaforme da configurare. Progetto, costruisco e consegno sistemi che funzionano — integrati nei tuoi strumenti dal primo giorno.</p>
       </div>
       <div class="servizi-grid">
         <div class="service-card reveal">
@@ -2797,7 +2809,7 @@ section#hero h1.hero-title span.highlight-italic {
   <!-- ─── Demo ─── -->
   <section id="demo">
     <div class="container">
-      <div class="demo-header reveal">
+      <div class="demo-header reveal text-center">
         <div class="section-label demo-label">Sistema multi-agente · Live architecture</div>
         <h2 class="section-title">Più agenti. Un unico risultato.</h2>
         <p class="section-sub">Ogni agente ha un ruolo preciso. L'orchestratore coordina tutto — tu vedi solo il risultato finale.</p>
@@ -2816,7 +2828,7 @@ section#hero h1.hero-title span.highlight-italic {
 
   <section id="come-funziona">
     <div class="container">
-      <div class="steps-header reveal">
+      <div class="steps-header reveal text-center">
         <div class="section-label">Il metodo SJM</div>
         <h2 class="section-title">Dal problema al sistema che funziona</h2>
         <p class="section-sub">Nessun discovery infinito. Nessun prototipo che non arriva mai in produzione. Lavoro in sprint brevi con un output concreto ad ogni fase.</p>
@@ -3357,4 +3369,4 @@ section#hero h1.hero-title span.highlight-italic {
     });
   </script>
 
-</div><script>(function(t){let s;try{s=JSON.parse(sessionStorage.getItem(t.storageKey)||"{}")}catch(e){console.error(e);return}const c=t.key||window.history.state?.__TSR_key,r=c?s[c]:void 0;if(t.shouldScrollRestoration&&r&&typeof r=="object"&&Object.keys(r).length>0){for(const e in r){const o=r[e];if(!o||typeof o!="object")continue;const l=o.scrollX,i=o.scrollY;if(!(!Number.isFinite(l)||!Number.isFinite(i))){if(e==="window")window.scrollTo({top:i,left:l,behavior:t.behavior});else if(e){let n;try{n=document.querySelector(e)}catch{continue}n&&(n.scrollLeft=l,n.scrollTop=i)}}}return}const a=window.location.hash.split("#",2)[1];if(a){const e=window.history.state?.__hashScrollIntoViewOptions??!0;if(e){const o=document.getElementById(a);o&&o.scrollIntoView(e)}return}window.scrollTo({top:0,left:0,behavior:t.behavior})})({"storageKey":"tsr-scroll-restoration-v1_3","shouldScrollRestoration":true});document.currentScript.remove()</script><!--/$--><button type="button" aria-label="Apri chat" aria-expanded="false" style="position:fixed;right:20px;bottom:20px;z-index:2147483647;width:80px;height:80px;border-radius:999px;border:1px solid rgba(255,255,255,0.9);background:#fff url(&quot;https://userdata-d7b62b.stack.tryrelevance.com/files/public/c32d1d9d-99cd-45b2-915d-2e468808d18a/agent-emoji-ChatGPT%20Image%2010%20giu%202026%2C%2017_51_02.png/ad172d8f-7fc1-4d2e-8f33-5bdcb7a690c8.png&quot;) center / cover no-repeat;color:#061014;box-shadow:0 18px 46px rgba(3,7,18,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto"></button><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-D7jo7Ns5.js"],assets:$R[5]=[$R[6]={tag:"script",attrs:$R[7]={type:"module",async:!0},children:"import(\"/assets/index-D7jo7Ns5.js\")"}]},"/":$R[8]={preloads:$R[9]=["/assets/index-DKdmptMd.js","/assets/sjm-haM0Zipo.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1791561349662,s:"success",ssr:!0},$R[12]={i:"  ",u:1791561349662,s:"success",ssr:!0}],lastMatchId:"  "})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="">import("/assets/index-D7jo7Ns5.js")</script></body></html>
+</div><script>(function(t){let s;try{s=JSON.parse(sessionStorage.getItem(t.storageKey)||"{}")}catch(e){console.error(e);return}const c=t.key||window.history.state?.__TSR_key,r=c?s[c]:void 0;if(t.shouldScrollRestoration&&r&&typeof r=="object"&&Object.keys(r).length>0){for(const e in r){const o=r[e];if(!o||typeof o!="object")continue;const l=o.scrollX,i=o.scrollY;if(!(!Number.isFinite(l)||!Number.isFinite(i))){if(e==="window")window.scrollTo({top:i,left:l,behavior:t.behavior});else if(e){let n;try{n=document.querySelector(e)}catch{continue}n&&(n.scrollLeft=l,n.scrollTop=i)}}}return}const a=window.location.hash.split("#",2)[1];if(a){const e=window.history.state?.__hashScrollIntoViewOptions??!0;if(e){const o=document.getElementById(a);o&&o.scrollIntoView(e)}return}window.scrollTo({top:0,left:0,behavior:t.behavior})})({"storageKey":"tsr-scroll-restoration-v1_3","shouldScrollRestoration":true});document.currentScript.remove()</script><!--/$--><button type="button" aria-label="Apri chat" aria-expanded="false" style="position:fixed;right:20px;bottom:20px;z-index:2147483647;width:80px;height:80px;border-radius:999px;border:1px solid rgba(255,255,255,0.9);background:#fff url(&quot;https://userdata-d7b62b.stack.tryrelevance.com/files/public/c32d1d9d-99cd-45b2-915d-2e468808d18a/agent-emoji-ChatGPT%20Image%2010%20giu%202026%2C%2017_51_02.png/ad172d8f-7fc1-4d2e-8f33-5bdcb7a690c8.png&quot;) center / cover no-repeat;color:#061014;box-shadow:0 18px 46px rgba(3,7,18,0.35);display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:auto"></button><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-DSYLryb_.js"],assets:$R[5]=[$R[6]={tag:"script",attrs:$R[7]={type:"module",async:!0},children:"import(\"/assets/index-DSYLryb_.js\")"}]},"/":$R[8]={preloads:$R[9]=["/assets/index-6B102c1L.js","/assets/sjm-DQfCuku4.js"]}}},matches:$R[10]=[$R[11]={i:"__root__ ",u:1791562012910,s:"success",ssr:!0},$R[12]={i:"  ",u:1791562012910,s:"success",ssr:!0}],lastMatchId:"  "})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="">import("/assets/index-DSYLryb_.js")</script></body></html>

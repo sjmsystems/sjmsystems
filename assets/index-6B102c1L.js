@@ -1,4 +1,4 @@
-import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";const n=`
+import{j as e}from"./index-DSYLryb_.js";import{c as i}from"./sjm-DQfCuku4.js";const n=`
   <!-- ─── Nav ─── -->
   <nav id="main-nav" class="hero-readable-nav" style="background: rgba(255,255,255,0.96); border-bottom: 1px solid rgba(15,20,36,0.12); backdrop-filter: blur(14px); box-shadow: 0 8px 24px rgba(15,20,36,0.10);">
     <div class="container">
@@ -208,22 +208,22 @@ import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";co
       </div>
       <div class="problema-grid">
         <div class="problema-card reveal">
-          <div class="problema-card-num">01 · ATTIVITÀ RIPETITIVE</div>
+          <div class="problema-card-num">01 · TEMPO SPRECATO</div>
           <div class="problema-card-title">Ore pagate a ricopiare dati</div>
           <p class="problema-card-desc">Collaboratori qualificati che passano mezza giornata a trascrivere dati tra fogli Excel, email e gestionale. Lavoro manuale e ripetitivo, pagato a stipendio pieno, su informazioni che l'azienda possiede già.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">02 · FRAGILITÀ ORGANIZZATIVA</div>
+          <div class="problema-card-num">02 · DIPENDENZA DA POCHI</div>
           <div class="problema-card-title">Processi chiusi nella testa di pochi</div>
           <p class="problema-card-desc">L'operatività dell'azienda dipende dalla memoria storica di una o due figure chiave. Se mancano loro, il flusso si inceppa perché le regole non sono scritte in un sistema replicabile.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">03 · CONTROLLO OPERATIVO</div>
-          <div class="problema-card-title">Rincorrere le persone per sapere a che punto si è</div>
+          <div class="problema-card-num">03 · STATO DEI LAVORI</div>
+          <div class="problema-card-title">Rincorrere le persone per conoscere lo stato dei lavori</div>
           <p class="problema-card-desc">Per conoscere lo stato reale di una commessa, di una consegna o di un cliente devi chiedere in giro o fare telefonate interne, anziché avere una fotografia chiara e aggiornata in tempo reale.</p>
         </div>
         <div class="problema-card reveal">
-          <div class="problema-card-num">04 · PIPELINE COMMERCIALE</div>
+          <div class="problema-card-num">04 · FATTURATO BLOCCATO</div>
           <div class="problema-card-title">Preventivi inviati e mai più richiamati</div>
           <p class="problema-card-desc">Decine di offerte mandate a clienti caldi che finiscono nel nulla senza un ricontatto sistematico. Soldi già per metà guadagnati, lasciati sul tavolo solo perché nessuno ha il tempo o il metodo per fare follow-up fino in fondo.</p>
         </div>
@@ -242,7 +242,7 @@ import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";co
           <div class="section-label">Cosa costruisco</div>
           <h2 class="section-title">Agenti operativi<br>su misura per la tua azienda</h2>
         </div>
-        <p class="section-sub">Non vendo piattaforme da configurare da solo. Progetto, costruisco e consegno sistemi che funzionano — integrati nei tuoi strumenti dal primo giorno.</p>
+        <p class="section-sub">Non vendo piattaforme da configurare. Progetto, costruisco e consegno sistemi che funzionano — integrati nei tuoi strumenti dal primo giorno.</p>
       </div>
       <div class="servizi-grid">
         <div class="service-card reveal">
@@ -275,7 +275,7 @@ import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";co
   <!-- ─── Demo ─── -->
   <section id="demo">
     <div class="container">
-      <div class="demo-header reveal">
+      <div class="demo-header reveal text-center">
         <div class="section-label demo-label">Sistema multi-agente · Live architecture</div>
         <h2 class="section-title">Più agenti. Un unico risultato.</h2>
         <p class="section-sub">Ogni agente ha un ruolo preciso. L'orchestratore coordina tutto — tu vedi solo il risultato finale.</p>
@@ -294,7 +294,7 @@ import{j as e}from"./index-D7jo7Ns5.js";import{c as i}from"./sjm-haM0Zipo.js";co
 
   <section id="come-funziona">
     <div class="container">
-      <div class="steps-header reveal">
+      <div class="steps-header reveal text-center">
         <div class="section-label">Il metodo SJM</div>
         <h2 class="section-title">Dal problema al sistema che funziona</h2>
         <p class="section-sub">Nessun discovery infinito. Nessun prototipo che non arriva mai in produzione. Lavoro in sprint brevi con un output concreto ad ogni fase.</p>
