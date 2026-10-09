@@ -65,7 +65,15 @@
       line-height: 1.7;
     }
     .text-center { text-align: center; }
-    .text-center .section-sub { margin: 0 auto; }
+    .text-center .section-sub,
+    .steps-header .section-sub,
+    .demo-header .section-sub,
+    .faq-header .section-sub,
+    .testi-header .section-sub {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 680px;
+    }
 
     /* ─── Reveal Animation ─── */
     .reveal {
@@ -2415,14 +2423,14 @@ section#hero h1.hero-title span.highlight-italic {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #F59E0B, #EF4444);
+  background: linear-gradient(90deg, var(--color-verdino, #3ECFB2), var(--color-avio, #4A7FA5));
   opacity: 0;
   transition: opacity var(--transition);
 }
 .problema-card:hover {
-  border-color: rgba(245, 158, 11, 0.4);
+  border-color: rgba(62, 207, 178, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+  box-shadow: 0 16px 48px rgba(15, 20, 36, 0.12);
 }
 .problema-card:hover::before {
   opacity: 1;
@@ -2431,7 +2439,7 @@ section#hero h1.hero-title span.highlight-italic {
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  color: #F59E0B;
+  color: var(--color-avio, #4A7FA5);
   letter-spacing: 0.08em;
   margin-bottom: 12px;
 }
@@ -2467,8 +2475,8 @@ section#hero h1.hero-title span.highlight-italic {
   padding: 80px 0 0 0;
 }
 .inerzia-banner {
-  background: linear-gradient(135deg, rgba(17, 21, 32, 0.95), rgba(11, 15, 25, 0.98));
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, #111520, #0B0F19);
+  border: 1px solid rgba(62, 207, 178, 0.25);
   border-radius: 16px;
   padding: 56px 48px;
   text-align: center;
@@ -2481,23 +2489,27 @@ section#hero h1.hero-title span.highlight-italic {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #F59E0B, #3ECFB2);
+  background: linear-gradient(90deg, var(--color-viola, #7B5EA7), var(--color-verdino, #3ECFB2));
 }
+.inerzia-banner .inerzia-title,
 .inerzia-title {
   font-family: var(--font-display);
   font-size: clamp(26px, 3.5vw, 36px);
   font-weight: 700;
-  color: var(--color-white);
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   line-height: 1.25;
   margin-bottom: 20px;
   max-width: 820px;
   margin-left: auto;
   margin-right: auto;
 }
+.inerzia-banner .inerzia-desc,
 .inerzia-desc {
   font-size: 17px;
-  color: var(--color-text);
-  opacity: 0.9;
+  color: #E2E8F0 !important;
+  -webkit-text-fill-color: #E2E8F0 !important;
+  opacity: 0.95;
   line-height: 1.7;
   max-width: 720px;
   margin: 0 auto 32px auto;
