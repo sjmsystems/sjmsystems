@@ -2396,12 +2396,23 @@ section#hero h1.hero-title span.highlight-italic {
 /* ─── Sezione Diagnosi del Dolore (Problema) ─── */
 .problema-section {
   padding: 96px 0;
-  background: rgba(17, 21, 32, 0.4);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 .problema-header {
   margin-bottom: 56px;
+}
+.problema-header .section-label {
+  color: var(--color-avio, #4A7FA5) !important;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.problema-header .section-sub {
+  color: #334155 !important;
+  font-size: 17px;
+  line-height: 1.7;
 }
 .problema-grid {
   display: grid;
@@ -2410,12 +2421,14 @@ section#hero h1.hero-title span.highlight-italic {
   margin-bottom: 40px;
 }
 .problema-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 232, 242, 0.95);
   border-radius: var(--radius);
   padding: 32px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 30px -12px rgba(15, 20, 36, 0.08);
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .problema-card::before {
@@ -2428,7 +2441,7 @@ section#hero h1.hero-title span.highlight-italic {
   transition: opacity var(--transition);
 }
 .problema-card:hover {
-  border-color: rgba(62, 207, 178, 0.4);
+  border-color: rgba(62, 207, 178, 0.5);
   transform: translateY(-4px);
   box-shadow: 0 16px 48px rgba(15, 20, 36, 0.12);
 }
@@ -2438,7 +2451,7 @@ section#hero h1.hero-title span.highlight-italic {
 .problema-card-num {
   font-family: var(--font-mono);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-avio, #4A7FA5);
   letter-spacing: 0.08em;
   margin-bottom: 12px;
@@ -2447,13 +2460,13 @@ section#hero h1.hero-title span.highlight-italic {
   font-family: var(--font-display);
   font-size: 19px;
   font-weight: 700;
-  color: var(--color-white);
+  color: #0F1424 !important;
   margin-bottom: 12px;
   line-height: 1.3;
 }
 .problema-card-desc {
   font-size: 15px;
-  color: var(--color-muted);
+  color: #475569 !important;
   line-height: 1.65;
 }
 .problema-stacco {
@@ -2461,13 +2474,14 @@ section#hero h1.hero-title span.highlight-italic {
   max-width: 780px;
   margin: 0 auto;
   font-size: 17px;
-  font-weight: 500;
-  color: var(--color-text);
+  font-weight: 600;
+  color: #0F1424 !important;
   line-height: 1.6;
   padding: 24px 32px;
-  background: rgba(74, 127, 165, 0.06);
-  border: 1px solid rgba(74, 127, 165, 0.2);
+  background: #FFFFFF;
+  border: 1px solid rgba(74, 127, 165, 0.25);
   border-radius: var(--radius);
+  box-shadow: 0 10px 30px -10px rgba(15, 20, 36, 0.08);
 }
 
 /* ─── Sezione / Banner Inerzia ─── */
