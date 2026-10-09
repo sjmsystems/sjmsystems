@@ -5,20 +5,20 @@ import cssText from "../assets/sjm.css?raw";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SJM Systems Engineering — Agenti AI per PMI italiane" },
+      { title: "SJM Systems Engineering — Sistemi operativi su misura per PMI" },
       {
         name: "description",
         content:
-          "Agenti AI custom per PMI italiane. Elimino i colli di bottiglia operativi con architetture costruite sui tuoi processi reali. Risultati in 20–40 giorni.",
+          "SJM Systems Engineering progetta sistemi operativi su misura integrati nei tuoi software aziendali per eliminare il lavoro manuale e darti il controllo sui numeri.",
       },
       {
         property: "og:title",
-        content: "SJM Systems Engineering — Agenti AI per PMI italiane",
+        content: "SJM Systems Engineering — Sistemi operativi su misura",
       },
       {
         property: "og:description",
         content:
-          "Agenti AI costruiti sui tuoi processi. Nessuna soluzione generica. Risultati misurabili in 20–40 giorni.",
+          "Recupera tempo e fatturato, eliminando il lavoro manuale. Sistemi operativi integrati nei tuoi software aziendali.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://sjmsystems.it/" },

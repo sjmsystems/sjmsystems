@@ -77,37 +77,40 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SJM Systems Engineering — Agenti AI per PMI italiane" },
+      { title: "SJM Systems Engineering — Sistemi operativi su misura per PMI" },
       {
         name: "description",
         content:
-          "SJM Systems Engineering progetta agenti AI custom per PMI italiane: architetture costruite sui tuoi processi reali, integrate negli strumenti che già usi.",
+          "SJM Systems Engineering progetta sistemi operativi su misura integrati nei tuoi software aziendali per eliminare il lavoro manuale e darti il controllo sui numeri.",
       },
       { name: "author", content: "SJM Systems Engineering" },
       { property: "og:site_name", content: "SJM Systems Engineering" },
       { property: "og:type", content: "website" },
       {
         property: "og:title",
-        content: "SJM Systems Engineering — Agenti AI per PMI italiane",
+        content: "SJM Systems Engineering — Sistemi operativi su misura",
       },
       {
         property: "og:description",
         content:
-          "Forze lavoro digitali progettate sui tuoi processi reali. Risultati misurabili in 20–40 giorni.",
+          "Recupera tempo e fatturato, eliminando il lavoro manuale. Sistemi operativi integrati nei tuoi software aziendali.",
       },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "SJM Systems Engineering — Agenti AI per PMI italiane" },
-      { name: "twitter:title", content: "SJM Systems Engineering — Agenti AI per PMI italiane" },
-      { name: "description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
-      { property: "og:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
-      { name: "twitter:description", content: "Agenti AI custom per PMI italiane. Costruiti sui tuoi processi reali." },
       { property: "og:image", content: "https://sjmsystems.it/media/social-card.jpg" },
       { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/jpeg" },
-      { property: "og:image:alt", content: "SJM Systems Engineering — Forze lavoro digitali, progettate sui tuoi processi" },
-      { name: "twitter:image", content: "https://sjmsystems.it/media/social-card.jpg" },
+      {
+        property: "og:image:alt",
+        content: "SJM Systems Engineering — Recupera tempo e fatturato, eliminando il lavoro manuale",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SJM Systems Engineering — Sistemi operativi su misura" },
+      {
+        name: "twitter:description",
+        content:
+          "Recupera tempo e fatturato, eliminando il lavoro manuale. Sistemi operativi integrati nei tuoi software aziendali.",
+      },
+      { name: "twitter:image", content: "https://sjmsystems.it/media/social-card.jpg" },
     ],
     links: [
       {
