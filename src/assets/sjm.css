@@ -2395,55 +2395,99 @@ section#hero h1.hero-title span.highlight-italic {
 
 /* ─── Sezione Diagnosi del Dolore (Problema) ─── */
 .problema-section {
-  padding: 96px 0;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  padding: 104px 0;
+  background: linear-gradient(180deg, #0B0F19 0%, #0F1524 50%, #0B0F19 100%);
+  border-top: 1px solid rgba(74, 127, 165, 0.25);
+  border-bottom: 1px solid rgba(74, 127, 165, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.problema-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: 8%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(123, 94, 167, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+.problema-section::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: 5%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(62, 207, 178, 0.14) 0%, transparent 70%);
+  pointer-events: none;
 }
 .problema-header {
   margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
 }
-.problema-header .section-label {
-  color: var(--color-avio, #4A7FA5) !important;
-  font-weight: 700;
+.problema-section .section-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3ECFB2 !important;
+  background: rgba(62, 207, 178, 0.1);
+  border: 1px solid rgba(62, 207, 178, 0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
 }
-.problema-header .section-sub {
-  color: #334155 !important;
+.problema-section .section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  margin-bottom: 18px;
+}
+.problema-section .section-sub {
   font-size: 17px;
   line-height: 1.7;
+  color: #94A3B8 !important;
+  -webkit-text-fill-color: #94A3B8 !important;
+  max-width: 640px;
 }
 .problema-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-bottom: 40px;
+  gap: 24px;
+  margin-bottom: 44px;
+  position: relative;
+  z-index: 2;
 }
 .problema-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(228, 232, 242, 0.95);
-  border-radius: var(--radius);
+  background: #121829 !important;
+  border: 1px solid rgba(74, 127, 165, 0.35) !important;
+  border-radius: 14px;
   padding: 32px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 30px -12px rgba(15, 20, 36, 0.08);
+  box-shadow: 0 12px 36px -10px rgba(0, 0, 0, 0.5);
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 .problema-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(90deg, var(--color-verdino, #3ECFB2), var(--color-avio, #4A7FA5));
-  opacity: 0;
+  opacity: 0.85;
   transition: opacity var(--transition);
 }
 .problema-card:hover {
-  border-color: rgba(62, 207, 178, 0.5);
+  border-color: rgba(62, 207, 178, 0.6) !important;
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(15, 20, 36, 0.12);
+  box-shadow: 0 20px 48px -10px rgba(62, 207, 178, 0.18), 0 12px 30px rgba(0,0,0,0.6);
 }
 .problema-card:hover::before {
   opacity: 1;
@@ -2452,36 +2496,42 @@ section#hero h1.hero-title span.highlight-italic {
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 700;
-  color: var(--color-avio, #4A7FA5);
+  color: #38BDF8 !important;
+  -webkit-text-fill-color: #38BDF8 !important;
   letter-spacing: 0.08em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .problema-card-title {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
-  color: #0F1424 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   margin-bottom: 12px;
   line-height: 1.3;
 }
 .problema-card-desc {
   font-size: 15px;
-  color: #475569 !important;
+  color: #CBD5E1 !important;
+  -webkit-text-fill-color: #CBD5E1 !important;
   line-height: 1.65;
 }
 .problema-stacco {
   text-align: center;
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
   font-size: 17px;
   font-weight: 600;
-  color: #0F1424 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
   line-height: 1.6;
-  padding: 24px 32px;
-  background: #FFFFFF;
-  border: 1px solid rgba(74, 127, 165, 0.25);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 30px -10px rgba(15, 20, 36, 0.08);
+  padding: 24px 36px;
+  background: linear-gradient(135deg, rgba(18, 24, 41, 0.95), rgba(15, 21, 36, 0.98));
+  border: 1px solid rgba(62, 207, 178, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px -15px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
 }
 
 /* ─── Sezione / Banner Inerzia ─── */
